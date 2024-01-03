@@ -103,7 +103,7 @@ $ type ~/.ssh/id_rsa.pub
 ##### 1. Clone repository
 
 ```
-$ git clone git@github.com:kredo-school/14th_explore_ease.git
+$ git clone git@github.com:kredo-school/16th_rankshty.git
 ```
 
 ##### 2. Go to your directory
@@ -113,7 +113,7 @@ $ cd Desktop
 ```
 
 ```
-$ cd 14th_explore_ease
+$ cd 16th_rankshty
 ```
 
 ##### 3. Create .env
@@ -126,7 +126,7 @@ $ cp .env.example .env
 
 <kbd><img width="400" alt="Screenshot 2022-12-14 at 3 03 57 PM" src="https://user-images.githubusercontent.com/119660809/207519051-4baa21c0-74e2-4d50-9eed-0c4e13f5c981.png"><kbd>
 
-##### DB_DATABASE=14th_explore_ease
+##### DB_DATABASE=16th_rankshty
 
 ##### 5. install php
 
@@ -167,7 +167,7 @@ $ mysql -u root
 ##### create your database
 
 ```
-> create database 14th_explore_ease;
+> create database 16th_rankshty;
 ```
 
 ##### exit mysql
@@ -246,7 +246,7 @@ http://127.0.0.1:8000/
 
 <kbd><img width="400" alt="Screenshot 2022-12-14 at 3 12 15 PM" src="https://user-images.githubusercontent.com/119660809/207520076-f413e459-9ab4-44bb-91fe-6a908dc8283d.png"><kbd>
 
-##### Name: localhost/14th_explore_ease
+##### Name: localhost/16th_rankshty
 
 ##### HOST: localhost
 
@@ -254,6 +254,6 @@ http://127.0.0.1:8000/
 
 ##### PASSWORD:
 
-##### DATABASE: 14th_explore_ease
+##### DATABASE: 16th_rankshty
 
 ##### PORT: 3306
