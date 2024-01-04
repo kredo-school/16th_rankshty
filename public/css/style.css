@@ -1,0 +1,5 @@
+.list-group-item:not(:first-child):hover {
+    cursor: pointer;
+    background-color:#cfeffa;
+    border-left: 10px solid #071657;
+}
