@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Kawai's code
+function SimulateConflict()
+{
+    $name = "Ore wa kawai";
+    $tagLine = "Watashiwa sugoi";
+    $timesKawai = 30;
+
+    console . log($name);
+    console . log($tagLine);
+
+    for ($i = 0; $i < $timesKawai; $i++) {
+        console . log("ore wa " . $timesKawai . ' times kawai.');
+    }
+}
