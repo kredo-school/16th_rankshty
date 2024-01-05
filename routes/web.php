@@ -18,17 +18,17 @@ Route::get('/', function () {
 });
 
 
-// Kawai's code
+// Ikemen's code
 function SimulateConflict()
 {
-    $name = "Ore wa kawai";
-    $tagLine = "Watashiwa sugoi";
-    $timesKawai = 30;
+    $name = "Ore wa Ikemen";
+    $tagLine = "Watashiwa ikemen";
+    $timesIkemen = 30;
 
     console . log($name);
     console . log($tagLine);
 
-    for ($i = 0; $i < $timesKawai; $i++) {
-        console . log("ore wa " . $timesKawai . ' times kawai.');
+    for ($i = 0; $i < $timesIkemen; $i++) {
+        console . log("ore wa " . $timesIkemen . ' times ikemen.');
     }
 }
