@@ -45,10 +45,10 @@
                     <p style="max-width: 200px;  margin-left: 30px;">Please proceed with the necessary procedures for opening a store by clicking the "Store Application" button. After completing the process, you will start using Merchant Server, and we will create your actual page.</p>
                 </div>
                 <div  class="col-4">
-                    <p  style="max-width: 200px;  margin-left: 30px;">Use the store management system to create your shop on RANKSHTY and prepare for payments and shipping. Upon passing the open review, your store will officially open.</p>
+                    <p style="max-width: 200px;  margin-left: 30px;">Use the store management system to create your shop on RANKSHTY and prepare for payments and shipping. Upon passing the open review, your store will officially open.</p>
                 </div>
                 <div  class="col-4">
-                    <p  style="max-width: 200px;  margin-left: 30px;">Finally, your store will open on the RANKSHTY! Orders will start coming in, and you will receive feedback from customers. Let's make your store one that brings smiles to many customers.</p>
+                    <p style="max-width: 200px;  margin-left: 30px;">Finally, your store will open on the RANKSHTY! Orders will start coming in, and you will receive feedback from customers. Let's make your store one that brings smiles to many customers.</p>
                 </div>
             </div>
         </div>
