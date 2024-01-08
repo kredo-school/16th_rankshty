@@ -14,9 +14,14 @@ use App\Http\Controllers\BuyerController;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
     
 
 Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.index');
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
