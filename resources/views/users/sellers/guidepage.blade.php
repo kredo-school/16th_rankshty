@@ -10,7 +10,7 @@
             Store Opening Process
         </h1>
     </div>
-    <div class="contents  mt-5">
+    <div class="container  mt-5">
         <div class="row">
            <div class="col-2 ms-5">
                <h4  style="white-space: nowrap;">Store Aprication</h4>
