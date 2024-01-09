@@ -5,24 +5,19 @@
             <span class="list-group-item">
                 <h3>Buyer Navigation</h3>
             </span>
-            {{-- <a href="{{ route('buyer.mypage') }}" --}}
-            <a href="#" class="list-group-item {{ request()->is('buyer.mypage') ? 'active' : '' }}">
+            <a href="#" class="list-group-item">
                 My Page
             </a>
-            {{-- <a href="{{ route('buyer.orderhistory') }}" --}}
-            <a href="#" class="list-group-item {{ request()->is('buyer.orderhistory') ? 'active' : '' }}">
+            <a href="#" class="list-group-item">
                 Order History
             </a>
-            {{-- <a href="{{ route('buyer.favoriteslist') }}" --}}
-            <a href="#" class="list-group-item {{ request()->is('buyer.favoriteslist') ? 'active' : '' }}">
+            <a href="#" class="list-group-item">
                 Favorites List
             </a>
-            {{-- <a href="{{ route('buyer.shoppingcart') }}" --}}
-            <a href="#" class="list-group-item {{ request()->is('buyer.shoppingcart') ? 'active' : '' }}">
+            <a href="#" class="list-group-item">
                 Shopping Cart
             </a>
-            {{-- <a href="{{ route('buyer.followblocklist') }}" --}}
-            <a href="#" class="list-group-item {{ request()->is('buyer.followblocklist') ? 'active' : '' }}">
+            <a href="#" class="list-group-item">
                 Follow/Block List
             </a>
         </div>
@@ -30,89 +25,78 @@
     {{-- @endif --}}
 
     {{-- Seller Sidebar --}}
-    @if (request()->is('Seller/*'))
-        <div class="col-3">
+    {{-- @if (request()->is('Seller/*')) --}}
+    <div class="col-3">
 
-            <div class="list-group">
-                <span class="list-group-item">
-                    <h3>Seller Navigation</h3>
-                </span>
-                {{-- <a href="{{ route('seller.mypage') }}" --}}
-                <a href="#" class="list-group-item {{ request()->is('seller.mypage') ? 'active' : '' }}">
-                    My Page
-                </a>
-                {{-- <a href="{{ route('seller.ordermanagement') }}" --}}
-                <a href="#" class="list-group-item {{ request()->is('seller.ordermanagement') ? 'active' : '' }}">
-                    Order Management
-                </a>
-                {{-- <a href="{{ route('seller.salesmanagement') }}" --}}
-                <a href="#" class="list-group-item {{ request()->is('seller.salesmanagement') ? 'active' : '' }}">
-                    Sales Management
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('seller.directmessages') ? 'active' : '' }}">
-                    Direct Messages
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('seller.ranking') ? 'active' : '' }}">
-                    Ranking
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('seller.productslist') ? 'active' : '' }}">
-                    Products List
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('seller.draftlist') ? 'active' : '' }}">
-                    Draft List
-                </a>
-            </div>
+        <div class="list-group">
+            <span class="list-group-item">
+                <h3>Seller Navigation</h3>
+            </span>
+            <a href="#" class="list-group-item">
+                My Page
+            </a>
+            <a href="#" class="list-group-item">
+                Order Management
+            </a>
+            <a href="#" class="list-group-item">
+                Sales Management
+            </a>
+            <a href="#" class="list-group-item">
+                Direct Messages
+            </a>
+            <a href="#" class="list-group-item">
+                Ranking
+            </a>
+            <a href="#" class="list-group-item">
+                Products List
+            </a>
+            <a href="#" class="list-group-item">
+                Draft List
+            </a>
         </div>
-    @endif
+    </div>
+    {{-- @endif --}}
 
     {{-- Admin Sidebar --}}
-    @if (request()->is('admin/*'))
-        <div class="col-3">
-            <div class="list-group">
-                <span class="list-group-item">
-                    <h3>Admin Navigation</h3>
-                </span>
-                {{-- <a href="{{ route('admin.usermanagement') }}" --}}
-                <a href="#" class="list-group-item {{ request()->is('admin/usermanagement') ? 'active' : '' }}">
-                    User Management
-                </a>
-                {{-- <a href="{{ route('admin.contentmanagement') }}" --}}
-                <a href="#"
-                    class="list-group-item {{ request()->is('admin/contentmanagement') ? 'active' : '' }}">
-                    Content Management
-                </a>
-                {{-- <a href="{{ route('admin.complainhandling') }}" --}}
-                <a href="#"
-                    class="list-group-item {{ request()->is('admin/complainhandling') ? 'active' : '' }}">
-                    Complain Handling
-                </a>
-                <a href="#"
-                    class="list-group-item {{ request()->is('admin/connectionwithbuyerseller') ? 'active' : '' }}">
-                    Connection With Buyer/Seller
-                </a>
-                <a href="#"
-                    class="list-group-item {{ request()->is('admin/categoryadddelete') ? 'active' : '' }}">
-                    Category Add/Delete
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('admin/notification') ? 'active' : '' }}">
-                    Notification
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('admin/navbardropdown') ? 'active' : '' }}">
-                    Navbar/Dropdown
-                </a>
-                <a href="#"
-                    class="list-group-item {{ request()->is('admin/followerfollowinglist') ? 'active' : '' }}">
-                    Follower/Following List
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
-                    Dashboard
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('admin/ranking') ? 'active' : '' }}">
-                    Ranking
-                </a>
-                <a href="#" class="list-group-item {{ request()->is('admin/customization') ? 'active' : '' }}">
-                    Customization
-                </a>
-            </div>
+    {{-- @if (request()->is('admin/*')) --}}
+    <div class="col-3">
+        <div class="list-group">
+            <span class="list-group-item">
+                <h3>Admin Navigation</h3>
+            </span>
+            <a href="#" class="list-group-item">
+                User Management
+            </a>
+            <a href="#" class="list-group-item">
+                Content Management
+            </a>
+            <a href="#" class="list-group-item">
+                Complain Handling
+            </a>
+            <a href="#" class="list-group-item">
+                Connection With Buyer/Seller
+            </a>
+            <a href="#" class="list-group-item">
+                Category Add/Delete
+            </a>
+            <a href="#" class="list-group-item">
+                Notification
+            </a>
+            <a href="#" class="list-group-item">
+                Navbar/Dropdown
+            </a>
+            <a href="#" class="list-group-item">
+                Follower/Following List
+            </a>
+            <a href="#" class="list-group-item">
+                Dashboard
+            </a>
+            <a href="#" class="list-group-item">
+                Ranking
+            </a>
+            <a href="#" class="list-group-item">
+                Customization
+            </a>
         </div>
-    @endif
+    </div>
+    {{-- @endif --}}
