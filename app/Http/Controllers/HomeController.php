@@ -29,4 +29,8 @@ class HomeController extends Controller
     public function favorite(){
         return view('buyer.favorite');
     }
+
+    public function productslist(){
+        return view('seller.productslist');
+    }
 }

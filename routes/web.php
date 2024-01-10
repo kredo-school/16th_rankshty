@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/favorite', [App\Http\Controllers\HomeController::class, 'favorite'])->name('favorite');
-// ↑ change buyer only
+Route::get('/buyer/favorite', [App\Http\Controllers\HomeController::class, 'favorite'])->name('buyer.favorite');
+Route::get('/seller/productslist', [App\Http\Controllers\HomeController::class, 'productslist'])->name('seller.productslist');
+// ↑ need change for byer or seller
 
 // Route::group(['middleware' => 'auth'],function(){
 //     Route::get('/', [HomeController::class, 'index'])->name('index');
