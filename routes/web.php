@@ -14,13 +14,9 @@ use App\Http\Controllers\Admin\UsersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function(){
 //     //User Management
 //     Route::get('/usermanagement', [UsersController::class, 'index'])->name('users');
