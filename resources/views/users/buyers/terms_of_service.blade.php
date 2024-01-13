@@ -138,6 +138,5 @@
             If your question isn't covered here, you can click <a href="#" class="alert-link"> here. </a> Feel free to email us for further support.
           </div>
         </div>
-
     </form>
 @endsection

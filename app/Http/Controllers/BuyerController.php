@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class BuyerController extends Controller
 {
-    public function service()
+    public function t-service()
     {
         return view('users.buyers.terms_of_service');
     }
