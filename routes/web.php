@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\BuyerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
+Route::get('/buyers/terms_of_service', [BuyerController::class, 'terms_of_service'])->name('terms_of_service');
+Route::get('/buyers/help', [BuyerController::class, 'help'])->name('help');

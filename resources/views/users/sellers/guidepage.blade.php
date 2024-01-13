@@ -5,7 +5,7 @@
 @section('content')
 <form action="#" method="post">
     @csrf
-    <div class="title fw-normal">
+    <div class="title fw-normal ms-5">
         <h1>
             Store Opening Process
         </h1>
