@@ -1,5 +1,7 @@
 @extends('layouts.app')
+
 @section('title', 'Help page')
+
 @section('content')
     <form action="#" method="get">
         @csrf
