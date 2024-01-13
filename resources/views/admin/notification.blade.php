@@ -9,11 +9,13 @@
         {{-- Notification Writing Area --}}
         <form method="POST" action="#" accept-charset="UTF-8" class="m-2 border-bottom rounded-0 py-4">
             @csrf
+            <div class="d-flex mx-auto gap-2 align-items-end">
+                <label for="notification"></label>
+                <textarea name="notification" rows="3" id="notification" placeholder="Input message"
+                    style="width: calc(100% - 192px - 10px)"></textarea>
 
-            <label for="message"></label>
-            <textarea name="notification" rows="3" id="notification" placeholder="Input message"
-                style="width: calc(100% - 192px - 10px)"></textarea>
-            <input type="submit" value="Add New" class="btn btn-primary">
+                <input type="submit" value="Add New" class="btn btn-primary">
+            </div>
         </form>
 
         {{-- Notification List by Card style --}}

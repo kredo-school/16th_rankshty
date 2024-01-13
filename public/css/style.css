@@ -5,18 +5,15 @@
 }
 
 /* Button style */
+.btn {
+    border-radius: 50vh;
+    height: 51px;
+    width: 192px;
+}
 .btn-primary {
+    border-color: #071657;
     background-color: #071657;
     color: #ffff;
-    border: none;
-    width: 192px;
-    height: 51px;
-    border-radius: 50vh;
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transform: translateY(-50%);
 }
 
 /* Pagination style */
