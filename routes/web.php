@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\NotificationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Notifications
+Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
 //User Management
 Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');

@@ -3,3 +3,34 @@
     background-color:#cfeffa;
     border-left: 10px solid #071657;
 }
+
+/* Button style */
+.btn {
+    border-radius: 50vh;
+    height: 51px;
+    width: 192px;
+}
+.btn-primary {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+/* Pagination style */
+.page-link {
+    text-align: center;
+    color: #071657;
+    width: 35px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 50% !important;
+    border: none ;
+    margin: 0.5rem;
+}
+.page-link:hover, .page-link:focus {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #fa8557;
+}
