@@ -12,8 +12,8 @@ class BuyerController extends Controller
     }
 
 
-    public function help()
-    {
-        return view('users.buyers.help');
-    }
-}
+//     public function help()
+//     {
+//         return view('users.buyers.help');
+//     }
+// }
