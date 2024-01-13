@@ -3,11 +3,9 @@
 @section('title','productslist')
 
 @section('content')
-    <div class="pb-2">
-        <h2>Products List</h2>
-    </div>
+    <h2 class="ps-5">Products List</h2>
 
-    <table class="table table-hover border align-middle">
+    <table class="table table-hover text-center align-middle">
         <thead class="table-secondary text-uppercase">
             <tr>
                 <th>id</th>
@@ -48,4 +46,22 @@
             @endforelse --}}
         </tbody>
     </table>
+    {{-- paginate(10) image --}}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link hover" href="#">2</a></li>
+            <li class="page-item"><a class="page-link focus" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link page-arrow" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 @endsection
