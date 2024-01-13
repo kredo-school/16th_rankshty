@@ -13,6 +13,6 @@ class BuyerController extends Controller
 
     public function help()
     {
-        return view('users.buyers.help');
+        return view('users.buyers.helppage');
     }
 }
