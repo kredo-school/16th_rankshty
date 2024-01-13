@@ -2,7 +2,7 @@
     {{-- Buyer Sidebar --}}
     @if (request()->is('buyer/*'))
         <div class="list-group">
-            <span class="list-group-item">
+            <span class="list-group-item disabled">
                 <h3>Buyer Navigation</h3>
             </span>
             <a href="#" class="list-group-item">
@@ -24,7 +24,7 @@
         {{-- Seller Sidebar --}}
     @elseif (request()->is('Seller/*'))
         <div class="list-group">
-            <span class="list-group-item">
+            <span class="list-group-item  disabled">
                 <h3>Seller Navigation</h3>
             </span>
             <a href="#" class="list-group-item">
@@ -52,7 +52,7 @@
         {{-- Admin Sidebar --}}
     @elseif (request()->is('admin/*'))
         <div class="list-group">
-            <span class="list-group-item">
+            <span class="list-group-item  disabled">
                 <h3>Admin Navigation</h3>
             </span>
             <a href="#" class="list-group-item">

@@ -1,5 +1,4 @@
-/* Sidebar Navigation */
-.list-group-item:not(:first-child):hover {
+.list-group-item:hover {
     cursor: pointer;
     background-color:#cfeffa;
     border-left: 10px solid #071657;
