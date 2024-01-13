@@ -33,4 +33,8 @@ class HomeController extends Controller
     public function productslist(){
         return view('seller.productslist');
     }
+
+    public function draftlist(){
+        return view('seller.draftlist');
+    }
 }

@@ -19,6 +19,8 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/buyer/favorite', [App\Http\Controllers\HomeController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/seller/productslist', [App\Http\Controllers\HomeController::class, 'productslist'])->name('seller.productslist');
+Route::get('/seller/draftlist', [App\Http\Controllers\HomeController::class, 'draftlist'])->name('seller.draftlist');
+
 // ↑ need change for byer or seller
 
 // Route::group(['middleware' => 'auth'],function(){
