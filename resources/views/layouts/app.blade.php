@@ -90,7 +90,9 @@
                     <div class="row justify-content-center">
 
                         {{-- Sidebar --}}
+                        {{-- @auth --}}
                         @include('common.sidebar')
+                        {{-- @endauth --}}
 
                         {{-- Content --}}
                         <div class="col-9">

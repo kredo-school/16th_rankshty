@@ -16,17 +16,9 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function(){
-//     //User Management
-//     Route::get('/usermanagement', [UsersController::class, 'index'])->name('users');
-// });
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Notifications
 Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
