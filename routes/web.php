@@ -25,4 +25,4 @@ Route::get('admin/notification', [NotificationsController::class, 'index'])->nam
 //User Management
 Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
 //FollowerFolloingList
-Route::get('admin/followerfollwinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
+Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');

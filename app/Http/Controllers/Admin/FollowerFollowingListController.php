@@ -11,7 +11,7 @@ class FollowerFollowingListController extends Controller
 
     public function index()
     {
-        return view('admin.followerfollwinglist');
+        return view('admin.followerfollowinglist');
     }
 
 
