@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
+use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
 //User Management
 Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
+//FollowerFolloingList
+Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
