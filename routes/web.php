@@ -28,6 +28,11 @@ Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.in
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Buyer Routes
+//FollowBlock
+Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('followblock');
+
+//Admin Routes
 //Notifications
 Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
 //User Management

@@ -1,7 +1,11 @@
-.list-group-item:hover {
+/* SideBar and Tab Style */
+.list-group-item:hover, .nav-link:hover, .nav-link.active {
     cursor: pointer;
     background-color:#cfeffa;
     border-left: 10px solid #071657;
+}
+.nav-item a:link, .nav-item a:visited, .nav-item a:hover, .nav-item a:active {
+    color: #000000;
 }
 
 /* Button style */
@@ -11,6 +15,16 @@
     width: 192px;
 }
 .btn-primary {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
     border-color: #071657;
     background-color: #071657;
     color: #ffff;
@@ -33,4 +47,4 @@
     font-weight: 600;
     font-size: 14px;
     background-color: #fa8557;
-}
+} 
