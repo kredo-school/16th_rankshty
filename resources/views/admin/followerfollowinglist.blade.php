@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Admin: Follower/Folloing List')
+@section('title', 'Admin: Follower/Following List')
 
 @section('content')
     <div class="justify-content-center rounded border" style="min-width:696px">
-        <h1 class="ps-3 mt-2">Follower/Folloing List</h1>
+        <h1 class="ps-3 mt-2">Follower/Following List</h1>
         <table class="table table-hover align-migddle bg-white text-secondary text-center">
             <thead class="small table-secondary text-secondary">
                 <tr>
