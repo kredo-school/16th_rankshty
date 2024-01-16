@@ -90,7 +90,7 @@
                         <thead class="small table-secondary text-secondary">
                             <tr>
                                 <th>USER ID</th>
-                                <th>USER TAROU</th>
+                                <th>USER NAME</th>
                                 <th></th>
                             </tr>
                         </thead>
