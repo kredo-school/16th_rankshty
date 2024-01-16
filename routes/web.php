@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\NotificationsController;
+use App\Http\Controllers\Admin\FollowerFollowingListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +20,17 @@ use App\Http\Controllers\BuyerController;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
     
 
 Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.index');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Notifications
+Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
+//User Management
+Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
+//FollowerFolloingList
+Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
