@@ -10,7 +10,7 @@
               <p>(219) 555-0114 <span class="grayed-out">or</span> Proxy@gmail.com</p>           
           </div>
           <div class="col-6 text-right">
-              <a href="#">Helps</a>
+              <a href="#" class="text-decoration-none text-white">Helps</a>
           </div>
       </div>
       <hr>
@@ -19,12 +19,9 @@
           <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
         </div>
         <div class="col-3">
-          <img src="http://127.0.0.1:8000/images/visa.png" alt="">
-          <img src="http://127.0.0.1:8000/images/mastercard.png" alt="">
-          <img src="http://127.0.0.1:8000/images/SecurePayment.png" alt="">
-
-          
-
+          <img src="{{ asset('images/visa.png') }}" alt="Visa">
+          <img src="{{ asset('images/mastercard.png') }}" alt="Mastercard">
+          <img src="{{ asset('images/SecurePayment.png') }}" alt="SecurePayment">
         </div>
       </div>
   </div>
