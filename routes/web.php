@@ -26,3 +26,4 @@ Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
 Route::get('/buyers/service', [BuyerController::class, 'service'])->name('service');
 Route::get('/buyers/help', [BuyerController::class, 'help'])->name('help');
 Route::get('/buyers/contact', [BuyerController::class, 'contact'])->name('contact');
+Route::get('/sellers/review', [SellerController::class, 'review'])->name('review');
