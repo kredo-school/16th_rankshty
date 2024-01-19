@@ -25,12 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function favorite(){
-        return view('buyer.favorite');
-    }
-
-    public function productslist(){
-        return view('seller.productslist');
-    }
 }

@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Admin\NotificationsController;
+use App\Http\Controllers\Admin\FollowerFollowingListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,39 +21,23 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/buyer/favorite', [App\Http\Controllers\HomeController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/seller/productslist', [App\Http\Controllers\HomeController::class, 'productslist'])->name('seller.productslist');
-// ↑ need change for byer or seller
 
-// Route::group(['middleware' => 'auth'],function(){
-//     Route::get('/', [HomeController::class, 'index'])->name('index');
 
-// });
+Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.index');
 
 
 
-// Route::group(['middleware' => 'auth'],function(){
-//     Route::get('/', [HomeController::class, 'index'])->name('index');
-//     # Post
-//     Route::get('/post/create', [PostController::class,'create'])->name('post.create');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//     #Admin
-//     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'],function(){
-//         # Admin Users
-//         //route('admin.users) is the same with admin/users
-//         Route::get('/users',[UsersController::class,'index'])->name('users');
-//         Route::delete('/users/{id}/deactivate',[UsersController::class,'deactivate'])->name('users.deactivate');
-//         # Admin Posts
-//         Route::get('/posts',[PostsController::class,'index'])->name('posts'); //admin.posts
-//         Route::delete('/posts/{id}/hide',[PostsController::class,'hide'])->name('posts.hide');
-//         # Admin Categories
-//         Route::get('/categories',[CategoriesController::class,'index'])->name('categories'); //admin.categories
-//         Route::delete('/categories/{id}/destroy',[CategoriesController::class,'destroy'])->name('categories.destroy');
-//     });
+//Buyer Routes
+//FollowBlock
+Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('followblock');
 
-//     Route::group(['middleware' => 'auth'], function(){
-//         Route::get('/',[HomeController::class, 'index'])->name('index');
-//         Route::get('/people',[HomeController::class, 'search'])->name('search');
-//     });
-// });
+//Admin Routes
+//Notifications
+Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
+//User Management
+Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
+//FollowerFolloingList
+Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
