@@ -8,6 +8,6 @@ class SellerController extends Controller
 {
     public function guide()
     {
-        return view('users.sellers.guidepage');
+        return view('users.sellers.guide_page');
     }
 }
