@@ -132,7 +132,7 @@
                 </div>
                 <div class="col-6">
                     <div class="text-center">
-                        <img src="{{ asset('assets/pexels-leeloo-thefirst-5428830.jpg') }}"  style="width: 90%; height: 300px: " alt="picture question-mark">
+                        <img src="{{ asset('assets/pexels-leeloo-thefirst-5428830.jpg') }}" style="width: 90%; height: 300px;" alt="picture question-mark">
                     </div>
                 </div>
             </div>
