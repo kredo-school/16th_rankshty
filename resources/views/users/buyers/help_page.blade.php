@@ -13,17 +13,17 @@
                         Inquiry & FAQs
                     </h1>
                 </div>
-                <div class="col-6 list-group">
+                <div class="col-6">
                     <div class="accordion mt-3" id="questionOne">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" style="background-color: #6c757d1f;"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    data-bs-toggle="collapseOne" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
                                     Question No.1
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#questionOne">
                                 <div class="accordion-body">
                                     <strong>This is the first item's accordion body.</strong> It is shown by default,
@@ -46,7 +46,7 @@
                                     Question No.2
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#questionTwo">
                                 <div class="accordion-body">
                                     <strong>This is the second item's accordion body.</strong> It is shown by default,
@@ -69,7 +69,7 @@
                                     Question No.3
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#questionThree">
                                 <div class="accordion-body">
                                     <strong>This is the second item's accordion body.</strong> It is shown by default,
@@ -92,7 +92,7 @@
                                     Question No.4
                                 </button>
                             </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#questionFour">
                                 <div class="accordion-body">
                                     <strong>This is the second item's accordion body.</strong> It is shown by default,
@@ -115,7 +115,7 @@
                                     Question No.5
                                 </button>
                             </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive"
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#questionFive">
                                 <div class="accordion-body">
                                     <strong>This is the second item's accordion body.</strong> It is shown by default,
