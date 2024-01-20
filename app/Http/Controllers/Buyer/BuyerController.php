@@ -13,8 +13,9 @@ class BuyerController extends Controller
         return view('buyers.index');
     }
 
-    public function reviewPage()
+    public function service()
     {
-        return view('buyers.reviewpage');
+        return view('users.buyers.terms_of_service');
     }
+
 }
