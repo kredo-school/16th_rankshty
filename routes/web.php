@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
 
 Route::get('/buyer/index', [BuyerController::class, 'index'])->name('index');
 

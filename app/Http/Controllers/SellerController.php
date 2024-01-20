@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class SellerController extends Controller
 {
-    public function index()
+
+    public function guide()
     {
-        return view('sellers.index');
+        return view('users.sellers.guide_page');
+
     }
 }
