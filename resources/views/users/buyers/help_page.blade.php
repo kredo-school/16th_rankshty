@@ -1,5 +1,7 @@
 @extends('layouts.app')
+
 @section('title', 'Help page')
+
 @section('content')
     <form action="#" method="get">
         @csrf
@@ -75,7 +77,7 @@
                                     element. These classes control the overall appearance, as well as the showing and
                                     hiding via CSS transitions. You can modify any of this with custom CSS or
                                     overriding our default variables. It's also worth noting that just about any HTML
-                                    can go within the though the transition does limit
+                                    can go within the  though the transition does limit
                                     overflow.
                                 </div>
                             </div>
