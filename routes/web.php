@@ -1,10 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\SellerController;
 use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
+
 
 
 /*
@@ -19,6 +22,10 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 */
 
 Auth::routes();
+
+
+Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
+
 
     
 
@@ -39,3 +46,4 @@ Route::get('admin/notification', [NotificationsController::class, 'index'])->nam
 Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
 //FollowerFolloingList
 Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
+
