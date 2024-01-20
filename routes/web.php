@@ -22,6 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
-Route::get('/buyers/service', [BuyerController::class, 'service'])->name('service');
+
 Route::get('/buyers/help', [BuyerController::class, 'help'])->name('help');
