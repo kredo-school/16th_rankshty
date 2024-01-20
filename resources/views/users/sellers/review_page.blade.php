@@ -11,7 +11,7 @@
             <h1>Customer reviews</h1>
         </div>
         <div class="col-4">
-            <p><span class="star5_rating" data-rate="5"></span> 星5</p>
+            <p><span class="star5_rating" data-rate="5"></span> 5</p>
         </div>
         
         <div class="col-2 bg-primary"></div>
