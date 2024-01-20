@@ -30,7 +30,7 @@
     {{-- Footer.js --}}
       <script src="{{ asset('js/footer.js') }}" defer></script>
 
-    
+
 </head>
 <body>
 
