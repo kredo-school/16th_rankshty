@@ -101,46 +101,34 @@
                 </div>
             </nav>
 
-            <main class="py-5">
-                <div class="container">
+            <main>
+                <div
+                    @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
+                    @else class="py-5 container" @endif>
                     <div class="row justify-content-center">
 
                         {{-- Sidebar --}}
-                        {{-- @auth --}}
-                        @include('common.sidebar')
-                        {{-- @endauth --}}
+                        @auth
+                            @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
+                                @include('common.sidebar')
+                            @endif
+                        @endauth
 
                         {{-- Content --}}
                         <div class="col-9">
                             @yield('content')
                         </div>
                     </div>
-                    </nav>
-
-                    <main>
-                        <div
-                            @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
-                    @else class="py-5 container" @endif>
-                            <div class="row justify-content-center">
-
-                                {{-- Sidebar --}}
-                                @auth
-                                    @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
-                                        @include('common.sidebar')
-                                    @endif
-                                @endauth
-
-                                {{-- Content --}}
-                                <div class="col-9">
-                                    @yield('content')
-                                </div>
-                            </div>
-                        </div>
-                    </main>
                 </div>
-                @include('common.footer')
-                {{-- Specific page js --}}
-                @stack('js')
+            </main>
+        </div>
+        @include('common.footer')
+
+        {{-- Scripts --}}
+        {{-- js for all pages --}}
+        <script src="{{ asset('js/footer.js') }}"></script>
+        {{-- Specific page js --}}
+        @stack('js')
 
     </body>
 

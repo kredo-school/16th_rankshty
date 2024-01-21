@@ -59,3 +59,26 @@
 .fa-star {
     color: #fa8557;
 }
+
+/* Footer style */
+.common-button {
+    background-color:#071657;
+    color: white;
+}
+.footer-container {
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+.navy-bg {
+    background-color: #071657; 
+}
+.grayed-out {
+    color: rgb(169, 169, 169); 
+}
+
+.custom-list-group .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
