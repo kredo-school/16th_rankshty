@@ -10,10 +10,12 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+
         {{-- Fontawesome --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -31,7 +33,15 @@
 
     </head>
 
+
+    {{-- Footer.js --}}
+    <script src="{{ asset('js/footer.js') }}" defer></script>
+
+
+    </head>
+
     <body>
+
         <div id="app">
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
@@ -75,7 +85,7 @@
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
 
@@ -91,29 +101,46 @@
                 </div>
             </nav>
 
-            <main>
-                <div
-                    @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
-                    @else class="py-5 container" @endif>
+            <main class="py-5">
+                <div class="container">
                     <div class="row justify-content-center">
 
                         {{-- Sidebar --}}
-                        @auth
-                            @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
-                                @include('common.sidebar')
-                            @endif
-                        @endauth
+                        {{-- @auth --}}
+                        @include('common.sidebar')
+                        {{-- @endauth --}}
 
                         {{-- Content --}}
                         <div class="col-9">
                             @yield('content')
                         </div>
                     </div>
+                    </nav>
+
+                    <main>
+                        <div
+                            @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
+                    @else class="py-5 container" @endif>
+                            <div class="row justify-content-center">
+
+                                {{-- Sidebar --}}
+                                @auth
+                                    @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
+                                        @include('common.sidebar')
+                                    @endif
+                                @endauth
+
+                                {{-- Content --}}
+                                <div class="col-9">
+                                    @yield('content')
+                                </div>
+                            </div>
+                        </div>
+                    </main>
                 </div>
-            </main>
-        </div>
-        {{-- Specific page js --}}
-        @stack('js')
+                @include('common.footer')
+                {{-- Specific page js --}}
+                @stack('js')
 
     </body>
 
