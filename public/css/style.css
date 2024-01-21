@@ -1,10 +1,16 @@
-/* SideBar and Tab Style */
-.list-group-item:hover, .nav-link:hover, .nav-link.active {
+/* These style is used by all pages */
+
+/* SideBar and Tab of followblock Style */
+.sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active,
+.followblock .list-group-item:hover, .followblock .nav-link:hover, .followblock .nav-link.active {
     cursor: pointer;
     background-color:#cfeffa;
     border-left: 10px solid #071657;
 }
-.nav-item a:link, .nav-item a:visited, .nav-item a:hover, .nav-item a:active {
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
     color: #000000;
 }
 
@@ -48,3 +54,8 @@
     font-size: 14px;
     background-color: #fa8557;
 } 
+
+/* Star Rating style */
+.fa-star {
+    color: #fa8557;
+}

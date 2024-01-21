@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class="col-3 sidebar">
     {{-- Buyer Sidebar --}}
     @if (request()->is('buyer/*'))
         <div class="list-group">

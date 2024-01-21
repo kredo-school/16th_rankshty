@@ -27,15 +27,16 @@ Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.in
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Buyer Routes
 //FollowBlock
-Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('followblock');
+Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
 //Admin Routes
 //Notifications
-Route::get('admin/notification', [NotificationsController::class, 'index'])->name('notifications');
+Route::get('admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
 //User Management
-Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('users');
+Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList
-Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('followerfollowinglist');
+Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');

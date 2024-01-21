@@ -20,9 +20,15 @@
 
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        {{-- JQuery --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
         <!-- Styles -->
+        {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {{-- Specific page css --}}
+        @stack('css')
+
     </head>
 
     <body>
@@ -69,7 +75,7 @@
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
 
@@ -85,13 +91,17 @@
                 </div>
             </nav>
 
-            <main class="py-5">
-                <div class="container">
+            <main>
+                <div
+                    @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
+                    @else class="py-5 container" @endif>
                     <div class="row justify-content-center">
 
                         {{-- Sidebar --}}
                         @auth
-                            @include('common.sidebar')
+                            @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
+                                @include('common.sidebar')
+                            @endif
                         @endauth
 
                         {{-- Content --}}
@@ -102,6 +112,9 @@
                 </div>
             </main>
         </div>
+        {{-- Specific page js --}}
+        @stack('js')
+
     </body>
 
 </html>
