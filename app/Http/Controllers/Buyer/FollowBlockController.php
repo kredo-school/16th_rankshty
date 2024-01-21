@@ -10,6 +10,6 @@ class FollowBlockController extends Controller
     //
     function index()
     {
-        return view('buyer.followblock');
+        return view('buyers.followblock');
     }
 }

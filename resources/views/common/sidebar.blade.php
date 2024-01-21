@@ -22,7 +22,7 @@
             </a>
         </div>
         {{-- Seller Sidebar --}}
-    @elseif (request()->is('Seller/*'))
+    @elseif (request()->is('seller/*'))
         <div class="list-group">
             <span class="list-group-item  disabled">
                 <h3>Seller Navigation</h3>

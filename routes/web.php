@@ -30,29 +30,25 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 //Seller Routes
-Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('seller.guide');
-Route::get('/buyers/service', [BuyerController::class, 'service'])->name('seller.service');
+Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
-Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.index');
-
+Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
 //FollowBlock
-Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
 
 //Admin Routes
+//Content Management
 Route::get('/admin/contentmanagement', [AdminController::class, 'contentManagement'])->name('admin.contentmanagement');
 Route::get('/admin/contentmanagement/details', [AdminController::class, 'contentManagementDetails'])->name('admin.contentmanagementdetails');
-
 //Notifications
-Route::get('admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
-
+Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
 //User Management
-Route::get('admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
-
+Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList
-Route::get('admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
+Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 
