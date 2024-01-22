@@ -9,27 +9,48 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    {{-- Fontawesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts -->
+      <link rel="dns-prefetch" href="//fonts.bunny.net">
+      <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+      @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-   {{-- Stylesheet --}}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- Styles -->
+      <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    {{-- Footer.js --}}
+      <script src="{{ asset('js/footer.js') }}" defer></script>
 </head>
 <body>
+
     <div id="app">
         {{-- navbar --}}
         @include('common.navbar')
 
-        <main class="py-4">
-            @yield('content')
+        <main class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    {{-- Sidebar --}}
+                    {{-- @auth --}}
+                    @include('common.sidebar')
+                    {{-- @endauth --}}
+
+                    {{-- Content --}}
+                    <div class="col-9">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+    @include('common.footer')
+
 </body>
 </html>
