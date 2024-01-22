@@ -36,7 +36,7 @@
                         <button type="button" class="btn btn-white text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
                             DELETE
                         </button>
-                        @include('seller.modal.deleteproduct')
+                        @include('sellers.modal.deleteproduct')
                     </td>
                 </tr>
             {{-- @empty

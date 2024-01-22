@@ -40,6 +40,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
 Route::get('/buyers/service', [BuyerController::class, 'service'])->name('service');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('myPage');
+Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('productslist');
 
 
 //Buyer Routes
