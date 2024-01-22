@@ -23,7 +23,6 @@
 
     <!-- Styles -->
       <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-      <link rel="stylesheet" href="{{ asset('css/seller/style.css') }}">
 
     {{-- Footer.js --}}
       <script src="{{ asset('js/footer.js') }}" defer></script>
