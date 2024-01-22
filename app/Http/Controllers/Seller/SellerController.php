@@ -18,4 +18,9 @@ class SellerController extends Controller
     {
         return view('sellers.index');
     }
+
+    public function draftlist()
+    {
+        return view('sellers.draftlist');
+    }
 }

@@ -34,7 +34,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
 Route::get('/buyers/service', [BuyerController::class, 'service'])->name('service');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('myPage');
-
+Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('draftlist');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('myPage');
