@@ -13,15 +13,15 @@
             {{-- Search Bar --}}
             <ul class="navbar-nav ms-auto search-position d-flex align-items-center">
                 <form action="#" class="d-flex">
-                    <input type="search" name="search" class="form-control form-control-sm" placeholder="Search">
-                    <button type="submit" class="btn btn-sm text-light" style="background: #071657">Search</button>
+                    <input type="search" name="search" class="form-control form-control-sm me-2" placeholder="Search">
+                    <button type="submit" class="btn btn-primary btn-search text-light">Search</button>
                 </form>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                @guest
+                {{-- @guest
                     @if (Route::has('login'))
                         <li class="nav-item item-position">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -33,9 +33,15 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                @else
+                @else --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-regular fa-bell custom-bell me-2"></i></a>
+                        <a class="nav-link position-relative" href="#">
+                            <i class="fa-regular fa-bell custom-bell me-2"></i>
+                            <span class="badge rounded-pill bell-badge">
+                                10
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
                     </li>
 
                     <li class="nav-item">
@@ -44,14 +50,13 @@
 
                     <li class="nav-item me-3">
                         <a class="nav-link" href="#">
-                            {{-- @if () if cart hold product --}}
-                                <div class="bag-group me-2">
-                                    <img src="{{ asset('images/icon-bag.svg') }}" alt="bag" class="custom-bag">
-                                    <i class="fa-solid fa-circle fa-lg orange-badge"></i>
-                                </div>
-                            {{-- @else
-                                <img src="{{ asset('images/icon-bag.svg') }}" alt="bag" class="bag" style="margin-right: 10px;">
-                            @endif --}}
+                            <div class="bag-group me-2">
+                                <img src="{{ asset('images/icon-bag.svg') }}" alt="bag" class="custom-bag">
+                                <span class="badge rounded-pill orange-badge">
+                                    5
+                                    <span class="visually-hidden">no item</span>
+                                </span>
+                            </div>
                             <div class="nav-text small">
                                 <span>Shopping cart</span>
                                 <span class="fw-bold">$ 31.55</span>
@@ -61,7 +66,7 @@
 
                     <li class="nav-item dropdown item-position">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->username }}
+                            {{-- {{ Auth::user()->username }} --}}username
                         </a>
 
                         <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
@@ -95,14 +100,14 @@
                             </form>
                         </div>
                     </li>
-                @endguest
+                {{-- @endguest --}}
             </ul>
         </div>
     </div>
 </nav>
 
 {{-- Navbar --}}
-<nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-line p-0" style="background:#071657">
+<nav class="navbar navbar-expand-md navbar-dark shadow-sm navbar-line p-1" style="background:#071657">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>

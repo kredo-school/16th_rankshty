@@ -6,7 +6,7 @@
     <div class="justify-content-center rounded border">
         <h1 class="ps-3 mt-1">Follow/Block List</h1>
 
-        <div class="d-flex">
+        <div class="d-flex followblock">
 
             {{-- followblock Tab --}}
             <ul class="nav flex-column col-2">
