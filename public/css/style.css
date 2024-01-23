@@ -1,0 +1,84 @@
+/* These style is used by all pages */
+
+/* SideBar and Tab of followblock Style */
+.sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active,
+.followblock .list-group-item:hover, .followblock .nav-link:hover, .followblock .nav-link.active {
+    cursor: pointer;
+    background-color:#cfeffa;
+    border-left: 10px solid #071657;
+}
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
+    color: #000000;
+}
+
+/* Button style */
+.btn {
+    border-radius: 50vh;
+    height: 51px;
+    width: 192px;
+}
+.btn-primary {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+/* Pagination style */
+.page-link {
+    text-align: center;
+    color: #071657;
+    width: 35px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 50% !important;
+    border: none ;
+    margin: 0.5rem;
+}
+.page-link:hover, .page-link:focus {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #fa8557;
+} 
+
+/* Star Rating style */
+.fa-star {
+    color: #fa8557;
+}
+
+/* Footer style */
+.common-button {
+    background-color:#071657;
+    color: white;
+}
+.footer-container {
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+.navy-bg {
+    background-color: #071657; 
+}
+.grayed-out {
+    color: rgb(169, 169, 169); 
+}
+
+.custom-list-group .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

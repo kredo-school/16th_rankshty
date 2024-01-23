@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class="col-3 sidebar">
     {{-- Buyer Sidebar --}}
     @if (request()->is('buyer/*'))
         <div class="list-group">
@@ -22,7 +22,7 @@
             </a>
         </div>
         {{-- Seller Sidebar --}}
-    @elseif (request()->is('Seller/*'))
+    @elseif (request()->is('seller/*'))
         <div class="list-group">
             <span class="list-group-item  disabled">
                 <h3>Seller Navigation</h3>
