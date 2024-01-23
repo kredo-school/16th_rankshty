@@ -1,8 +1,11 @@
 @extends('layouts.app')
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @endpush
 @push('js')
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"></script>
     <script src="{{ asset('js/home.js') }}"></script>
 @endpush
 

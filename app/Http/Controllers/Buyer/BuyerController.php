@@ -18,7 +18,7 @@ class BuyerController extends Controller
         return view('buyers.reviewpage');
     }
 
-        public function service()
+    public function service()
     {
         return view('users.buyers.terms_of_service');
     }

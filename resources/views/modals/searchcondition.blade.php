@@ -1,13 +1,7 @@
-<style>
-    .sarchcondition {
-        max-width: 90%;
-    }
-</style>
-
 <!-- Modal -->
 <div class="modal fade " id="searchConditionModal" tabindex="-1" aria-labelledby="searchConditionModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog sarchcondition" style="width: 1500px">
+    <div class="modal-dialog modal-dialog-scrollable sarchcondition" style="width: 1500px">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="searchConditionModalLabel">Serach Conditions</h5>
@@ -15,6 +9,7 @@
             </div>
             <div class="modal-body">
                 <div class="d-flex justify-content-around">
+                    {{-- Main Categories --}}
                     <div>
                         <h2>Main Categories</h2>
                         <div class="form-check">
@@ -53,6 +48,7 @@
                             </label>
                         </div>
                     </div>
+                    {{-- Sub Categories --}}
                     <div>
                         <h2>Sub Categories</h2>
                         <div class="form-check">
@@ -90,39 +86,162 @@
                                 Sub Categories 5
                             </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault6">
+                            <label class="form-check-label" for="subFlexRadioDefault6">
+                                Sub Categories 6
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault7">
+                            <label class="form-check-label" for="subFlexRadioDefault7">
+                                Sub Categories 7
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault8">
+                            <label class="form-check-label" for="subFlexRadioDefault8">
+                                Sub Categories 8
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault9">
+                            <label class="form-check-label" for="subFlexRadioDefault9">
+                                Sub Categories 9
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault10">
+                            <label class="form-check-label" for="subFlexRadioDefault10">
+                                Sub Categories 10
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault11">
+                            <label class="form-check-label" for="subFlexRadioDefault11">
+                                Sub Categories 11
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subFlexRadioDefault"
+                                id="subFlexRadioDefault12">
+                            <label class="form-check-label" for="subFlexRadioDefault12">
+                                Sub Categories 12
+                            </label>
+                        </div>
                     </div>
+                    {{-- Shippement Fee and Price --}}
                     <div>
-                        <h2>Shippment fee</h2>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
-                                id="ShppmentFlexRadioDefault1">
-                            <label class="form-check-label" for="ShppmentFlexRadioDefault1">
-                                All
-                            </label>
+                        <div class="border-bottom pb-3">
+                            <h2>Shippment fee</h2>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
+                                    id="ShppmentFlexRadioDefault1">
+                                <label class="form-check-label" for="ShppmentFlexRadioDefault1">
+                                    All
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
+                                    id="ShppmentFlexRadioDefault2" checked>
+                                <label class="form-check-label" for="ShppmentFlexRadioDefault2">
+                                    Free Shipping
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
-                                id="ShppmentFlexRadioDefault2" checked>
-                            <label class="form-check-label" for="ShppmentFlexRadioDefault2">
-                                Free Shipping
-                            </label>
+                        <div class="mt-2">
+                            <h2>Price</h2>
+                            <div class="selector">
+                                <div class="price-slider">
+                                    <div id="slider-range"
+                                        class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                        <span tabindex="0"
+                                            class="ui-slider-handle ui-corner-all ui-state-default"></span><span
+                                            tabindex="3500"
+                                            class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                    </div>
+                                    <span>Price:</span>
+                                    <span id="min-price" data-currency="¥" class="slider-price">0</span> <span
+                                        class="seperator">-</span> <span id="max-price" data-currency="¥"
+                                        data-max="3500" class="slider-price">3500 +</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    {{-- Rating --}}
                     <div>
                         <h2>Rating</h2>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
-                                id="ShppmentFlexRadioDefault1">
-                            <label class="form-check-label" for="ShppmentFlexRadioDefault1">
-                                All
-                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="ratingCheck5">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <label class="form-check-label" for="ratingCheck5">
+                                    5.0
+                                </label>
+                            </div>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="ShppmentFlexRadioDefault"
-                                id="ShppmentFlexRadioDefault2" checked>
-                            <label class="form-check-label" for="ShppmentFlexRadioDefault2">
-                                Free Shipping
-                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="ratingCheck4">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <label class="form-check-label" for="ratingCheck4">
+                                    4.0 % up
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="ratingCheck3">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <label class="form-check-label" for="ratingCheck3">
+                                    3.0 % up
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="ratingCheck2">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <label class="form-check-label" for="ratingCheck2">
+                                    2.0 % up
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="fratingCheck1">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <label class="form-check-label" for="ratingCheck1">
+                                    1.0 % up
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
