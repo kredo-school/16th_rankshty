@@ -24,7 +24,7 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 Auth::routes();
 
 
-Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
+Route::get('/seller/guide', [SellerController::class, 'guide'])->name('guide');
 
 
     
