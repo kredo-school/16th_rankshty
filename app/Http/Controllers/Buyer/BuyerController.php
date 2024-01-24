@@ -18,4 +18,5 @@ class BuyerController extends Controller
         return view('users.buyer.terms_of_service');
     }
 
+
 }
