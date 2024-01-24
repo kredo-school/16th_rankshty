@@ -22,4 +22,9 @@ class BuyerController extends Controller
     {
         return view('users.buyers.terms_of_service');
     }
+
+    public function contact()
+    {
+        return view('users.buyer.contact_page');
+    }
 }
