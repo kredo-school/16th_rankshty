@@ -2,6 +2,11 @@
     max-width: 90%;
 }
 
+.form-check-input:checked {
+    background-color: #fa8557 !important;
+    border-color: #fa8557 !important;
+}
+
 .sarchcondition .modal-footer {
     justify-content: center;
 }
@@ -10,7 +15,6 @@
     background-color: #fa8557 !important;
     border-color: #fa8557 !important;
 }
-
 
 .selector {
     position: relative;

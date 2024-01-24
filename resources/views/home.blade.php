@@ -20,11 +20,6 @@ $iconimage =
 
 @section('content')
     <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#searchConditionModal">
-            Click Here
-        </button>
-        @include('modals.searchcondition')
         <div class="row justify-content-center">
 
             {{-- Welcome Message Area with blue box --}}
