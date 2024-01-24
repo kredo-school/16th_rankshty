@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'productslist')
+@section('title', 'Seller: Products list')
 
 @section('content')
     <div class="justify-content-center rounded border" style="min-width:696px">
