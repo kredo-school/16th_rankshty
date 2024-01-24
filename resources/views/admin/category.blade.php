@@ -22,15 +22,10 @@
                     <td>image</td>
                     <td>fashion</td>
                     <td>500</td>
-                    <td>tops</td>
-                    <td>delete</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>image</td>
-                    <td>PCs</td>
-                    <td>500</td>
-                    <td>laptop</td>
+                    <td>
+                        <button class="btn btn-link text-black text-decoration-none  p-0 btn-modal" data-bs-target="#subcategoryModalToggle" data-bs-toggle="modal">View</button>
+                        @include('admin.modal.subcategory')
+                    </td>
                     <td>delete</td>
                 </tr>
             </tbody>
