@@ -8,6 +8,6 @@ class BuyerController extends Controller
 {
     public function contact()
     {
-        return view('users.buyers.contact_page');
+        return view('users.buyer.contact_page');
     }
 }

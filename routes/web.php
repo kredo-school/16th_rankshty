@@ -22,4 +22,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/buyers/contact', [BuyerController::class, 'contact'])->name('contact');
+Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
