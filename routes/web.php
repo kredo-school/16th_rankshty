@@ -32,6 +32,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');

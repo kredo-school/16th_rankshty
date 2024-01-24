@@ -82,3 +82,35 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+.file-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input-container input[type="file"] {
+display: none;
+}
+
+.file-input-container label {
+cursor: pointer;
+padding: 10px 15px;
+background-color: #071657;
+color: #fff;
+border-radius: 5px;
+display: inline-block;
+}
+
+.file-input-container label:hover {
+background-color: #071657;
+}
+
+.file-input-container i {
+margin-right: 5px;
+}
+
+.btn-square{
+    width: 200px;
+    height: 200px;
+}
