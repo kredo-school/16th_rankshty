@@ -66,10 +66,19 @@
                 </li>
 
                 <li class="nav-item dropdown item-position">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle fw-bold" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{-- {{ Auth::user()->username }} --}}username
-                    </a>
+                    @if (isset(Auth::user()->name))
+                        {{-- @if (isset(Auth::user()->username)) --}}
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle fw-bold" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+                    @else
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Singin') }}</a> /
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Singup') }}</a>
+                        </div>
+                    @endif
+
 
                     <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
                         @can('admin')

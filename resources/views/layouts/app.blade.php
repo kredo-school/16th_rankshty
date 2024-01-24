@@ -27,9 +27,15 @@
         <!-- Styles -->
         {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         {{-- Specific page css --}}
         @stack('css')
 
+        {{-- js for all pages --}}
+        {{-- Searchcondition.js --}}
+        <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"></script>
+        <script src="{{ asset('js/searchcondition.js') }}" defer></script>
         {{-- Footer.js --}}
         <script src="{{ asset('js/footer.js') }}" defer></script>
     </head>
