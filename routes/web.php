@@ -23,4 +23,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/buyers/help', [BuyerController::class, 'help'])->name('help');
+Route::get('/buyer/help', [BuyerController::class, 'help'])->name('help');
