@@ -22,4 +22,11 @@ class BuyerController extends Controller
     {
         return view('users.buyers.terms_of_service');
     }
+
+    public function help()
+    {
+        return view('users/buyer/help_page');
+    }
+
+
 }
