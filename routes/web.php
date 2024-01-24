@@ -31,7 +31,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 //Seller Routes
 Route::get('/sellers/guide', [SellerController::class, 'guide'])->name('guide');
-Route::get('/buyer/service', [BuyerController::class, 'service'])->name('service');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('myPage');
 
 
@@ -39,6 +38,7 @@ Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('myPage
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('myPage');
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('reviewPage');
 Route::get('/buyer/my-page', [BuyerController::class, 'index'])->name('buyers.index');
+Route::get('/buyer/service', [BuyerController::class, 'service'])->name('service');
 
 //FollowBlock
 Route::get('buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('followblock');
