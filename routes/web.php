@@ -25,7 +25,6 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 Auth::routes();
 
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -39,6 +38,7 @@ Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.my
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
+
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
