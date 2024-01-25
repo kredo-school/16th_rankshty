@@ -16,4 +16,9 @@ class AdminController extends Controller
     {
         return view('admin.contentmanagementdetails');
     }
+
+    public function complainhandling()
+    {
+        return view('admin.complainhandling');
+    }
 }

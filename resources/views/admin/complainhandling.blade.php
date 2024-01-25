@@ -9,39 +9,29 @@
             <thead class="small table-secondary text-secondary text-uppercase">
                 <tr>
                     <th>id</th>
-                    <th>name</th>
-                    <th>color</th>
-                    <th>size</th>
-                    <th>price</th>
-                    <th>quantity</th>
-                    <th>status</th>
-                    <th></th>
-                    <th></th>
+                    <th>title</th>
+                    <th>product</th>
+                    <th>type</th>
+                    <th>user</th>
+                    <th>date</th>
+                    <th>details</th>
                 </tr>
             </thead>
             <tbody>
-                {{-- @forelse ( $all_products as $product ) --}}
                 <tr>
                     <td>1</td>
-                    <td>iPhone</td>
-                    <td>red</td>
-                    <td>mini</td>
-                    <td>$10.00</td>
-                    <td>200</td>
-                    <td>Published</td>
+                    <td>complaint</td>
+                    <td></td>
+                    <td>report</td>
+                    <td>seller</td>
+                    <td>2021.12.23</td>
                     <td>
                         <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-white text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
-                            DELETE
-                        </button>
-                        @include('sellers.modal.deleteproduct')
                     </td>
                 </tr>
                 {{-- @empty
                     <div class="bg-secondary-subtle">
-                        <p>You don't have a product.</p>
+                        <p>No complaints.</p>
                     </div>
                 @endforelse --}}
             </tbody>
