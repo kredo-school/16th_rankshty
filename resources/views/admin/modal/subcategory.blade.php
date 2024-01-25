@@ -7,31 +7,42 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col">Tops</div>
+                    <div class="col">Tops (300)</div>
                     <div class="col">
                         <button class="btn btn-link p-0" style="color: gray" data-bs-target="#subcategoryModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-xmark-circle"></i></button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">Bottoms</div>
+                    <div class="col">Bottoms(100)</div>
                     <div class="col">
                         <button class="btn btn-link p-0" style="color: gray" data-bs-target="#subcategoryModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-xmark-circle"></i></button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">Inner</div>
+                    <div class="col">Inner(50)</div>
                     <div class="col">
                         <button class="btn btn-link p-0" style="color: gray" data-bs-target="#subcategoryModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-xmark-circle"></i></button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">Jacket</div>
+                    <div class="col">Jacket(50)</div>
                     <div class="col">
                         <button class="btn btn-link p-0" style="color: gray" data-bs-target="#subcategoryModalToggle2" data-bs-toggle="modal"><i class="fa-solid fa-xmark-circle"></i></button>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
+                <form action="#" method="post">
+                    @csrf
+                    <div class="row mt-5">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control mb-2" placeholder="Add Subcategory name">
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
