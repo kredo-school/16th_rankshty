@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -25,10 +26,12 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 Auth::routes();
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
