@@ -9,6 +9,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Buyer\FollowBlockController;
+
 
 
 
@@ -39,7 +42,7 @@ Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.my
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
 //FollowBlock
-Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
 
 
 //Admin Routes
@@ -52,4 +55,6 @@ Route::get('/admin/notification', [NotificationsController::class, 'index'])->na
 Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
+//Dashboard
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
