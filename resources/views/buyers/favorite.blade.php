@@ -8,7 +8,7 @@
     </div>
 
     <table class="table table-hover border align-middle">
-        <thead>
+        <thead class="text-uppercase">
             <tr>
                 <th>product</th>
                 <th>price</th>
