@@ -37,6 +37,8 @@ Route::get('/seller/productslist', [SellerController::class, 'productsList'])->n
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
