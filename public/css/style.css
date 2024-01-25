@@ -1,5 +1,70 @@
 /* These style is used by all pages */
 
+/* Header & Navbar */
+.logo{
+    height: 4.5rem;
+    position: absolute;
+    top:1px;
+}
+
+.search-position{
+    position: relative;
+    top:6px;
+}
+
+.item-position{
+    position: relative;
+    top: 15px;
+}
+
+.custom-bell{
+    position: relative;
+    top: 18px;
+    left: -40px;
+    transform: scale(1.7);
+    color: #071657;
+}
+
+.bell-badge {
+    position: absolute;
+    top: 20px;
+    left:-26px;
+    background-color: #FA8557;
+}
+
+.custom-heart{
+    position: relative;
+    top: 18px;
+    left: -40px;
+    transform: scale(1.5);
+    color: #071657;
+}
+
+.bag-group{
+    position: relative;
+    top: 10px;
+    right: 40px;
+}
+
+.custom-bag {
+    height: 2rem;
+    position: absolute;
+}
+
+.orange-badge {
+    position: absolute;
+    left:18px;
+    background-color: #FA8557;
+}
+
+.nav-text{
+    position: relative;
+    top: 8px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
 /* SideBar and Tab of followblock Style */
 .sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active,
 .followblock .list-group-item:hover, .followblock .nav-link:hover, .followblock .nav-link.active {
@@ -38,6 +103,10 @@
 
 .btn-modal{
     height: 20px;
+}
+.btn-search {
+    height: 40px;
+    width: 150px;
 }
 
 /* Pagination style */
