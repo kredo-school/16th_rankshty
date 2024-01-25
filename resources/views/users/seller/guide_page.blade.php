@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Guidepage')
+@section('title','Guide Page')
 
 @section('content')
 <form action="#" method="post">
