@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -32,15 +33,17 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
 
@@ -58,3 +61,5 @@ Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::cla
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
+//category
+Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
