@@ -23,10 +23,15 @@
                     <td>fashion</td>
                     <td>500</td>
                     <td>
-                        <button class="btn btn-link text-black text-decoration-none  p-0 btn-modal" data-bs-target="#subcategoryModalToggle" data-bs-toggle="modal">View</button>
+                        <button class="btn btn-link text-black text-decoration-none p-0 btn-modal" data-bs-target="#subcategoryModalToggle" data-bs-toggle="modal">View</button>
                         @include('admin.modal.subcategory')
                     </td>
-                    <td>delete</td>
+                    <td>
+                        <button type="button" class="btn btn-link text-secondary text-decoration-none p-0 btn-modal" data-bs-toggle="modal" data-bs-target="#deleteCategpryModal">
+                            DELETE
+                        </button>
+                        @include('admin.modal.deletecategory')
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -54,7 +59,7 @@
 
     <form action="#" method="post" enctype="multipart/form-data">
         @csrf
-        <div class="row mt-5">
+        <div class="row mt-5 align-items-end">
             <div class="col">
                 <input type="text" name="name" class="form-control mb-2" placeholder="Add Category name">
                 <input type="file" name="icon" class="form-control">
