@@ -1,12 +1,12 @@
 <!-- Modal -->
-<div class="modal fade" id="deleteCategpryModal" tabindex="-1" aria-labelledby="deleteCategpryModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCategoryModal" tabindex="-1" aria-labelledby="deleteCategoryModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content text-center">
             <div class="d-flex flex-row-reverse">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-header mx-auto">
-                <h1 class="modal-title" id="deleteCategpryModalLabel">Delete Category</h1>
+                <h1 class="modal-title" id="deleteCategoryModalLabel">Delete Category</h1>
             </div>
             <div class="modal-body">
                 <span>Do you want to delete <span class="fw-bold">CategoryA</span> ?</span>

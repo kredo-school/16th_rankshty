@@ -27,7 +27,7 @@
                         @include('admin.modal.subcategory')
                     </td>
                     <td>
-                        <button type="button" class="btn btn-link text-secondary text-decoration-none p-0 btn-modal" data-bs-toggle="modal" data-bs-target="#deleteCategpryModal">
+                        <button type="button" class="btn btn-link text-secondary text-decoration-none p-0 btn-modal" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal">
                             DELETE
                         </button>
                         @include('admin.modal.deletecategory')
