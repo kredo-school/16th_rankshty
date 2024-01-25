@@ -1,17 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class SellerController extends Controller
 {
-
     public function guide()
     {
-        return view('users.sellers.guide_page');
-
+        return view('users.seller.guide_page');
     }
 
     public function myPage()
@@ -24,3 +21,4 @@ class SellerController extends Controller
         return view('sellers.productRegistry');
     }
 }
+
