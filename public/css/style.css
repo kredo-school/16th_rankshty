@@ -101,6 +101,9 @@
     color: #ffff;
 }
 
+.btn-modal{
+    height: 20px;
+}
 .btn-search {
     height: 40px;
     width: 150px;
