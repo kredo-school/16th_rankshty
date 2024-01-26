@@ -21,4 +21,10 @@ class AdminController extends Controller
     {
         return view('admin.complainhandling');
     }
+
+    public function category()
+    {
+        return view('admin.category');
+    }
+
 }

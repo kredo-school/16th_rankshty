@@ -26,6 +26,8 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 Auth::routes();
 
+//Home Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Seller Routes
@@ -37,6 +39,8 @@ Route::get('/seller/productslist', [SellerController::class, 'productsList'])->n
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
 Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
@@ -53,3 +57,5 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
+//category
+Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
