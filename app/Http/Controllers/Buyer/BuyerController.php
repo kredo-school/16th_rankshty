@@ -32,4 +32,10 @@ class BuyerController extends Controller
     {
         return view('users.buyer.contact_page');
     }
+
+    public function help()
+    {
+        return view('users.buyer.help_page');
+    }
+
 }
