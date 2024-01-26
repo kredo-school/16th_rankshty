@@ -61,39 +61,50 @@
             </div>
             <br>
             <div class="d-flex">
-                <div class="col-md-2"></div>
+                <label for="color" class="col-md-2 col-form-label form-inline">Add pictures<span class="text-danger">*</span></label>
+           
                 <div class="file-input-container me-3">
-                    <input type="file" name="picture_1" id="picture_1" class="form-control" />
+                    <input type="file" name="picture_1" id="picture_1" class="form-control"/>
                     <label for="picture_1">
-                        <i class="fas fa-plus-square fs-1"></i> 
+                        <div class="insert-pics">
+                            <i class="fa-solid fa-circle-plus circle-plus-color fs-1"></i>
+                        </div>
                     </label>
                 </div>
 
                 <div class="file-input-container mx-3">
                     <input type="file" name="picture_2" id="picture_2" class="form-control" />
                     <label for="picture_2">
-                        <i class="fas fa-plus-square fs-1"></i> 
+                        <div class="insert-pics">
+                            <i class="fa-solid fa-circle-plus circle-plus-color fs-1"></i>
+                        </div>
                     </label>
                 </div>
 
                 <div class="file-input-container mx-3">
                     <input type="file" name="picture_3" id="picture_3" class="form-control" />
                     <label for="picture_3">
-                        <i class="fas fa-plus-square fs-1"></i> 
+                        <div class="insert-pics">
+                            <i class="fa-solid fa-circle-plus circle-plus-color fs-1"></i>
+                        </div>
                     </label>
                 </div>
 
                 <div class="file-input-container mx-3">
                     <input type="file" name="picture_4" id="picture_4" class="form-control" />
                     <label for="picture_4">
-                        <i class="fas fa-plus-square fs-1"></i> 
+                        <div class="insert-pics">
+                            <i class="fa-solid fa-circle-plus circle-plus-color fs-1"></i>
+                        </div>
                     </label>
                 </div>
 
                 <div class="file-input-container mx-3">
                     <input type="file" name="picture_5" id="picture_5" class="form-control" />
                     <label for="picture_5">
-                        <i class="fas fa-plus-square fs-1"></i> 
+                        <div class="insert-pics">
+                            <i class="fa-solid fa-circle-plus circle-plus-color fs-1"></i>
+                        </div>
                     </label>
                 </div>
             </div>
@@ -118,9 +129,11 @@
                 </div>
             </div>
             <br>
+   
             <div class="col-md-8 offset-md-8">
-                <input type="submit" value="Post" class="btn btn-primary text-white mt-3 ">
+                <input type="submit" value="Post" class="btn btn-primary text-white">
             </div>
+ 
         </form>
     </div>
 </div>
