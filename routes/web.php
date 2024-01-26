@@ -29,8 +29,6 @@ Auth::routes();
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
-
 
 
 //Seller Routes
@@ -40,9 +38,9 @@ Route::get('/seller/productslist', [SellerController::class, 'productsList'])->n
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
-Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
-Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
+Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
+
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
