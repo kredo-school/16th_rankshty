@@ -59,5 +59,7 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
+Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
 //category
 Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+

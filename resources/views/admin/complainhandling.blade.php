@@ -26,7 +26,7 @@
                     <td>seller</td>
                     <td>2021.12.23</td>
                     <td>
-                        <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
+                        <a href="{{ route('admin.complaindetail') }}" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
                     </td>
                 </tr>
                 {{-- @empty
