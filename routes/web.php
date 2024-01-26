@@ -26,6 +26,8 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 Auth::routes();
 
+//Home Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Seller Routes
