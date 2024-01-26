@@ -42,6 +42,7 @@ Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.s
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
 
 
+
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
 
