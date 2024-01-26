@@ -10,4 +10,9 @@ class SellerController extends Controller
     {
         return view('users.seller.guide_page');
     }
+
+    public function productsList()
+    {
+        return view('sellers.productslist');
+    }
 }
