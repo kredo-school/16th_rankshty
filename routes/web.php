@@ -60,6 +60,5 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
 //category
 Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
