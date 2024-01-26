@@ -22,4 +22,8 @@ class AdminController extends Controller
         return view('admin.category');
     }
 
+    public function ranking()
+    {
+        return view('admin.ranking');
+    }
 }
