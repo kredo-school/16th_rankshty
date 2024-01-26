@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -24,9 +25,30 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 */
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
-Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
-Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
+Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+
+//Buyer Routes
+Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
+Route::get('/buyer/reviewpage', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
+Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
+Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
+//FollowBlock
+Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
+
+
+//Admin Routes
+//Content Management
+Route::get('/admin/contentmanagement', [AdminController::class, 'contentManagement'])->name('admin.contentmanagement');
+Route::get('/admin/contentmanagement/details', [AdminController::class, 'contentManagementDetails'])->name('admin.contentmanagementdetails');
+//Notifications
+Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
+//User Management
+Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
+//FollowerFolloingList
+Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
+
