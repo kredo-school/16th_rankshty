@@ -5,6 +5,9 @@ use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
 
 use App\Http\Controllers\PurchaseHistoryController;
+use App\Http\Controllers\InformationController;
+use App\Http\Controllers\FollowerListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +27,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/purchase-history', 'PurchaseHistoryController@index');
 
 Route::get('/purchase-history', [App\Http\Controllers\PurchaseHistoryController::class, 'index'])->name('purchase-history');
+Route::get('/info', [App\Http\Controllers\InformationController::class, 'index'])->name('purchase-history');
+Route::get('/follower-list', [App\Http\Controllers\FollowerListController::class, 'index'])->name('follower-list');
+Route::get('/connection', [App\Http\Controllers\ConnectionController::class, 'index'])->name('connection');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Notifications
