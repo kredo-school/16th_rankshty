@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', ' Buyer: Products Registry')
+@section('title', ' Seller: Products Registry')
 
 @section('content')
 <div class="container mt-4 col-12">
