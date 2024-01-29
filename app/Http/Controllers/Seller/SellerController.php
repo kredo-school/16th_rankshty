@@ -23,6 +23,11 @@ class SellerController extends Controller
         return view('sellers.productRegistry');
     }
     
+    public function draftlist()
+    {
+        return view('sellers.draftlist');
+    }
+
     public function productsList()
     {
         return view('sellers.productslist');
