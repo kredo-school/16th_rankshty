@@ -208,7 +208,7 @@ border: 1.5px dashed var(--Main, #071657);
     cursor: pointer;
   }
   .rating-css input:checked + label ~ label {
-    color: #fff;
+    color: #b4afaf;
   }
   .rating-css label:active {
     transform: scale(0.8);

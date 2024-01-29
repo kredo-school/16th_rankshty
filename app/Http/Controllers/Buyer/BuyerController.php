@@ -33,5 +33,8 @@ class BuyerController extends Controller
         return view('users.buyer.help_page');
     }
 
-
+    public function reviewPage()
+    {
+        return view('buyers.reviewpage');
+    }
 }
