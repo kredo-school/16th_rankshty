@@ -60,6 +60,10 @@
                             @endif
                         @endauth
 
+                        @if (request()->is('ranking/*'))
+                            @include('ranking-sidebar')
+                        @endif
+
                         {{-- Content --}}
                         <div class="col-9">
                             @yield('content')

@@ -28,8 +28,9 @@ Auth::routes();
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/ranking/bestseller', [HomeController::class, 'ranking'])->name('ranking.bestseller');
+Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking.review');
+Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
 
 
 //Seller Routes
