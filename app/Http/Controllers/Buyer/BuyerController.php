@@ -13,13 +13,25 @@ class BuyerController extends Controller
         return view('buyers.index');
     }
 
-    public function reviewPage()
+    public function favorite()
     {
-        return view('buyers.reviewpage');
+        return view('buyers.favorite');
     }
 
     public function service()
     {
-        return view('users.buyers.terms_of_service');
+        return view('users.buyer.terms_of_service');
     }
+
+    public function contact()
+    {
+        return view('users.buyer.contact_page');
+    }
+
+    public function help()
+    {
+        return view('users.buyer.help_page');
+    }
+
+
 }

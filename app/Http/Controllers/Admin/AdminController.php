@@ -16,4 +16,10 @@ class AdminController extends Controller
     {
         return view('admin.contentmanagementdetails');
     }
+
+    public function category()
+    {
+        return view('admin.category');
+    }
+
 }
