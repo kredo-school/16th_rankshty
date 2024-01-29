@@ -75,7 +75,6 @@
         {{-- Scripts --}}
         {{-- Specific page js --}}
         @stack('js')
-
     </body>
 
 </html>
