@@ -25,31 +25,30 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 */
 
 Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
 Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
 
-
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
+Route::get('/buyer/reviews-page', [BuyerController::class, 'reviewsPage'])->name('buyer.reviewsPage');
+Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
 
-
-
 //FollowBlock
 Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
-
 
 //Admin Routes
 //Content Management
@@ -63,3 +62,9 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //Ranking
 Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.ranking');
+//complainhandling
+Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
+Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
+//category
+Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+
