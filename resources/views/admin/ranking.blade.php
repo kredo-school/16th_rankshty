@@ -27,15 +27,7 @@
                     <td>1</td>
                     <td>image</td>
                     <td>iPhone</td>
-                    <td>
-                        <div>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </td>
+                    <td>4.8</td>
                     <td>3500</td>
                     <td>5000</td>
                     <td>1,950</td>
