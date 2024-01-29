@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', ' Buyer: Products Registry')
+@section('title', ' Seller: Products Registry')
 
 @section('content')
 <div class="container mt-4 col-12">
@@ -129,9 +129,11 @@
                 </div>
             </div>
             <br>
+   
             <div class="col-md-8 offset-md-8">
-                <input type="submit" value="Post" class="btn btn-primary text-white mt-3 ">
+                <input type="submit" value="Post" class="btn btn-primary text-white">
             </div>
+ 
         </form>
     </div>
 </div>
