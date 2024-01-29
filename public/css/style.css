@@ -101,9 +101,6 @@
     color: #ffff;
 }
 
-.btn-modal{
-    height: 20px;
-}
 .btn-search {
     height: 40px;
     width: 150px;
@@ -157,6 +154,7 @@
 }
 
 
+/* Picture insert icon */
 .file-input-container {
     position: relative;
     display: inline-block;
@@ -164,19 +162,6 @@
 
 .file-input-container input[type="file"] {
 display: none;
-}
-
-.file-input-container label {
-cursor: pointer;
-padding: 10px 15px;
-background-color: #071657;
-color: #fff;
-border-radius: 5px;
-display: inline-block;
-}
-
-.file-input-container label:hover {
-background-color: #071657;
 }
 
 .file-input-container i {
@@ -187,3 +172,47 @@ margin-right: 5px;
     width: 200px;
     height: 200px;
 }
+
+.insert-pics {
+display: flex;
+width: 80px;
+height: 80px;
+padding: 38px 35px 37px 40px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 2px;
+border: 1.5px dashed var(--Main, #071657);
+}
+
+.circle-plus-color {
+    color: #071657;
+}
+
+/* rating */
+.rating-css div {
+    color: #fa8557;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+  .rating-css input {
+    display: none;
+  }
+  .rating-css input + label {
+    font-size: 60px;
+    text-shadow: 1px 1px 0 #fa8557;
+    cursor: pointer;
+  }
+  .rating-css input:checked + label ~ label {
+    color: #fff;
+  }
+  .rating-css label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+  }
+
+/* End of Star Rating */
