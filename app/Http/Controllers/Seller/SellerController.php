@@ -12,6 +12,16 @@ class SellerController extends Controller
         return view('users.seller.guide_page');
     }
 
+    public function myPage()
+    {
+        return view('sellers.index');
+    }
+
+    public function draftlist()
+    {
+        return view('sellers.draftlist');
+    }
+  
     public function productsList()
     {
         return view('sellers.productslist');
