@@ -28,12 +28,10 @@ use App\Http\Controllers\Buyer\FollowBlockController;
 */
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
