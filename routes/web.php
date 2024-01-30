@@ -10,6 +10,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Buyer\FollowBlockController;
+
 
 
 
@@ -25,12 +28,10 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 */
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
@@ -48,7 +49,8 @@ Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.s
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
 
 //FollowBlock
-Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+
 
 //Admin Routes
 //Content Management
@@ -62,9 +64,12 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //Ranking
 Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.ranking');
+//Dashboard
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+//category
+Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
 //complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
-//category
-Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+
 
