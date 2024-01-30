@@ -62,6 +62,8 @@ Route::get('/admin/notification', [NotificationsController::class, 'index'])->na
 Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
+//Ranking
+Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.ranking');
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 //category
