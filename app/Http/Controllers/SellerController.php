@@ -8,6 +8,6 @@ class SellerController extends Controller
 {
     public function review()
     {
-        return view('users.sellers.review_page');
+        return view('users.seller.review');
     }
 }
