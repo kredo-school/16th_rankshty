@@ -3,8 +3,8 @@
         <h3>Total ranking</h3>
         <nav class="nav flex-column">
             <a class="nav-link text-black" href="{{ route('ranking.bestseller') }}">Best seller</a>
-            <a class="nav-link text-black" href="{{ route('ranking.review') }}">Review</a>
-            <a class="nav-link text-black" href="{{ route('ranking.favorite') }}">Favorite</a>
+            <a class="nav-link text-black" href="{{ route('ranking.review') }}">Reviews</a>
+            <a class="nav-link text-black" href="{{ route('ranking.favorite') }}">Favorites</a>
         </nav>
     </div>
 
