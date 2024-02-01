@@ -39,6 +39,8 @@
         <script src="{{ asset('js/searchcondition.js') }}" defer></script>
         {{-- Footer.js --}}
         <script src="{{ asset('js/footer.js') }}" defer></script>
+        {{-- Chart.js --}}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
     </head>
 
     <body>
@@ -77,7 +79,6 @@
         {{-- Scripts --}}
         {{-- Specific page js --}}
         @stack('js')
-
     </body>
 
 </html>
