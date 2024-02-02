@@ -2,6 +2,10 @@
 
 @section('title', 'Ranking')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/ranking.css') }}">
+@endpush
+
 @section('content')
     <div class="justify-content-center" style="min-width:696px">
         {{-- Table sorted by sales --}}
@@ -36,7 +40,7 @@
                         </td>
                         <td>3500</td>
                         <td style="position: relative;">
-                            <button type="button" class="btn btn-link p-0">
+                            <button type="button" class="btn btn-link p-0 btn-rank">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                             5000
@@ -78,7 +82,7 @@
                         </td>
                         <td>3500</td>
                         <td style="position: relative;">
-                            <button type="button" class="btn btn-link p-0">
+                            <button type="button" class="btn btn-link p-0 btn-rank">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                             5000
@@ -120,7 +124,7 @@
                         </td>
                         <td>3500</td>
                         <td style="position: relative;">
-                            <button type="button" class="btn btn-link p-0">
+                            <button type="button" class="btn btn-link p-0 btn-rank">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                             5000

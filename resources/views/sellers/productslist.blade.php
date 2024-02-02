@@ -33,7 +33,7 @@
                         <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-white text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+                        <button type="button" class="btn btn-link text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
                             DELETE
                         </button>
                         @include('sellers.modal.deleteproduct')
