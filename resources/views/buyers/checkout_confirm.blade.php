@@ -1,26 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Buyer: Checkout Confirm Page')
-<style>
-    label:not(.form-check-label) {
-        margin-top: 0.5rem;
-        margin-bottom: 0rem;
-    }
 
-    .card-body img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .card {
-        width: 40%;
-    }
-
-    .card-footer,
-    .card-header {
-        background-color: #f8fafc !important;
-    }
-</style>
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+@endpush
 
 @section('content')
 
