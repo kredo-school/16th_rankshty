@@ -2,17 +2,21 @@
 
 @section('title','Buyer: Watch list')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/buyer.css') }}">
+@endpush
+
 @section('content')
-    <div class="pb-2">
-        <h2>Watch List</h2>
+    <div class="pb-2 text-center">
+        <h2 class="fw-bold">My Watchlist</h2>
     </div>
 
-    <table class="table table-hover border align-middle">
+    <table class="table table-hover border align-middle text-center">
         <thead class="text-uppercase">
             <tr>
-                <th>product</th>
-                <th>price</th>
-                <th>stock status</th>
+                <th colspan="2" class="text-secondary">product</th>
+                <th class="text-secondary">price</th>
+                <th class="text-secondary">stock status</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -21,20 +25,20 @@
             {{-- @forelse ( $all_favorites as $favorite ) --}}
                 <tr>
                     <td>
-                        <img src="{{ asset('images/product.png') }}" alt="demo">
-                        name
+                        <img src="{{ asset('images/product.png') }}" alt="demo" class="d-block mx-auto image-lg">
                     </td>
+                    <td>name</td>
                     <td>$10.00</td>
                     <td>
-                        <div class="badge bg-primary-subtle" style="color: #071657">In Stock</div>
-                        <div class="badge bg-danger-subtle text-danger">Out of Stock</div>
+                        <div class="badge bg-primary-subtle p-2" style="color: #071657">In Stock</div>
+                        <div class="badge bg-danger-subtle text-danger p-2">Out of Stock</div>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-dark btn-sm rounded-pill px-4" style="background-color: #071657">Add to Cart</a>
-                        <a class="btn btn-secondary btn-sm rounded-pill px-4 disabled" aria-disabled="true">Add to Cart</a>
+                        <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Add to Cart</a>
+                        <a class="btn btn-secondary disabled d-flex justify-content-center align-items-center" aria-disabled="true">Add to Cart</a>
                     </td>
                     <td>
-                        <button type="#" class="btn"><i class="fa-regular fa-circle-xmark"></i></button>
+                        <button type="#" class="btn btn-link text-secondary p-0"><i class="fa-regular fa-circle-xmark"></i></button>
                     </td>
                 </tr>
             {{-- @empty
