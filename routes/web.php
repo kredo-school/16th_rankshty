@@ -39,6 +39,7 @@ Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
 Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
+Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
