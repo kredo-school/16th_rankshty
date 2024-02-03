@@ -33,6 +33,11 @@ class BuyerController extends Controller
         return view('users.buyer.help_page');
     }
 
+    public function checkout()
+    {
+        return view('buyers.checkout');
+    }
+    
     public function returnProducts()
     {
         return view('buyers.returnproducts');
