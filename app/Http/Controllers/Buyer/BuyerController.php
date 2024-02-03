@@ -38,4 +38,9 @@ class BuyerController extends Controller
         return view('buyers.returnproducts');
     }
 
+    public function cart()
+    {
+        return view('buyers.cart');
+    }
+
 }

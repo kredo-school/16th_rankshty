@@ -1,0 +1,11 @@
+/* favorite and watchlist and cart*/
+.image-lg{
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+}
+
+.btn-link{
+    height: 20px;
+    width: 20px;
+}
