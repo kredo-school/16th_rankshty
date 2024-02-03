@@ -2,23 +2,11 @@
 
 @section('title', 'Buyer: Checkout Complete Page')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/checkout.css') }}">
+@endpush
+
 @section('content')
-    <style>
-        ::marker {
-            color: #071657;
-            font-size: 300%;
-        }
-
-        ul {
-            font-size: 16px;
-            line-height: 30px;
-            list-style: square;
-        }
-
-        ul li span {
-            vertical-align: 10px;
-        }
-    </style>
 
     <div class="container">
         <div class="container-header text-center">

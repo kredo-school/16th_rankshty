@@ -16,3 +16,18 @@
     .card-header {
         background-color: #f8fafc !important;
     }
+        
+    ::marker {
+        color: #071657;
+        font-size: 300%;
+    }
+
+    ul {
+        font-size: 16px;
+        line-height: 30px;
+        list-style: square;
+    }
+
+    ul li span {
+        vertical-align: 10px;
+    }
