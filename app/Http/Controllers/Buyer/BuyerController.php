@@ -37,6 +37,11 @@ class BuyerController extends Controller
     {
         return view('buyers.checkout');
     }
+
+    public function checkoutConfirm()
+    {
+        return view('buyers.checkout_confirm');
+    }
     
     public function returnProducts()
     {
