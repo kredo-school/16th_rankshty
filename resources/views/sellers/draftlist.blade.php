@@ -5,7 +5,7 @@
 @section('content')
     <div class="justify-content-center rounded border" style="min-width:696px">
         <h1 class="ps-3 mt-2">Draft List</h1>
-        <table class="table table-hover align-migddle bg-white text-secondary text-center">
+        <table class="table table-hover align-middle bg-white text-secondary text-center">
             <thead class="small table-secondary text-secondary text-uppercase">
                 <tr>
                     <th>id</th>
