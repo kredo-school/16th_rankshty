@@ -5,7 +5,7 @@
 @section('content')
     <div class="justify-content-center rounded border" style="min-width:696px">
         <h1 class="ps-3 mt-2">Products List</h1>
-        <table class="table table-hover align-migddle bg-white text-secondary text-center">
+        <table class="table table-hover align-middle bg-white text-secondary text-center">
             <thead class="small table-secondary text-secondary text-uppercase">
                 <tr>
                     <th>id</th>
@@ -33,7 +33,7 @@
                         <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-white text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+                        <button type="button" class="btn btn-link text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
                             DELETE
                         </button>
                         @include('sellers.modal.deleteproduct')

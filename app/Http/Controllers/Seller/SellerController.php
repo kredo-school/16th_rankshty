@@ -22,7 +22,7 @@ class SellerController extends Controller
     {
         return view('sellers.productRegistry');
     }
-    
+
     public function draftlist()
     {
         return view('sellers.draftlist');
@@ -31,6 +31,11 @@ class SellerController extends Controller
     public function productsList()
     {
         return view('sellers.productslist');
+    }
+
+    public function ranking()
+    {
+        return view('sellers.ranking');
     }
 }
 
