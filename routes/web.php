@@ -47,9 +47,9 @@ Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
-
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 
 
 //Admin Routes
