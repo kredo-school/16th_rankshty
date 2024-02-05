@@ -53,6 +53,11 @@ class BuyerController extends Controller
         return view('buyers.returnproducts');
     }
 
+    public function watchlist()
+    {
+        return view('buyers.watchlist');
+    }
+  
     public function report()
     {
         return view('buyers.report');
