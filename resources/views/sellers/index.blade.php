@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Buyer: My page')
-
+@section('title', 'Seller: My page')
 @section('content')
 <div class="container mt-4 col-6">
     <div class="container-header border border-tertiary rounded-top px-3 py-1">
@@ -85,3 +84,5 @@
     </div>
 </div>
 @endsection
+
+
