@@ -10,3 +10,11 @@
     width: 20px;
 }
 
+/* cart */
+.btn-fluctuation{
+    height: 35px;
+    width: 40px;
+    border-radius: 0%;
+    background-color: rgba(216, 216, 217, 0.29);
+    border-color: #071657;
+}

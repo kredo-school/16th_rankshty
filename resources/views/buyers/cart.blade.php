@@ -19,58 +19,82 @@
                         <tr>
                             <th colspan="2" class="text-secondary">product</th>
                             <th class="text-secondary">price</th>
-                            <th class="text-secondary">stock status</th>
-                            <th></th>
+                            <th class="text-secondary">quantity</th>
+                            <th class="text-secondary">subtotal</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                         {{-- @foreach ( $all_carts as $cart ) --}}
                             <tr>
                                 <td>
                                     <img src="{{ asset('images/product.png') }}" alt="demo" class="d-block mx-auto image-lg">
                                 </td>
                                 <td>name</td>
-                                <td>$10.00</td>
+                                <td>$14.00</td>
                                 <td>
-                                    <div class="badge bg-primary-subtle" style="color: #071657">In Stock</div>
-                                    <div class="badge bg-danger-subtle text-danger">Out of Stock</div>
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-outline-secondary btn-fluctuation rounded-start-2" onclick="decrementQuantity()">-</button>
+                                        </span>
+                                        <input type="text" class="form-control text-center bg-secondary-subtle" value="1" id="quantity" readonly>
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-outline-secondary btn-fluctuation rounded-end-2" onclick="incrementQuantity()">+</button>
+                                        </span>
+                                    </div>
                                 </td>
+                                <td>$14.00</td>
                                 <td>
-                                    <a href="#" class="btn btn-dark btn-sm rounded-pill px-4" style="background-color: #071657">Purchase</a>
-                                    <a class="btn btn-secondary btn-sm rounded-pill px-4 disabled" aria-disabled="true">Purchase</a>
-                                </td>
-                                <td>
-                                    <button type="#" class="btn"><i class="fa-regular fa-circle-xmark"></i></button>
+                                    <button type="#" class="btn btn-link text-secondary text-decoration-none d-flex justify-content-center align-items-center"><i class="fa-regular fa-circle-xmark"></i></button>
                                 </td>
                             </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">Cart Total</div>
+            <div class="col-auto">
+                <div class="card p-2">
+                    <div class="card-header bg-light border-0">
+                        <h4 class="fw-bold">Cart Total</h4>
+                    </div>
                     <div class="card-body">
                         <span>Subtotal: </span>
-                        <span class="fw-bold">$84.00</span>
+                        <span class="fw-bold float-end">$14.00</span>
                         <hr>
 
                         <span>Shipping: : </span>
-                        <span class="fw-bold">Free</span>
+                        <span class="fw-bold float-end">Free</span>
                         <hr>
 
                         <span>Total: </span>
-                        <span class="fw-bold">$84.00</span>
-
+                        <span class="fw-bold float-end">$14.00</span>
+                    </div>
+                    <div class="card-footer bg-light border-0">
+                        <a href="#" class="btn btn-primary  mx-auto d-flex justify-content-center align-items-center">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
         </div>
 
-    {{-- {{-- @else --}}
+    {{-- @else
         <div>
-            <p class="fs-3 text-danger fw-bold">There are no items in your cart.</p>
+            <p class="fs-3 text-danger fw-bold mt-3">There are no items in your cart.</p>
         </div>
-    {{-- @endif --}}
+    @endif --}}
+
+    <script>
+        function incrementQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+        }
+
+        function decrementQuantity() {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+    </script>
 
 @endsection
