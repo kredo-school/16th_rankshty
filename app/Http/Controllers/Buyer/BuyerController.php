@@ -43,4 +43,9 @@ class BuyerController extends Controller
         return view('buyers.returnproducts');
     }
 
+    public function report()
+    {
+        return view('buyers.report');
+    }
+
 }
