@@ -56,12 +56,11 @@ class BuyerController extends Controller
     public function cart()
     {
         return view('buyers.cart');
-
+    }
     public function watchlist()
     {
         return view('buyers.watchlist');
     }
-  
     public function report()
     {
         return view('buyers.report');

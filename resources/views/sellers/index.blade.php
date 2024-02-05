@@ -13,32 +13,32 @@
                     <div class="row">
                         <div class="col-6">
                             <p class="mb-0">First Name</p>
-                            <input class="rounded col-12 py-2 px-3" value="Emily" readonly>
+                            <input type="text" class="rounded col-12 py-2 px-3" value="Emily" readonly>
                         </div>
                         <div class="col-6">
                             <p class="mb-0">Last Name</p>
-                            <input class="rounded col-12 py-2 px-3" value="Jones" readonly>
+                            <input type="text" class="rounded col-12 py-2 px-3" value="Jones" readonly>
                         </div>
                     </div>
 
                     <div class="col-12">
                         <p class="mb-0">Username</p>
-                        <input class="rounded col-12 py-2 px-3" value="EmilyJones22" readonly>
+                        <input type="text" class="rounded col-12 py-2 px-3" value="EmilyJones22" readonly>
                     </div>
 
                     <div class="col-12">
                         <p class="mb-0">Company Name</p>
-                        <input class="rounded col-12 py-2 px-3" value="NovaLink Global" readonly>
+                        <input type="text" class="rounded col-12 py-2 px-3" value="NovaLink Global" readonly>
                     </div>
 
                     <div class="col-12">
                         <p class="mb-0">Email</p>
-                        <input class="rounded col-12 py-2 px-3" value="emily-jones58@gmail.com" readonly>
+                        <input type="text" class="rounded col-12 py-2 px-3" value="emily-jones58@gmail.com" readonly>
                     </div>
 
                     <div class="col-12">
                         <p class="mb-0">Phone Number</p>
-                        <input class="rounded col-12 py-2 px-3" value="(603) 555-0123" readonly>
+                        <input type="text" class="rounded col-12 py-2 px-3" value="(603) 555-0123" readonly>
                     </div>
                 </div>
 
@@ -50,30 +50,30 @@
             <div class="row">
                 <div class="col-12">
                     <p class="mb-0">Street Address</p>
-                    <input class="rounded py-2 px-3" value="4140 Parl" readonly>
+                    <input type="text" class="rounded py-2 px-3" value="4140 Parl" readonly>
                 </div>
 
                 <div class="col-4">
                     <p class="mb-0">Country / Region</p>
-                    <input class="rounded col-12 py-2 px-3" value="United States" readonly>
+                    <input type="text" class="rounded col-12 py-2 px-3" value="United States" readonly>
                 </div>
                 <div class="col-4">
                     <p class="mb-0">States</p>
-                    <input class="rounded col-12 py-2 px-3" value="Washinton DC" readonly>
+                    <input type="text" class="rounded col-12 py-2 px-3" value="Washinton DC" readonly>
                 </div>
                 <div class="col-4">
                     <p class="mb-0">Zip Code</p>
-                    <input class="rounded col-12 py-2 px-3" value="20033">
+                    <input type="text" class="rounded col-12 py-2 px-3" value="20033">
                 </div>
 
                 <div class="col-6">
                     <p class="mb-0">password</p>
-                    <input tyle="password" class="rounded col-12 py-2 px-3" value="**********">
+                    <input type="password" class="rounded col-12 py-2 px-3" value="**********">
                 </div>
 
                 <div class="col-6">
                     <p class="mb-0">Credit Card Number</p>
-                    <input tyle="password" class="rounded col-12 py-2 px-3" value="***************">
+                    <input type="password" class="rounded col-12 py-2 px-3" value="***************">
                 </div>
 
                 <div class="col-12">
