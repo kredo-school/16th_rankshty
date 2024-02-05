@@ -29,6 +29,7 @@
                 <div class="col-12">
                     <p class="mb-0">Email</p>
                     <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">novaLink_global21@Inc.com</p>
+
                 </div>
 
                 <div class="col-12">
