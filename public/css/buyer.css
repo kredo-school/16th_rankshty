@@ -1,4 +1,4 @@
-/* favorite and watchlist */
+/* favorite and watchlist and cart*/
 .image-lg{
     width: 9rem;
     height: 9rem;
@@ -8,5 +8,14 @@
 .btn-link{
     height: 20px;
     width: 20px;
+}
+
+/* cart */
+.btn-fluctuation{
+    height: 35px;
+    width: 40px;
+    border-radius: 0%;
+    background-color: rgba(216, 216, 217, 0.29);
+    border-color: #071657;
 }
 
