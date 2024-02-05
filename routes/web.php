@@ -10,6 +10,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Buyer\FollowBlockController;
+
 
 
 
@@ -25,12 +28,15 @@ use App\Http\Controllers\Admin\FollowerFollowingListController;
 */
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//Ranking Routes
+Route::get('/ranking/bestseller', [HomeController::class, 'ranking'])->name('ranking.bestseller');
+Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking.review');
+Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
@@ -38,6 +44,7 @@ Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
 Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
+Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
@@ -46,11 +53,22 @@ Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
+
 Route::get('/buyer/review-page', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
+Route::get('/buyer/returnproducts', [BuyerController::class, 'returnProducts'])->name('buyer.returnproducts');
+Route::get('/buyer/cart', [BuyerController::class, 'cart'])->name('buyer.cart');
+Route::get('/buyer/watchlist', [BuyerController::class, 'watchlist'])->name('buyer.watchlist');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 
 
 //FollowBlock
-Route::get('/buyer/followblock', [App\Http\Controllers\Buyer\FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
+Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
+Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
+
 
 //Admin Routes
 //Content Management
@@ -62,9 +80,14 @@ Route::get('/admin/notification', [NotificationsController::class, 'index'])->na
 Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
-//complainhandling
+//Ranking
+Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.ranking');
+//Dashboard
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+//Category
+Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+//Complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
-//category
-Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+
 

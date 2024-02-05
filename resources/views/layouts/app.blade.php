@@ -39,6 +39,8 @@
         <script src="{{ asset('js/searchcondition.js') }}" defer></script>
         {{-- Footer.js --}}
         <script src="{{ asset('js/footer.js') }}" defer></script>
+        {{-- Chart.js --}}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
     </head>
 
     <body>
@@ -60,6 +62,10 @@
                             @endif
                         @endauth
 
+                        @if (request()->is('ranking/*'))
+                            @include('ranking-sidebar')
+                        @endif
+
                         {{-- Content --}}
                         <div class="col-9">
                             @yield('content')
@@ -73,7 +79,6 @@
         {{-- Scripts --}}
         {{-- Specific page js --}}
         @stack('js')
-
     </body>
 
 </html>

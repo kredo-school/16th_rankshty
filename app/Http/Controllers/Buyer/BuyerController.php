@@ -37,4 +37,39 @@ class BuyerController extends Controller
     {
         return view('buyers.reviewpage');
     }
+
+    public function checkout()
+    {
+        return view('buyers.checkout');
+    }
+
+    public function checkoutConfirm()
+    {
+        return view('buyers.checkout_confirm');
+    }
+
+    public function checkoutComplete()
+    {
+        return view('buyers.checkout_complete');
+    }
+    
+    public function returnProducts()
+    {
+        return view('buyers.returnproducts');
+    }
+
+    public function cart()
+    {
+        return view('buyers.cart');
+    }
+    
+    public function watchlist()
+    {
+        return view('buyers.watchlist');
+    }
+  
+    public function report()
+    {
+        return view('buyers.report');
+    }
 }
