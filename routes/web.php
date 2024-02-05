@@ -59,6 +59,11 @@ Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer
 
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
+Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
+Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
 
 
 //Admin Routes
