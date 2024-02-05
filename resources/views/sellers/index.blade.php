@@ -63,22 +63,22 @@
                 </div>
                 <div class="col-4">
                     <p class="mb-0">Zip Code</p>
-                    <input type="text" class="rounded col-12 py-2 px-3" value="20033">
+                    <input type="text" class="rounded col-12 py-2 px-3" value="20033" readonly>
                 </div>
 
                 <div class="col-6">
                     <p class="mb-0">password</p>
-                    <input type="password" class="rounded col-12 py-2 px-3" value="**********">
+                    <input type="password" class="rounded col-12 py-2 px-3" value="**********" readonly>
                 </div>
 
                 <div class="col-6">
                     <p class="mb-0">Credit Card Number</p>
-                    <input type="password" class="rounded col-12 py-2 px-3" value="***************">
+                    <input type="password" class="rounded col-12 py-2 px-3" value="***************" readonly>
                 </div>
 
                 <div class="col-12">
                     <p class="mb-0">Add review</p>
-                    <textarea class="rounded col-12 py-2 px-3">Lorem ipsum dolor sit amet. Ut
+                    <textarea class="rounded col-12 py-2 px-3" readonly>Lorem ipsum dolor sit amet. Ut
                         rerum asperiores et eveniet mollitia sit optio repellendus non minima quam vel obcaecati eius sed
                         repudiandae tempora non dicta unde. Et dignissimos recusandae ut sint blanditiis et natus dolores
                         qui facere suscipit? Eos voluptates eveniet et aliquam nesciunt vel excepturi enim aut adipisci
