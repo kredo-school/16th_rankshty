@@ -13,27 +13,27 @@
                 <div class="row">
                     <div class="col-6">
                         <p class="mb-0">First Name</p>
-                        <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">David</p>
+                        <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">Emily</p>
                     </div>
                     <div class="col-6">
                         <p class="mb-0">Last Name</p>
-                        <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">Miller</p>
+                        <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">Jones</p>
                     </div>
                 </div>
 
                 <div class="col-12">
-                    <p class="mb-0">Company Name</p>
-                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">NovaLink Global</p>
+                    <p class="mb-0">Username</p>
+                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">EmilyJones22</p>
                 </div>
 
                 <div class="col-12">
                     <p class="mb-0">Email</p>
-                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">novaLink_global21@Inc.com</p>
+                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">emily-jones58@gmail.com</p>
                 </div>
 
                 <div class="col-12">
                     <p class="mb-0">Phone Number</p>
-                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">(603) 926-0167</p>
+                    <p class="rounded col-12 py-2 px-3" style="background-color: #E6E6E6;">(603) 555-0123</p>
                 </div>
             </div>
 
