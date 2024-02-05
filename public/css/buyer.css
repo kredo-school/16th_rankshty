@@ -1,3 +1,18 @@
+/* product */
+.btn-orange{
+    background-color: #fb9c77a7;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.heart-custom{
+    color: #fa8557;
+    position: absolute;
+    left: 9px;
+    top: 20px;
+}
+
 /* favorite and watchlist and cart*/
 .image-lg{
     width: 9rem;

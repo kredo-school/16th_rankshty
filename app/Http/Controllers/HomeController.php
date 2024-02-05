@@ -33,4 +33,9 @@ class HomeController extends Controller
     {
         return view('ranking');
     }
+
+    public function product()
+    {
+        return view('product');
+    }
 }
