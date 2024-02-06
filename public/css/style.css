@@ -219,3 +219,8 @@ border: 1.5px dashed var(--Main, #071657);
   }
 
 /* End of Star Rating */
+
+.seller input, .seller textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
