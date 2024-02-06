@@ -37,5 +37,10 @@ class SellerController extends Controller
     {
         return view('sellers.ranking');
     }
+
+    public function report()
+    {
+        return view('sellers.report');
+    }
 }
 
