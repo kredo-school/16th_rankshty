@@ -16,8 +16,8 @@
         </div>
         <div class="col">
             <h2 class="fw-bold float-start me-3">Product name</h2>
-            <div class="badge bg-primary-subtle align-self-end" style="color: #071657">In Stock</div>
-            <div class="mt-4">
+            <div class="badge bg-primary-subtle mt-2" style="color: #071657">In Stock</div>
+            <div class="mt-3">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
@@ -25,19 +25,36 @@
                 <i class="fa-regular fa-star"></i>
                 <span>4 Review</span>
             </div>
-            <p class="fs-4 mt-3">$48.00</p>
+            <p class="fs-4 mt-3" style="color: #071657;">$48.00</p>
             <hr>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quisquam atque nostrum exercitationem aperiam quae.</p>
 
             <div class="row mt-5">
                 <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <select name="size" id="size" class="form-select bg-secondary-subtle m-0 w-100">
+                                <option value="" hidden>Size</option>
+                                <option value="s">S</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select name="color" id="color" class="form-select bg-secondary-subtle">
+                                <option value="" hidden>Color</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <input type="number" name="quantity" id="quantity" class="form-control bg-secondary-subtle mt-2" min="1" step="1" placeholder="Quantity">
                 </div>
-                <div class="col">
-                    <button type="submit"  class="btn btn-primary d-flex justify-content-center align-items-center">Add to Cart</button>
+
+                <div class="col container">
+                    <button type="submit"  class="btn btn-primary d-flex justify-content-center align-items-center mt-4">Add to Cart</button>
                 </div>
-                <div class="col-auto">
-                    <button type="button" class="btn btn-warning btn-orange mt-2">
+
+                <div class="col-1">
+                    <button type="button" class="btn btn-warning btn-orange mt-4">
                         <i class="fa-regular fa-heart fa-xl heart-custom"></i>
                     </button>
                 </div>

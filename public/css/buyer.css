@@ -4,12 +4,13 @@
     height: 40px;
     width: 40px;
     position: relative;
+    top: 5px;
 }
 
 .heart-custom{
     color: #fa8557;
     position: absolute;
-    left: 9px;
+    left: 8px;
     top: 20px;
 }
 
