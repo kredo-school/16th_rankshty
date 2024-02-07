@@ -42,5 +42,15 @@ class SellerController extends Controller
     {
         return view('sellers.report');
     }
+    
+    public function help()
+    {
+        return view('sellers.help');
+    }
+
+    public function contact()
+    {
+        return view('sellers.contact');
+    }
 }
 
