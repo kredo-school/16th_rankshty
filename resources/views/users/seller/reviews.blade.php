@@ -7,11 +7,11 @@
 
 <div class="container">
     <div class="row">
-        <div class="title fw-normal">
+        <div class="title fw-normal bg-info">
             <h1>Customer reviews</h1>
         </div>
-        <div class="col-4 fs-1">
-            <p><span class="star5_rating" data-rate="5"></span><ul class="list-unstyled d-flex justify-content-center">
+        <div class="col-4 fs-1 m-0 p-0">
+            <ul class="list-unstyled d-flex justify-content-start  m-0 p-0">
                 <li>
                   <i class="fas fa-star fa-sm text-warning"></i>
                 </li>
@@ -26,17 +26,26 @@
                 </li>
                 <li>
                   <i class="fas fa-star-half-alt fa-sm text-warning"></i>
-                  <div class="no-wrap">4.0/5</div>
                 </li>
-              </ul> </p>
+             </ul>   
+                <ul class="list-unstyled d-flex justify-content-start  m-0 p-0">
+                    <div class="no-wrap fs-5 bg-info m-0 p-0">4.0/5</div>
+                </ul>
+            
         </div>
         
-        <div class="col-4 bg-primary"><img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" alt="coffee" style="width: 250px; height:250px;"></div>
-        <div class="col-4 bg-success text-center mt-5">
+        <div class="col-2 bg-primary"><img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" alt="coffee" style="width: 250px; height:250px;"></div>
+        <div class="col-2 bg-info">PRODUCT NAME</div>
+        <div class="col-2">
+            <button type="button" class="btn btn-outline-info">Write a review</button>
+        </div>
+        
+        <div class="col-2 bg-success text-center mt-5">
             <button type="button" class="btn btn-outline-info">See All Buying Options</button>
         </div>
-        <div class="col-12 bg-secondary">
-            <div class="accordion mt-3" id="questionOne">
+        <div class="col-12">
+            <div class="col-6">
+                 <div class="accordion mt-3" id="questionOne">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" style=""
@@ -53,6 +62,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+           
             <hr>
             <div class="btn-group">
                 <div class="dropdown">
@@ -80,47 +91,135 @@
                 </div>
             </div>
             <hr>
-            <div class="card">
+            <div class="card border-0 col-10">
                 <div class="card-body mt-2">
-                    <div class="d-flex mb-4">
+                    <div class="d-flex mb-1">
                         <img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" class="rounded-circle shadow-1-strong" width="50" height="50">
                         
-                        <div class="d-flex flex-column ms-3">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="fw-bolder">Teresa May</h5>
-                                <h5 class="fw-bold ms-5">TITLE</h5>
+                        <div class="d-flex flex-column ms-3 m-0 p-0">
+                            <div class="d-flex justify-content-between  m-0 p-0">
+                                <h5 class="fw-bolder  m-0 p-0">Teresa May</h5>
+                                <h5 class="fw-bold ms-5  m-0 p-0">TITLE HERE!</h5>
                             </div>
-                            
-                            <div class="ms-0">
-                            <ul class="list-unstyled d-flex justify-content-start">
-                                <li>
-                                    <i class="fas fa-star fa-sm text-warning"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-warning"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-warning"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star fa-sm text-warning"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-star-half-alt fa-sm text-warning"></i>
-                                </li>
-                            </ul>
+                            <div class="ms-0  m-0 p-0">
+                                <ul class="list-inline d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <div class="text-muted">FEB 3, 2024</div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <div class="p-0" style="font-size: 1rem; line-height: 1;">
+                        Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
                     </div>
-                        <div class="mt-0 bg-info">
-                            Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
-                        </div>
-                        <div class="fw-light">2 people found this helpful</div>
-                        <button type="button" class="btn btn-outline-secondary">Helphul</button>
-                        <button type="button" class="btn btn-outline-warning ms-3">Report</button>
+                    <div class="fw-light text-muted p-1">2 people found this helpful</div>
+                    <button type="button" class="btn btn-outline-secondary">Helphul</button>
+                    <button type="button" class="btn btn-light ms-3 text-muted">Report</button>
                 </div>
-            </div>
-                   
+                <div class="card-body mt-2">
+                    <div class="d-flex mb-1">
+                        <img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" class="rounded-circle shadow-1-strong" width="50" height="50">
+                        
+                        <div class="d-flex flex-column ms-3 m-0 p-0">
+                            <div class="d-flex justify-content-between  m-0 p-0">
+                                <h5 class="fw-bolder  m-0 p-0">Teresa May</h5>
+                                <h5 class="fw-bold ms-5  m-0 p-0">TITLE HERE!</h5>
+                            </div>
+                            <div class="ms-0  m-0 p-0">
+                                <ul class="list-inline d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <div class="text-muted">FEB 3, 2024</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0" style="font-size: 1rem; line-height: 1;">
+                        Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
+                    </div>
+                    <div class="fw-light text-muted p-1">2 people found this helpful</div>
+                    <button type="button" class="btn btn-outline-secondary">Helphul</button>
+                    <button type="button" class="btn btn-light ms-3 text-muted">Report</button>
+                </div>
+                <div class="card-body mt-2">
+                    <div class="d-flex mb-1">
+                        <img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" class="rounded-circle shadow-1-strong" width="50" height="50">
+                        
+                        <div class="d-flex flex-column ms-3 m-0 p-0">
+                            <div class="d-flex justify-content-between  m-0 p-0">
+                                <h5 class="fw-bolder  m-0 p-0">Teresa May</h5>
+                                <h5 class="fw-bold ms-5  m-0 p-0">TITLE HERE!</h5>
+                            </div>
+                            <div class="ms-0  m-0 p-0">
+                                <ul class="list-inline d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <div class="text-muted">FEB 3, 2024</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0" style="font-size: 1rem; line-height: 1;">
+                        Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
+                    </div>
+                    <div class="fw-light text-muted p-1">2 people found this helpful</div>
+                    <button type="button" class="btn btn-outline-secondary">Helphul</button>
+                    <button type="button" class="btn btn-light ms-3 text-muted">Report</button>
+                </div>
+                
+            </div>        
     </div>
 </div>
 @endsection
