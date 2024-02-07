@@ -102,6 +102,7 @@
                 </div>
             </main>
         </div>
+        <script src="{{ asset('js/dashboard.js') }}" defer></script>
     </body>
 
 </html>
