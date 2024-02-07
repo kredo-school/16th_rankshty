@@ -22,5 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/seller/review', [SellerController::class, 'review'])->name('seller.reviews');
+Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');
 

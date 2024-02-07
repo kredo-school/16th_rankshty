@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class SellerController extends Controller
 {
-    public function review()
+    public function reviews()
     {
-        return view('users.seller.review');
+        return view('users.seller.reviews');
     }
 }
