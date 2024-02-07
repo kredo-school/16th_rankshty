@@ -86,5 +86,7 @@ Route::get('/admin/category', [AdminController::class, 'category'])->name('admin
 //Complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
+//Connection
+Route::get('/admin/connection', [AdminController::class, 'connection'])->name('admin.connection');
 
 

@@ -36,4 +36,9 @@ class AdminController extends Controller
     {
         return view('admin.ranking');
     }
+
+    public function connection()
+    {
+        return view('admin.connection');
+    }
 }
