@@ -46,6 +46,7 @@ Route::get('/seller/product-registry', [SellerController::class, 'productRegistr
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
 Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
 Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
+Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
 Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 
