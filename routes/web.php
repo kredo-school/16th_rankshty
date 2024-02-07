@@ -32,11 +32,12 @@ Auth::routes();
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 //Ranking Routes
 Route::get('/ranking/bestseller', [HomeController::class, 'ranking'])->name('ranking.bestseller');
 Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking.review');
 Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
+// Product Route
+Route::get('/product', [HomeController::class, 'product'])->name('product');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
@@ -63,7 +64,6 @@ Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
 Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
-Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
 Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
