@@ -1,4 +1,20 @@
-/* favorite and watchlist */
+/* product */
+.btn-orange{
+    background-color: #fb9c77a7;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 5px;
+}
+
+.heart-custom{
+    color: #fa8557;
+    position: absolute;
+    left: 8px;
+    top: 20px;
+}
+
+/* favorite and watchlist and cart*/
 .image-lg{
     width: 9rem;
     height: 9rem;
@@ -8,5 +24,14 @@
 .btn-link{
     height: 20px;
     width: 20px;
+}
+
+/* cart */
+.btn-fluctuation{
+    height: 35px;
+    width: 40px;
+    border-radius: 0%;
+    background-color: rgba(216, 216, 217, 0.29);
+    border-color: #071657;
 }
 
