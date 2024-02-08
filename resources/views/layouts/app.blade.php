@@ -51,7 +51,7 @@
 
             <main>
                 <div
-                    @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
+                    @if (request()->is('/') || request()->is('home') || request()->is('product')) class="py-5 container-fluid"
                     @else class="py-5 container" @endif>
                     <div class="row justify-content-center">
 

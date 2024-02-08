@@ -32,11 +32,12 @@ Auth::routes();
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 //Ranking Routes
 Route::get('/ranking/bestseller', [HomeController::class, 'ranking'])->name('ranking.bestseller');
 Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking.review');
 Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
+// Product Route
+Route::get('/product', [HomeController::class, 'product'])->name('product');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
@@ -45,6 +46,9 @@ Route::get('/seller/product-registry', [SellerController::class, 'productRegistr
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
 Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
 Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
+Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
+Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
+Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
@@ -61,6 +65,12 @@ Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
 Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
+Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
+Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
+Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
+//FollowBlock
+Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
 Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
@@ -71,6 +81,7 @@ Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete
 //Content Management
 Route::get('/admin/contentmanagement', [AdminController::class, 'contentManagement'])->name('admin.contentmanagement');
 Route::get('/admin/contentmanagement/details', [AdminController::class, 'contentManagementDetails'])->name('admin.contentmanagementdetails');
+Route::get('/admin/ordermanagement/dashboard', [AdminController::class, 'orderManagementDashboard'])->name('admin.orderManagementDashboard');
 //Notifications
 Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
 //User Management
