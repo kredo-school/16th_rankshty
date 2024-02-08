@@ -410,3 +410,8 @@ border: 1.5px dashed var(--Main, #071657);
     background-color: #E6E6E6;
     border: none;
 }
+
+.buyer input, .buyer textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
