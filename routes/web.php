@@ -68,12 +68,20 @@ Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.rep
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
 Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
+//FollowBlock
+Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
+Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
+Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
+Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
 
 
 //Admin Routes
 //Content Management
 Route::get('/admin/contentmanagement', [AdminController::class, 'contentManagement'])->name('admin.contentmanagement');
 Route::get('/admin/contentmanagement/details', [AdminController::class, 'contentManagementDetails'])->name('admin.contentmanagementdetails');
+Route::get('/admin/ordermanagement/dashboard', [AdminController::class, 'orderManagementDashboard'])->name('admin.orderManagementDashboard');
 //Notifications
 Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
 //User Management
@@ -89,5 +97,3 @@ Route::get('/admin/category', [AdminController::class, 'category'])->name('admin
 //Complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
-
-
