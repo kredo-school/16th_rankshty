@@ -1,0 +1,39 @@
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        color: black;
+    }
+
+    .left_display {
+        position: relative;
+        width: 50%;
+    }
+
+    .left_display div p {
+        text-align: left;
+        font-size: 0.5rem
+    }
+
+    .right_display {
+        position: relative;
+        left: 50%;
+        width: 50%;
+    }
+
+    .right_display div p {
+        text-align: right;
+        font-size: 0.5rem
+    }
+
+    .right_display div .message {
+        background-color: #DADADA;
+    }
+
+    h4 span {
+        text-align: center;
+    }
+
+    .overflow-scroll {
+        height: 50vh;
+    }

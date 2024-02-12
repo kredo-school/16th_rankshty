@@ -1,0 +1,11 @@
+.fa-crown, .text-orange, .fa-heart{
+    color: #fa8557;
+}
+
+.btn-rank{
+    height: 20px;
+    width:20px;
+    position:absolute;
+    left:10px;
+    color: #fa8557;
+}
