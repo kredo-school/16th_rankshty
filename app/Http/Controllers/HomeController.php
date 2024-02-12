@@ -38,4 +38,9 @@ class HomeController extends Controller
     {
         return view('product');
     }
+
+    public function categorize()
+    {
+        return view('categorize');
+    }
 }

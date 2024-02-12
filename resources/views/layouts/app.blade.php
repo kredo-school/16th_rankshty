@@ -66,6 +66,10 @@
                             @include('ranking-sidebar')
                         @endif
 
+                        @if (request()->is('categorize'))
+                            @include('categorize-sidebar')
+                        @endif
+
                         {{-- Content --}}
                         <div class="col-9">
                             @yield('content')

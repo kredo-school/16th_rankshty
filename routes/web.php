@@ -42,6 +42,8 @@ Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking
 Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
 // Product Route
 Route::get('/product', [HomeController::class, 'product'])->name('product');
+// Categorize Route
+Route::get('/categorize', [HomeController::class, 'categorize'])->name('categorize');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
