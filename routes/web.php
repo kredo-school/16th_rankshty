@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Buyer\BuyerController;
+use App\Http\Controllers\Buyer\ConnectionController;
 use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\Buyer\FollowBlockController;
 
 
 
+use App\Http\Controllers\PurchaseHistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,8 @@ use App\Http\Controllers\Buyer\FollowBlockController;
 */
 
 Auth::routes();
+
+
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -61,6 +65,8 @@ Route::get('/buyer/returnproducts', [BuyerController::class, 'returnProducts'])-
 Route::get('/buyer/cart', [BuyerController::class, 'cart'])->name('buyer.cart');
 Route::get('/buyer/watchlist', [BuyerController::class, 'watchlist'])->name('buyer.watchlist');
 Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
+Route::get('/buyer/purchase-history', [PurchaseHistoryController::class, 'index'])->name('buyer.purchase-history');
+Route::get('/buyer/connection', [ConnectionController::class, 'index'])->name('buyer.connection');
 
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
