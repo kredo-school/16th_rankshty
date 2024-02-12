@@ -128,37 +128,10 @@
     background-color: #fa8557;
 }
 
-/* Backgroung-color Gray */
-.bg-gray {
-    background: var(--Gray-Scale-Gray-50, #F2F2F2);
-}
-
 .text-follower {
     color: #4CA0D4;
 }
 
-.in-stock {
-    display: inline-flex;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 4px;
-    background: rgba(76, 160, 212, 0.20);
-    background-color: #4CA0D433;
-    color: #071657;
-}
-
-.out-of-stock {
-    display: inline-flex;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 4px;
-    background: rgba(234, 75, 72, 0.20);
-    color: #071657;
-}
 /* Star Rating style */
 .fa-star {
     color: #fa8557;
