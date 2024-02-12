@@ -35,12 +35,12 @@
                                 <div class="col p-2 text-center">
                                     <span>2023/12/20</span>
                                 </div>
-                                    <div class="row">
-                                        <div class="col-6 me-2 mt-3 float-right">
-                                            <div class="rounded-4 bg-gray p-2 ">Hello. I have a question about your product details.May I ask a question?</div>
+                                    <div class="row float">
+                                        <div class="col-8 me-2 mt-3 float-right">
                                             <img src="{{ asset('img/Woman_1.jpeg') }}" class="rounded-circle border link-underline link-underline-opacity-0 float-right" style="height: 30px; width: 30px;" alt="">
+                                            <div class="rounded-4 bg-gray p-2">Hello. I have a question about your product details.May I ask a question?</div>
                                         </div>
-                                        <div class="col-6 ms-2 mt-3 float-left">
+                                        <div class="col-8 ms-2 mt-3 float-left">
                                             <img src="{{ asset('img/shoppingcart.png') }}" class="rounded-circle border link-underline link-underline-opacity-0 float-left" style="height: 30px; width: 30px;" alt="">
                                             <div class="rounded-4 p-2 border-gray">Hello. Of course!</div>
                                         </div>
