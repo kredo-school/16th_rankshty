@@ -78,6 +78,33 @@ let barConfig_ranking = {
 };
 let barChart_ranking = new Chart(barCtx_ranking, barConfig_ranking);
 
+// doughnutChart of Inventory
+let doughnutCtx_inventory = document.getElementById("doughnutChart-inventory");
+let doughnutConfig_inventory = {
+    type: 'doughnut',
+    data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Red", "Blue", "Yellow", "Green"],
+    datasets: [{
+        data: [10, 19, 6, 8, 2, 11, 3, 5, 7, 9],
+        label: 'label',
+        backgroundColor: [  // それぞれの棒の色を設定(dataの数だけ)
+        '#ff0000',
+        '#0000ff',
+        '#ffff00',
+        '#008000',
+        '#800080',
+        '#ffa500',
+        '#ff0000',
+        '#0000ff',
+        '#ffff00',
+        '#008000',
+        ],
+        hoverOffset: 4
+    }]
+    },
+};
+let doughnutChart_inventory = new Chart(doughnutCtx_inventory, doughnutConfig_inventory);
+
 // Display the dropdown's selected menu
 $(function(){
     $('.dropdown-menu .dropdown-item').click(function(){
@@ -105,4 +132,3 @@ $(function(){
 
     });
 });
-
