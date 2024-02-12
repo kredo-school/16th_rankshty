@@ -5,9 +5,9 @@ $("#slider-range").slider({
     step: 50,
     slide: function (event, ui) {
         $("#min-price").html(ui.values[0]);
-    
+
         console.log(ui.values[0])
-    
+
         suffix = '';
         if (ui.values[1] == $("#max-price").data('max')) {
             suffix = ' +';
@@ -24,4 +24,25 @@ $('.searchcondition').on('click', function (e) {
         return;
     }
     e.stopPropagation();
-}) 
+})
+
+
+
+// Categorize
+$("#slider-range2").slider({
+    range: true,
+    min: 0,
+    max: 3500,
+    step: 50,
+    slide: function (event, ui) {
+        $("#min-price2").html(ui.values[0]);
+
+        console.log(ui.values[0])
+
+        suffix = '';
+        if (ui.values[1] == $("#max-price2").data('max')) {
+            suffix = ' +';
+        }
+        $("#max-price2").html(ui.values[1] + suffix);
+    }
+});
