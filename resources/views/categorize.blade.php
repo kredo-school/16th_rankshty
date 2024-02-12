@@ -3,10 +3,6 @@
 @section('title', 'Categorize')
 
 @push('css')
-    <link rel="stylesheet" href="{{ asset('css/buyer.css') }}">
-@endpush
-
-@push('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endpush
 
