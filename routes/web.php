@@ -17,6 +17,9 @@ use App\Http\Controllers\Buyer\FollowBlockController;
 
 
 use App\Http\Controllers\PurchaseHistoryController;
+use App\Http\Controllers\InformationController;
+use App\Http\Controllers\FollowerListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +33,6 @@ use App\Http\Controllers\PurchaseHistoryController;
 */
 
 Auth::routes();
-
-
 
 //Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -55,6 +56,9 @@ Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('selle
 Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
 Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
+Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
+Route::get('/seller/follower-list', [App\Http\Controllers\FollowerListController::class, 'index'])->name('seller.follower-list');
+Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::class, 'index'])->name('seller.connection');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
