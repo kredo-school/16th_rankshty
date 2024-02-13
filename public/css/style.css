@@ -1,7 +1,88 @@
-.list-group-item:hover {
+/* These style is used by all pages */
+
+/* Header & Navbar */
+.logo{
+    height: 4.5rem;
+    position: absolute;
+    top:1px;
+}
+
+.search-position{
+    position: relative;
+    top:6px;
+}
+
+.item-position{
+    position: relative;
+    top: 15px;
+}
+
+.custom-bell{
+    position: relative;
+    top: 18px;
+    left: -40px;
+    transform: scale(1.7);
+    color: #071657;
+}
+
+.bell-badge {
+    position: absolute;
+    top: 20px;
+    left:-26px;
+    background-color: #FA8557;
+}
+
+.custom-heart{
+    position: relative;
+    top: 18px;
+    left: -40px;
+    transform: scale(1.5);
+    color: #071657;
+}
+
+.bag-group{
+    position: relative;
+    top: 10px;
+    right: 40px;
+}
+
+.custom-bag {
+    height: 2rem;
+    position: absolute;
+}
+
+.orange-badge {
+    position: absolute;
+    left:18px;
+    background-color: #FA8557;
+}
+
+.nav-text{
+    position: relative;
+    top: 8px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SideBar and Tab of followblock Style */
+.sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active,
+.followblock .list-group-item:hover, .followblock .nav-link:hover, .followblock .nav-link.active {
     cursor: pointer;
     background-color:#cfeffa;
     border-left: 10px solid #071657;
+}
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
+    color: #000000;
+}
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
+    color: #000000;
 }
 
 /* Button style */
@@ -14,6 +95,42 @@
     border-color: #071657;
     background-color: #071657;
     color: #ffff;
+}
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+.btn-modal{
+    height: 20px;
+}
+.btn-search {
+    height: 40px;
+    width: 150px;
+}
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+.btn-modal{
+    height: 20px;
+}
+.btn-search {
+    height: 40px;
+    width: 150px;
 }
 
 /* Pagination style */
@@ -34,3 +151,112 @@
     font-size: 14px;
     background-color: #fa8557;
 }
+
+.text-follower {
+    color: #4CA0D4;
+}
+
+/* Star Rating style */
+.fa-star {
+    color: #fa8557;
+}
+
+/* Footer style */
+.common-button {
+    background-color:#071657;
+    color: white;
+}
+.footer-container {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.navy-bg {
+    background-color: #071657;
+}
+.grayed-out {
+    color: rgb(169, 169, 169);
+}
+
+.custom-list-group .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Picture insert icon */
+.file-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input-container input[type="file"] {
+display: none;
+}
+
+.file-input-container i {
+margin-right: 5px;
+}
+
+.btn-square{
+    width: 200px;
+    height: 200px;
+}
+
+.insert-pics {
+display: flex;
+width: 80px;
+height: 80px;
+padding: 38px 35px 37px 40px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 2px;
+border: 1.5px dashed var(--Main, #071657);
+}
+
+.circle-plus-color {
+    color: #071657;
+}
+
+/* rating */
+.rating-css div {
+    color: #fa8557;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+  .rating-css input {
+    display: none;
+  }
+  .rating-css input + label {
+    font-size: 60px;
+    text-shadow: 1px 1px 0 #fa8557;
+    cursor: pointer;
+  }
+  .rating-css input:checked + label ~ label {
+    color: #fff;
+  }
+  .rating-css label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+  }
+
+/* End of Star Rating */
+
+
+.seller input, .seller textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
+
+
+.buyer input, .buyer textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
+
