@@ -45,25 +45,24 @@
         </div>
         <div class="col-12">
             <div class="col-6">
-                 <div class="accordion mt-3" id="questionOne">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" style=""
-                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                            aria-controls="collapseOne">
-                            How are ratings calculated?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                        data-bs-parent="#questionOne">
-                        <div class="accordion-body">
-                            To calculate the overall star rating and percentage breakdown by star, we don't use a simple average. Instead, our system considers things like how recent a review is and if the reviewer bought the item on RANKSHTY. It also analyzes reviews to verify trustworthiness.
+                <div class="accordion mt-3" id="questionOne">
+                        <div class="accordion mt-3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    How are ratings calculated?
+                                </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        To calculate the overall star rating and percentage breakdown by star, we don't use a simple average. Instead, our system considers things like how recent a review is and if the reviewer bought the item on RANKSHTY. It also analyzes reviews to verify trustworthiness.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
-            </div>
-            </div>
-           
+           </div>
+            
             <hr>
             <div class="btn-group">
                 <div class="dropdown">
