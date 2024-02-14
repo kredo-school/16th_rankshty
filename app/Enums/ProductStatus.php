@@ -27,7 +27,7 @@ final class ProductStatus extends Enum
         return parent::getDescription($value);
     }
 
-    public static function getValue(string $key)
+    public static function getValue(string $key): mixed
     {
         if ($key === 'Published') {
             return self::PUBLISHED;
