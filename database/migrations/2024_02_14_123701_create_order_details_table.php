@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('order_id')->references('id')->on('orders')->onDelete('cascade');
+            $table->foreignId('product_details_id')->references('id')->on('product_details')->onDelete('cascade');
+            $table->bigInteger('quantity');
+            $table->bigInteger('unitPrice');
+            $table->bigInteger('discount')->default(0);
         });
     }
 

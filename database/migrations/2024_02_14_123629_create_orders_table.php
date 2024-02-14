@@ -16,11 +16,11 @@ return new class extends Migration
             $table->foreignId('buyer_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('seller_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('address_id')->references('id')->on('addresses')->onDelete('cascade');
-            $table->varchar('freight', 255);
-            $table->timestamps('shipped_date');
-            $table->timestamps('ordered_at');
-            $table->timestamps('order_date');
-            $table->timestamps('required_date');
+            $table->string('freight', 255);
+            $table->date('shipped_date')->nullable();
+            $table->date('ordered_at')->nullable();
+            $table->date('order_date')->nullable();
+            $table->date('required_date')->nullable();
         });
     }
 
