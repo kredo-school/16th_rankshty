@@ -3,45 +3,45 @@
 @section('title', 'Review Page for seller')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/seller_reviews.css') }}">
 
 <div class="container">
     <div class="row">
-        <div class="title fw-normal bg-info">
+        <div class="title fw-normal">
             <h1>Customer reviews</h1>
         </div>
         <div class="col-4 fs-1 m-0 p-0">
             <ul class="list-unstyled d-flex justify-content-start  m-0 p-0">
                 <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
+                  <i class="fas fa-star fa-sm"></i>
                 </li>
                 <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
+                  <i class="fas fa-star fa-sm"></i>
                 </li>
                 <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
+                  <i class="fas fa-star fa-sm"></i>
                 </li>
                 <li>
-                  <i class="fas fa-star fa-sm text-warning"></i>
+                  <i class="fas fa-star fa-sm"></i>
                 </li>
                 <li>
-                  <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+                  <i class="fas fa-star-half-alt fa-sm"></i>
                 </li>
+                <div class="fs-3 ms-3 mt-2">4.0 out of 5</div>
              </ul>   
                 <ul class="list-unstyled d-flex justify-content-start  m-0 p-0">
-                    <div class="no-wrap fs-5 bg-info m-0 p-0">4.0/5</div>
+                    <div class="text-muted fs-5 ms-3">50 global rating</div>
                 </ul>
-            
+            <div class="col-2 ms-5"><img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" alt="coffee" style="width: 250px; height:250px;"></div>
         </div>
         
-        <div class="col-2 bg-primary"><img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" alt="coffee" style="width: 250px; height:250px;"></div>
-        <div class="col-2 bg-info">PRODUCT NAME</div>
-        <div class="col-2">
-            <button type="button" class="btn btn-outline-info">Write a review</button>
+        <div class="col-4 p-5 text-center">
+            <h1 class="fw-bold">PRODUCT NAME</h1>
+            <button type="button" class="btn btn-outline-secondary mt-5">Write a review</button>
         </div>
         
-        <div class="col-2 bg-success text-center mt-5">
-            <button type="button" class="btn btn-outline-info">See All Buying Options</button>
+        <div class="col-4 text-center mt-5">
+            <button type="button" class="btn btn-outline-secondary">See All Buying Options</button>
         </div>
         <div class="col-12">
             <div class="col-6">
@@ -104,61 +104,19 @@
                             <div class="ms-0  m-0 p-0">
                                 <ul class="list-inline d-flex justify-content-start m-0 p-0">
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
-                                    <li>
-                                        <div class="text-muted">FEB 3, 2024</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-0" style="font-size: 1rem; line-height: 1;">
-                        Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
-                    </div>
-                    <div class="fw-light text-muted p-1">2 people found this helpful</div>
-                    <button type="button" class="btn btn-outline-secondary">Helphul</button>
-                    <button type="button" class="btn btn-light ms-3 text-muted">Report</button>
-                </div>
-                <div class="card-body mt-2">
-                    <div class="d-flex mb-1">
-                        <img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" class="rounded-circle shadow-1-strong" width="50" height="50">
-                        
-                        <div class="d-flex flex-column ms-3 m-0 p-0">
-                            <div class="d-flex justify-content-between  m-0 p-0">
-                                <h5 class="fw-bolder  m-0 p-0">Teresa May</h5>
-                                <h5 class="fw-bold ms-5  m-0 p-0">TITLE HERE!</h5>
-                            </div>
-                            <div class="ms-0  m-0 p-0">
-                                <ul class="list-inline d-flex justify-content-start m-0 p-0">
-                                    <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
@@ -188,19 +146,61 @@
                             <div class="ms-0  m-0 p-0">
                                 <ul class="list-inline d-flex justify-content-start m-0 p-0">
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                     <li>
-                                        <i class="fas fa-star fa-sm text-warning"></i>
+                                        <i class="fas fa-star fa-sm"></i>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <div class="text-muted">FEB 3, 2024</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0" style="font-size: 1rem; line-height: 1;">
+                        Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid neque ex maiores earum impedit ducimus quisquam quo, numquam quia ut pariatur deserunt nulla saepe odit aperiam quasi facilis sint.consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaeratad velit ab hic tenetur.
+                    </div>
+                    <div class="fw-light text-muted p-1">2 people found this helpful</div>
+                    <button type="button" class="btn btn-outline-secondary">Helphul</button>
+                    <button type="button" class="btn btn-light ms-3 text-muted">Report</button>
+                </div>
+                <div class="card-body mt-2">
+                    <div class="d-flex mb-1">
+                        <img src="/assets/pexels-quang-anh-ha-nguyen-885021.jpg" class="rounded-circle shadow-1-strong" width="50" height="50">
+                        
+                        <div class="d-flex flex-column ms-3 m-0 p-0">
+                            <div class="d-flex justify-content-between  m-0 p-0">
+                                <h5 class="fw-bolder  m-0 p-0">Teresa May</h5>
+                                <h5 class="fw-bold ms-5  m-0 p-0">TITLE HERE!</h5>
+                            </div>
+                            <div class="ms-0  m-0 p-0">
+                                <ul class="list-inline d-flex justify-content-start m-0 p-0">
+                                    <li>
+                                        <i class="fas fa-star fa-sm"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-star fa-sm"></i>
                                     </li>
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-start m-0 p-0">
