@@ -5,13 +5,13 @@
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 @endpush
-{{-- @push('js') --}}
-  
-{{-- @endpush --}}
+@push('js')
+<script src="{{ asset('js/dashboard.js') }}" defer></script>
+@endpush
 
 @section('content')
     <div class="justify-content-center rounded border dashboard" style="min-width:696px">
-        <h1 class="ps-3 mt-2">Dashboard</h1>
+        <h1 class="ps-3 mt-2">Dashboard(Order/Stock)</h1>
         {{-- Sort by --}}
         <div class="d-flex mb-4">
             <h3 class="col-2 text-center my-auto">Sort by</h3>
@@ -46,7 +46,7 @@
                             <div class="dropdown-item" value="Sub Category ">Sub Category</div>
                         </li>
                         <li>
-                            <div class="dropdown-item" value="Inner">Inner</div>
+                            <div class="dropdown-item" value="Inner">T-shirts</div>
                         </li>
                         <li>
                             <div class="dropdown-item" value="Pants">Pants</div>
@@ -56,26 +56,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown" id="role-select">
-                    <button class="btn btn-secondary dropdown-toggle shadow" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Role
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="dropdown-item" value="Role ">Role</div>
-                        </li>
-                        <li>
-                            <div class="dropdown-item" value="All">All</div>
-                        </li>
-                        <li>
-                            <div class="dropdown-item" value="Seller">Seller</div>
-                        </li>
-                        <li>
-                            <div class="dropdown-item" value="Buyer">Buyer</div>
-                        </li>
-                    </ul>
-                </div>
+               
                 <div class="dropdown d-none" id="ranking-selection">
                     <button class="btn btn-secondary dropdown-toggle shadow" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -109,20 +90,20 @@
                 <h3>Display</h3>
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="#dashboard-sale" data-bs-toggle="tab"><button
-                            class="btn btn-outline-primary" checked style="width: 100px">Sale</button></a>
+                            class="btn btn-outline-primary" checked style="width: 100px">Inventory</button></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#dashboard-profit" data-bs-toggle="tab"><button
-                            class="btn btn-outline-primary" style="width: 100px">Profit</button></a>
+                            class="btn btn-outline-primary" style="width: 100px">Order/Stock</button></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#dashboard-ranking" data-bs-toggle="tab"><button
-                            class="btn btn-outline-primary" style="width: 100px" id="ranking-nav">Ranking</button></a>
+                            class="btn btn-outline-primary" style="width: 100px" id="ranking-nav">Y o Y</button></a>
                 </li>
             </ul>
             {{-- Display Sale, Profit and Ranking Tab Contents --}}
             <div class="tab-content container-fluid mb-2 me-2 border rounded-bottom-1">
-                <div id="dashboard-sale" class="tab-pane" style="height: 350px">
+                <div id="dashboard-sale" class="tab-pane" style="height: 400px">
                     <h1 class="text-center mt-2">Inventory</h1>
                     <div class="d-flex gap-2 overflow-auto" style="height: 300px">
                         <div class="my-auto" style="width:80%;">
@@ -162,10 +143,10 @@
                     </div>
                 </div>
                 <div id="dashboard-profit" class="tab-pane" style="height: 350px">
-                    <h1 class="text-center mt-2">Profit</h1>
+                    <h1 class="text-center mt-2">Order/Stock-curve</h1>
                     <div class="d-flex gap-2 overflow-auto" style="height: 300px">
                         <div class="my-auto" style="width:80%;">
-                            <canvas id="barChart-profit"></canvas>
+                            <canvas id="mixedChart-orderstock"></canvas>
                         </div>
                         <table class="table table-hover align-middle bg-white text-secondary text-center"
                             style="width: 20%">
@@ -201,10 +182,10 @@
                     </div>
                 </div>
                 <div id="dashboard-ranking" class="tab-pane" style="height: 350px">
-                    <h1 class="text-center mt-2">Ranking</h1>
+                    <h1 class="text-center mt-2">Year on Year</h1>
                     <div class="d-flex gap-2 overflow-auto" style="height: 300px">
                         <div class="my-auto" style="width:80%;">
-                            <canvas id="barChart-ranking"></canvas>
+                            <canvas id="mixedChart-yearonyear"></canvas>
                         </div>
                         <table class="table table-hover align-middle bg-white text-secondary text-center"
                             style="width: 20%">
