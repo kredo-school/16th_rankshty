@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card shadow">
+                <div class="card bg-white shadow">
                     <div class="card-header text-center bg-white border-0">
                         <h1>{{ __('Sign In') }}</h1>
                     </div>

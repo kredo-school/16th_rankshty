@@ -78,6 +78,12 @@
 .followblock .nav-item a:hover, .followblock .nav-item a:active {
     color: #000000;
 }
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
+    color: #000000;
+}
 
 /* Button style */
 .btn {
@@ -89,6 +95,24 @@
     border-color: #071657;
     background-color: #071657;
     color: #ffff;
+}
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+.btn-modal{
+    height: 20px;
+}
+.btn-search {
+    height: 40px;
+    width: 150px;
 }
 .btn-info {
     border-color: #4CA0D4;
@@ -123,6 +147,10 @@
     font-weight: 600;
     font-size: 14px;
     background-color: #fa8557;
+}
+
+.text-follower {
+    color: #4CA0D4;
 }
 
 /* Star Rating style */
@@ -216,4 +244,16 @@ border: 1.5px dashed var(--Main, #071657);
   }
 
 /* End of Star Rating */
+
+
+.seller input, .seller textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
+
+
+.buyer input, .buyer textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
 

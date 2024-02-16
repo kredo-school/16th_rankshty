@@ -11,10 +11,25 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        {{-- Fontawesome --}}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- FONTAWESOME CDN --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
+        {{-- css for all pages --}}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -51,7 +66,7 @@
 
             <main>
                 <div
-                    @if (request()->is('/') || request()->is('home')) class="py-5 container-fluid"
+                    @if (request()->is('/') || request()->is('home') || request()->is('product')) class="py-5 container-fluid"
                     @else class="py-5 container" @endif>
                     <div class="row justify-content-center">
 
@@ -64,6 +79,10 @@
 
                         @if (request()->is('ranking/*'))
                             @include('ranking-sidebar')
+                        @endif
+
+                        @if (request()->is('categorize'))
+                            @include('categorize-sidebar')
                         @endif
 
                         {{-- Content --}}

@@ -6,3 +6,19 @@
 .table tbody tr {
     border-bottom: 0.5px solid whitesmoke;
 }
+
+/* help */
+.accordion-button{
+    background-color: #6c757d1f;
+}
+
+/* contact */
+.custom-icon{
+    font-size: 50px;
+    color: #0C66A6;
+    border-radius: 40%;
+}
+
+.btn-info{
+    background-color: #4CA0D4;
+}

@@ -52,7 +52,7 @@ class BuyerController extends Controller
     {
         return view('buyers.checkout_complete');
     }
-    
+
     public function returnProducts()
     {
         return view('buyers.returnproducts');
@@ -62,12 +62,11 @@ class BuyerController extends Controller
     {
         return view('buyers.cart');
     }
-    
+
     public function watchlist()
     {
         return view('buyers.watchlist');
     }
-  
     public function report()
     {
         return view('buyers.report');
