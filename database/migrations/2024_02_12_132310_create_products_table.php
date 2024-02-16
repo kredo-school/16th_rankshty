@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->unsignedTinyInteger('status');
             $table->unsignedbigInteger('seller_id');
-            $table->string('image_1')->nullable();
-            $table->string('image_2')->nullable();
-            $table->string('image_3')->nullable();
-            $table->string('image_4')->nullable();
-            $table->string('image_5')->nullable();
+            $table->longText('image_1')->nullable();
+            $table->longText('image_2')->nullable();
+            $table->longText('image_3')->nullable();
+            $table->longText('image_4')->nullable();
+            $table->longText('image_5')->nullable();
             $table->text('description')->nullable();
             $table->string('product_name');
             $table->timestamps();
-            $table->softDeletes()->nullable();
+            $table->softDeletes();
 
             $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade');
         });
