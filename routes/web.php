@@ -48,6 +48,7 @@ Route::get('/categorize', [HomeController::class, 'categorize'])->name('categori
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
+Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
@@ -57,7 +58,7 @@ Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.
 Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
-Route::get('/seller/follower-list', [App\Http\Controllers\FollowerListController::class, 'index'])->name('seller.follower-list');
+Route::get('/seller/follower-list', [App\Http\Controllers\Seller\FollowerListController::class, 'index'])->name('seller.follower-list');
 Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::class, 'index'])->name('seller.connection');
 
 //Buyer Routes
@@ -111,5 +112,6 @@ Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
 //Connection
 Route::get('/admin/connection', [AdminController::class, 'connection'])->name('admin.connection');
+
 
 
