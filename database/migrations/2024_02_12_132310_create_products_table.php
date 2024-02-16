@@ -23,7 +23,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('product_name');
             $table->timestamps();
-            $table->softDeletes()->nullable();
+            $table->softDeletes();
 
             $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade');
         });

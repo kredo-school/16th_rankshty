@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('model_number')->nullable();
             $table->unsignedbigInteger('stock_quantity')->nullable();
             $table->timestamps();
-            $table->softDeletes()->nullable();
+            $table->softDeletes();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
