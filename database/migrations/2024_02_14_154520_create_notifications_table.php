@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('target_user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->enum('action', ['dms', 'Favorite','Order','Shipped','Review','Restocked','Information']);
+            $table->enum('action', ['dms', 'Favorite','Follow','Order','Shipped','Review','Restocked','Information']);
             $table->foreignId('dms_id')->nullable()->references('id')->on('dms')->onDelete('cascade');
             $table->foreignId('order_id')->nullable()->references('id')->on('orders')->onDelete('cascade');
             $table->foreignId('product_details_id')->nullable()->references('id')->on('product_details')->onDelete('cascade');
