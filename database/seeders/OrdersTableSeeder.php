@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Orders; 
 
-class OrdersSeeder extends Seeder
+class OrdersTableSeeder extends Seeder
 {
    
     public function run(): void
