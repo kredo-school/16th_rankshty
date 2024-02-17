@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignID('buyer_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignID('seller_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
+
+            $table->unique(['buyer_id', 'seller_id']);
         });
     }
 
