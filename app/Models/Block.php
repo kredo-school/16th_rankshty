@@ -8,4 +8,6 @@ class Block extends Model
 {
     public $timestamps = false;
     protected $fillable = ['blocker_id', 'blocked_id'];
+
+    
 }

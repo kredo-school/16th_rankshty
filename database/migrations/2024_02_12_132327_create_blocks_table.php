@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('blocker_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('blocked_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->unique(['blocker_id', 'blocked_id']);
         });
     }
 
