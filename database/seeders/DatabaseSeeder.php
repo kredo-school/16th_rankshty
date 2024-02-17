@@ -7,6 +7,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this->call(FavoritesSeeder::class);
+        $this->call([
+            OrderDetailsSeeder::class,
+        ]);
     }
 }
