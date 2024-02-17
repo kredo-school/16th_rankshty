@@ -2,28 +2,20 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; 
+use Faker\Factory as Faker;
 
 class FavoritesSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
-       $favorites = [
-       [
-        'user_id' => 1,
-        'product_id' => 1,
-       ],
-       [
-        'user_id'=> 2,
-        'product_id' => 2,
-       ],
-    ];
-    foreach($favorites as $favorite) 
-    {
-        DB::table('favorites')->insert($favorite);
-    }
+        $faker = Faker::create();
 
+        foreach (range(1, 10) as $index) {
+            \DB::table('favorites')->insert([
+                'user_id'    => $faker->randomDigitNotNull,
+                'product_id' => $faker->randomDigitNotNull,
+            ]);
+        }
     }
 }
