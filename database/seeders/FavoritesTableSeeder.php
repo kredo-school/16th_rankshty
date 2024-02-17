@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-class FavoritesSeeder extends Seeder
+class FavoritesTableSeeder extends Seeder
 {
     public function run()
     {
