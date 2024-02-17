@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\ProductSeeder;
+use Database\Seeders\ProductDetailSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,7 +29,8 @@ class DatabaseSeeder extends Seeder
             MainCategorySeeder::class,
             SubCategorySeeder::class,
             ProductSeeder::class,
-            ProductDetailSeeder::class
+            ProductDetailSeeder::class,
+            CategoryProductSeeder::class
         ]);
     }
 }
