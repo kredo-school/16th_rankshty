@@ -17,6 +17,7 @@ class ProductSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 10) as $index) {
+            $statusNumber = $faker->numberBetween(1, 3);
             $sellerId = $faker->numberBetween(1, 10);
             $imageCount = $faker->numberBetween(1, 5);
 
@@ -30,7 +31,7 @@ class ProductSeeder extends Seeder
             }
 
             DB::table('products')->insert([
-                'status' => $faker->randomElement(['Published', 'Draft', 'Archived']),
+                'status' => $statusNumber,
                 'seller_id' => $sellerId,
                 'image_1' => $images['image1'],
                 'image_2' => $images['image2'],
