@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->bigInteger('post_code');
+            $table->string('post_code');
             $table->string('receiver_name');
             $table->string('address');
             $table->string('city');
