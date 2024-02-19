@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             $statusNumber = $faker->numberBetween(1, 3);
-            $sellerId = $faker->numberBetween(1, 10);
+            $seller = DB::table('users')->where('role_id', 3)->inRandomOrder()->first();
             $imageCount = $faker->numberBetween(1, 5);
 
             $images = [];
@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
 
             DB::table('products')->insert([
                 'status' => $statusNumber,
-                'seller_id' => $sellerId,
+                'seller_id' => $seller->id,
                 'image_1' => $images['image1'],
                 'image_2' => $images['image2'],
                 'image_3' => $images['image3'],
