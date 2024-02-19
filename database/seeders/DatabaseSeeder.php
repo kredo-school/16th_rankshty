@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             SubCategorySeeder::class,
             CategoryProductSeeder::class,
             ReviewsTableSeeder::class,
+            CartSeeder::class,
             FollowSeeder::class,
             BlockSeeder::class,
             DmsSeeder::class,
