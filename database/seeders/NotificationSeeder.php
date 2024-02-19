@@ -14,72 +14,35 @@ class NotificationSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        $notifications = [
-            [
-                'user_id' => 1,
-                'target_user_id' => 2,
-                'action' => ActionType::search(0),
-                'dms_id' => null,
-                'order_id' => null,
-                'product_details_id' => null,
-                'favorites_id' => null,
-                'follows_id' => 1,
-                'reviews_id' => null,
-                'info_text' => 'You have a new follower',
-                'is_checked' => 0,
-                'deleted_at' => null,
-                'receiver_role_id' => 2,
-            ],
-            [
-                'user_id' => 1,
-                'target_user_id' => 2,
-                'action' => ActionType::search(1),
-                'dms_id' => null,
-                'order_id' => null,
-                'product_details_id' => null,
-                'favorites_id' => null,
-                'follows_id' => 2,
-                'reviews_id' => null,
-                'info_text' => 'You have a new follower',
-                'is_checked' => 0,
-                'deleted_at' => null,
-                'receiver_role_id' => 2,
-            ],
-            [
-                'user_id' => 1,
-                'target_user_id' => 2,
-                'action' => ActionType::search(3),
-                'dms_id' => null,
-                'order_id' => null,
-                'product_details_id' => null,
-                'favorites_id' => null,
-                'follows_id' => 1,
-                'reviews_id' => null,
-                'info_text' => 'You have a new follower',
-                'is_checked' => 0,
-                'deleted_at' => null,
-                'receiver_role_id' => 2,
-            ],
-            [
-                'user_id' => 1,
-                'target_user_id' => 2,
-                'action' => ActionType::search(4),
-                'dms_id' => null,
-                'order_id' => null,
-                'product_details_id' => null,
-                'favorites_id' => null,
-                'follows_id' => 2,
-                'reviews_id' => null,
-                'info_text' => 'You have a new follower',
-                'is_checked' => 0,
-                'deleted_at' => null,
-                'receiver_role_id' => 2,
-            ]
-        ];
+        // All users
+        $all_users = \DB::table('users')->get();
+        // admin user
+        $admin_user = \DB::table('users')->where('role_id', 1)->first();
+        // user
+        $user = \DB::table('users')->where('role_id', 2)->first();
 
-        foreach ($notifications as $notification) {
-            Notification::create($notification);
+
+        for ($i = 1; $i < 8; $i++) {
+            $notification = new Notification();
+            if ($i == 7) {
+                $notification->user_id = $admin_user->id;
+                $notification->target_user_id = $user->id;
+            } else {
+                $notification->user_id = $all_users[$i]->id;
+                $notification->target_user_id = $all_users[$i + 1]->id;
+            }
+            $notification->action = ActionType::search($i);
+            $notification->dms_id = $i == 1 ? 1 : null;
+            $notification->order_id = $i == 2 ? 1 : null;
+            $notification->product_details_id = $i == 3 ? 1 : null;
+            $notification->favorites_id = $i == 4 ? 1 : null;
+            $notification->follows_id = $i == 5 ? 1 : null;
+            $notification->reviews_id = $i == 6 ? 1 : null;
+            $notification->info_text = $i == 7 ? 'This is a test notification' : null;
+            $notification->is_checked = rand(0, 1);
+            $notification->deleted_at = null;
+            $notification->receiver_role_id = $i == 7 ? $user->role_id : $all_users[$i + 1]->role_id;
+            $notification->save();
         }
     }
 }
