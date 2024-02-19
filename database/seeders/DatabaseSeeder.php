@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\CartSeeder;
 use Database\Seeders\ProductSeeder;
 use Database\Seeders\SubCategorySeeder;
 use Database\Seeders\ProductDetailSeeder;
