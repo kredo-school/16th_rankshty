@@ -12,7 +12,7 @@ class product extends Model
     #A product belongs to a user
     public function users()
     {
-        return $this->belongsTo(User::class)->latest();
+        return $this->belongsTo(User::class)->withTrashed();;
     }
 
     public function reviews()
