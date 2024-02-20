@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             $avatarPath = $this->generateRandomAvatar($faker);
-            
+
             \DB::table('users')->insert([
                 'username'            => $faker->userName,
                 'first_name'          => $faker->firstName,
@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
                 'introduction'        => $faker->sentence,
                 'business_name'       => $faker->company,
                 'credit_card_number'  => $faker->creditCardNumber,
-                'role_id'             => $faker->randomDigitNotNull,
+                'role_id'             => $faker->numberBetween(1, 3),
                 'last_login_at'       => $faker->dateTimeThisMonth,
                 'last_logout_at'      => $faker->dateTimeThisMonth,
                 'created_at'          => now(),
