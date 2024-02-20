@@ -30,6 +30,9 @@ class DatabaseSeeder extends Seeder
             FollowSeeder::class,
             BlockSeeder::class,
             DmsSeeder::class,
+            // OrderSeeder::class,
+            // FavoriteSeeder::class,
+            NotificationSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 
