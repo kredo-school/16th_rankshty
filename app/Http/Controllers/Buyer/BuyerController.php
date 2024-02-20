@@ -33,6 +33,11 @@ class BuyerController extends Controller
         return view('users.buyer.help_page');
     }
 
+    public function reviewPage()
+    {
+        return view('buyers.reviewpage');
+    }
+
     public function checkout()
     {
         return view('buyers.checkout');
@@ -66,5 +71,4 @@ class BuyerController extends Controller
     {
         return view('buyers.report');
     }
-
 }
