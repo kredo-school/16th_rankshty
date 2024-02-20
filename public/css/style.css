@@ -66,14 +66,14 @@
 }
 
 /* SideBar and Tab of followblock Style */
-.sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active,
+.sidebar .list-group-item:hover, .sidebar .nav-link:hover, .sidebar .nav-link.active, .sidebar .focused,
 .followblock .list-group-item:hover, .followblock .nav-link:hover, .followblock .nav-link.active {
     cursor: pointer;
     background-color:#cfeffa;
     border-left: 10px solid #071657;
 }
 .sidebar .nav-item a:link, .sidebar .nav-item a:visited,
-.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,.sidebar .focused,
 .followblock .nav-item a:link, .followblock .nav-item a:visited,
 .followblock .nav-item a:hover, .followblock .nav-item a:active {
     color: #000000;
