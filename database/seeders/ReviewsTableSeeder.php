@@ -13,15 +13,15 @@ class ReviewsTableSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1,10) as $index){
-            $picture_1Path = $this->generateRandomPicture_1($faker); 
-            $picture_2Path = $this->generateRandomPicture_2($faker); 
-            $picture_3Path = $this->generateRandomPicture_3($faker); 
-            $picture_4Path = $this->generateRandomPicture_4($faker); 
-            $picture_5Path = $this->generateRandomPicture_5($faker); 
+            $picture_1Path = $this->generateRandomPicture_1($faker);
+            $picture_2Path = $this->generateRandomPicture_2($faker);
+            $picture_3Path = $this->generateRandomPicture_3($faker);
+            $picture_4Path = $this->generateRandomPicture_4($faker);
+            $picture_5Path = $this->generateRandomPicture_5($faker);
 
             DB::table('reviews')->insert([
-                'user_id'           => $faker->numberBetween(1, 100), 
-                'product_id'        => $faker->numberBetween(1, 100),
+                'user_id'           => $faker->numberBetween(1, 10),
+                'product_id'        => $faker->numberBetween(1, 10),
                 'review_title'      => $faker->sentence,
                 'description'       => $faker->paragraph,
                 'rating_star_mark'  => $faker->numberBetween(1, 5),
@@ -32,6 +32,7 @@ class ReviewsTableSeeder extends Seeder
                 'picture_5'         => $picture_5Path,
                 'created_at'        => now(),
                 'updated_at'        => now(),
+                'deleted_at'        => null,
             ]);
         }
     }
@@ -47,7 +48,7 @@ class ReviewsTableSeeder extends Seeder
         $picture_2 = $faker->image('public/storage/picture_2s', 200, 200, 'people', false);
         return 'picture_2s/' . pathinfo($picture_2, PATHINFO_BASENAME);
     }
-   
+
     private function generateRandomPicture_3($faker)
     {
         $picture_3 = $faker->image('public/storage/picture_3s', 200, 200, 'people', false);
