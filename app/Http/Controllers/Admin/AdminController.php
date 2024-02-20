@@ -27,11 +27,6 @@ class AdminController extends Controller
         return view('admin.complaindetail');
     }
 
-    public function category()
-    {
-        return view('admin.category');
-    }
-
     public function ranking()
     {
         return view('admin.ranking');

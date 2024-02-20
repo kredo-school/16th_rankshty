@@ -4,21 +4,22 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Buyer\BuyerController;
-use App\Http\Controllers\Buyer\ConnectionController;
-use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
-use App\Http\Controllers\Admin\NotificationsController;
-use App\Http\Controllers\Admin\FollowerFollowingListController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Buyer\FollowBlockController;
-
-
-
-use App\Http\Controllers\PurchaseHistoryController;
+use App\Http\Controllers\Buyer\BuyerController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\FollowerListController;
+use App\Http\Controllers\Seller\SellerController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\PurchaseHistoryController;
+use App\Http\Controllers\Admin\CategoriesController;
+
+
+
+use App\Http\Controllers\Buyer\ConnectionController;
+use App\Http\Controllers\Buyer\FollowBlockController;
+use App\Http\Controllers\Admin\NotificationsController;
+use App\Http\Controllers\Admin\FollowerFollowingListController;
 
 
 /*
@@ -106,7 +107,7 @@ Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.r
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 //Category
-Route::get('/admin/category', [AdminController::class, 'category'])->name('admin.category');
+Route::get('/admin/category', [CategoriesController::class, 'index'])->name('admin.category');
 //Complainhandling
 Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling'])->name('admin.complainhandling');
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');

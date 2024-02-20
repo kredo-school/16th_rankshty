@@ -17,22 +17,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>image</td>
-                    <td>fashion</td>
-                    <td>500</td>
-                    <td>
-                        <button class="btn btn-link text-black text-decoration-none p-0 btn-modal" data-bs-target="#subcategoryModalToggle" data-bs-toggle="modal">View</button>
-                        @include('admin.modal.subcategory')
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-link text-secondary text-decoration-none p-0 btn-modal" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal">
-                            DELETE
-                        </button>
-                        @include('admin.modal.deletecategory')
-                    </td>
-                </tr>
+                @foreach ( $all_main_categories  as $main_category)
+                    <tr>
+                        <td>{{ $main_category->id }}</td>
+                        <td>
+                            <img src="{{ $main_category->image }}" alt="Category {{ $main_category->id }}">
+                        </td>
+                        <td>{{ $main_category->name }}</td>
+                        <td>{{ $main_category->categoryProduct->count() }}</td>
+                        <td>
+                            <button class="btn btn-link text-black text-decoration-none p-0 btn-modal" data-bs-target="#subcategory-{{ $main_category->id }}" data-bs-toggle="modal">View</button>
+                            @include('admin.modal.subcategory')
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-link text-secondary text-decoration-none p-0 btn-modal" data-bs-toggle="modal" data-bs-target="#deleteCategory-{{ $main_category->id }}">
+                                DELETE
+                            </button>
+                            @include('admin.modal.deletecategory')
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 
