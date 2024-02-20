@@ -125,9 +125,6 @@
     color: #ffff;
 }
 
-.btn-modal{
-    height: 20px;
-}
 .btn-search {
     height: 40px;
     width: 150px;
@@ -239,7 +236,7 @@ border: 1.5px dashed var(--Main, #071657);
     cursor: pointer;
   }
   .rating-css input:checked + label ~ label {
-    color: #fff;
+    color: #b4afaf;
   }
   .rating-css label:active {
     transform: scale(0.8);
