@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
+            UsersTableSeeder::class,
+            ReviewsTableSeeder::class,
+            ComplainHandlingTableSeeder::class,
             RoleSeeder::class,
             UsersTableSeeder::class,
             AddressSeeder::class,
@@ -23,10 +26,12 @@ class DatabaseSeeder extends Seeder
             CategoryProductSeeder::class,
             ReviewsTableSeeder::class,
             OrderDetailsTableSeeder::class,
+            FavoritesTableSeeder::class,
             CartSeeder::class,
             FollowSeeder::class,
             BlockSeeder::class,
             DmsSeeder::class,
+            NotificationSeeder::class,
 
         ]);
         // \App\Models\User::factory(10)->create();
