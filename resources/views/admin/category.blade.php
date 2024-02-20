@@ -21,7 +21,7 @@
                     <tr>
                         <td>{{ $main_category->id }}</td>
                         <td>
-                            <img src="{{ $main_category->image }}" alt="Category {{ $main_category->id }}">
+                            <img src="{{ $main_category->image }}" alt="Category {{ $main_category->id }}" style="width: 9rem">
                         </td>
                         <td>{{ $main_category->name }}</td>
                         <td>{{ $main_category->categoryProduct->count() }}</td>
