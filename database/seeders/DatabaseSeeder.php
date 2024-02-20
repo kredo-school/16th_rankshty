@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
+
         $this->call([
             UsersTableSeeder::class,
             ReviewsTableSeeder::class,
@@ -24,14 +25,14 @@ class DatabaseSeeder extends Seeder
             SubCategorySeeder::class,
             CategoryProductSeeder::class,
             ReviewsTableSeeder::class,
+            OrderDetailsTableSeeder::class,
             FavoritesTableSeeder::class,
             CartSeeder::class,
             FollowSeeder::class,
             BlockSeeder::class,
             DmsSeeder::class,
-            // OrderSeeder::class,
-            // FavoriteSeeder::class,
             NotificationSeeder::class,
+
         ]);
         // \App\Models\User::factory(10)->create();
 
