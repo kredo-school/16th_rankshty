@@ -134,7 +134,7 @@
 }
 
 @media (min-width: 768px) {
-    .selector #slider-range {
+    .selector #slider-range, .selector #slider-range2 {
         width: 100%
     }
 }
@@ -203,4 +203,23 @@
 
 .selector.open .show-all:after {
     display: none
+}
+
+
+
+/* Categorize sidebar */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffffff00;
+}
+
+.selector #slider-range2 {
+    width: 90%;
+    margin-bottom: 30px;
+    border: none;
+    background: #d7d7d7;
+    height: 3px;
 }
