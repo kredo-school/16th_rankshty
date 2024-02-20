@@ -69,12 +69,15 @@ Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
+
+Route::get('/buyer/review-page', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/returnproducts', [BuyerController::class, 'returnProducts'])->name('buyer.returnproducts');
 Route::get('/buyer/cart', [BuyerController::class, 'cart'])->name('buyer.cart');
 Route::get('/buyer/watchlist', [BuyerController::class, 'watchlist'])->name('buyer.watchlist');
 Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/purchase-history', [PurchaseHistoryController::class, 'index'])->name('buyer.purchase-history');
 Route::get('/buyer/connection', [ConnectionController::class, 'index'])->name('buyer.connection');
+
 
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
