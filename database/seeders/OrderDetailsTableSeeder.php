@@ -8,7 +8,7 @@ use App\Models\OrderDetails;
 
 class OrderDetailsSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $faker = Faker::create();
 
