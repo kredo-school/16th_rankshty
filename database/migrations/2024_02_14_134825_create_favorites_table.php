@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('favorites', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('buyer_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignID('seller_id')->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade');
 
-            $table->unique(['buyer_id', 'seller_id']);
+            $table->unique(['user_id', 'product_id']);
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('favorites');
     }
 };

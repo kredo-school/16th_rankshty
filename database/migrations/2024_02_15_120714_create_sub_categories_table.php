@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('buyer_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignID('seller_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('name');
+            $table->unsignedBigInteger('main_category_id');
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->unique(['buyer_id', 'seller_id']);
+            $table->foreign('main_category_id')->references('id')->on('main_categories')->onDelete('cascade');
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('sub_categories');
     }
 };

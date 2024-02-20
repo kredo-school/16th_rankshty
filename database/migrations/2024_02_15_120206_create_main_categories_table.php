@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('main_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('buyer_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignID('seller_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('name');
+            $table->string('image');
             $table->timestamps();
-
-            $table->unique(['buyer_id', 'seller_id']);
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('main_categories');
     }
 };

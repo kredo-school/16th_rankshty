@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('role_name')->unique();
+        Schema::create('carts', function (Blueprint $table) {
+            $table->foreignId('buyer_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade');
+
+            $table->primary(['buyer_id', 'product_id']);
         });
     }
 
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('carts');
     }
 };

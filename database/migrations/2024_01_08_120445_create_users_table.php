@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamp('last_login_at')->nullable();
             $table->timestamp('last_logout_at')->nullable();
             $table->timestamps();
-            $table->softDeletes()->nullable();
+            $table->softDeletes();
 
             $table->foreign('role_id')->references('id')->on('roles');
         });
