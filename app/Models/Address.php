@@ -18,4 +18,9 @@ class Address extends Model
         'prefecture',
         'phone_number',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class)->withTrashed();
+    }
 }
