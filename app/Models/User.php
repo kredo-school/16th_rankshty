@@ -91,5 +91,11 @@ class User extends Authenticatable
         return $this->hasMany(Order::class)->latest();
     }
 
+    #To get all the addresses of a user
+    public function addresses()
+    {
+        return $this->hasMany(Address::class)-latest();
+    }
+
 }
 
