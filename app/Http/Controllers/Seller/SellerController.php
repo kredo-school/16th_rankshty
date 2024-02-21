@@ -8,7 +8,7 @@ class SellerController extends Controller
 {
     public function guide()
     {
-        return view('users.seller.guide_page');
+        return view('seller.guide');
     }
 
     public function productsList()
