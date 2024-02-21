@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             SubCategorySeeder::class,
             CategoryProductSeeder::class,
             ReviewsTableSeeder::class,
-            OrdersTableSeeder::class
+            OrdersTableSeeder::class,
             OrderDetailsTableSeeder::class,
             FavoritesTableSeeder::class,
             CartSeeder::class,
