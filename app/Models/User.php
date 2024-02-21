@@ -42,4 +42,60 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    #To get all the products of a user
+    public function products()
+    {
+        return $this->hasMany(Product::class)->latest();
+    }
+
+    #To get all the dms of a user
+    public function dms()
+    {
+        return $this->hasMany(DM::class)->latest();
+    }
+
+    #To get all the reviews of a user
+    public function reviews()
+    {
+        return $this->hasMany(Review::class)->latest();
+    }
+
+    #To get all the blocks of a user
+    public function blocks()
+    {
+        return $this->hasMany(Block::class)->latest();
+    }
+
+    #To get all the carts of a user
+    public function carts()
+    {
+        return $this->hasMany(Cart::class)->latest();
+    }
+
+    #To get all the favorites of a user
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class)->latest();
+    }
+    
+    #To get all the follows of a user
+    public function follows()
+    {
+        return $this->hasMany(Follow::class)->latest();
+    }
+
+    #To get all the orders of a user
+    public function orders()
+    {
+        return $this->hasMany(Order::class)->latest();
+    }
+
+    #To get all the addresses of a user
+    public function addresses()
+    {
+        return $this->hasMany(Address::class)-latest();
+    }
+
 }
+
