@@ -18,12 +18,11 @@ class CartSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             $buyer = DB::table('users')->where('role_id', 2)->inRandomOrder()->first();
-            $productId = $faker->numberBetween(1, 10);
-
 
             DB::table('carts')->insert([
                 'buyer_id' => $buyer->id,
-                'product_id' => $productId,
+                'product_detail_id' => $faker->numberBetween(1, 10),
+                'quantity' => $faker->numberBetween(1, 10)
             ]);
         }
     }

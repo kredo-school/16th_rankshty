@@ -11,11 +11,23 @@ class FavoritesTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 10) as $index) {
+        $uniqueCombinations = [];
+
+        for ($i = 0; $i < 10; $i++) {
+            do {
+                $buyer = \DB::table('users')->where('role_id', 2)->inRandomOrder()->first();
+                $product_id = $faker->numberBetween(1, 10);
+                $combination = $buyer->id . '-' . $product_id;
+            } while (in_array($combination, $uniqueCombinations));
+
+
+
             \DB::table('favorites')->insert([
-                'user_id'    => $faker->randomDigitNotNull,
-                'product_id' => $faker->randomDigitNotNull,
+                'user_id' => $buyer->id,
+                'product_id' => $product_id,
             ]);
+
+            $uniqueCombinations[] = $combination;
         }
     }
 }
