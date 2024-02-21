@@ -22,7 +22,9 @@ class CartSeeder extends Seeder
             DB::table('carts')->insert([
                 'buyer_id' => $buyer->id,
                 'product_detail_id' => $faker->numberBetween(1, 10),
-                'quantity' => $faker->numberBetween(1, 10)
+                'quantity' => $faker->numberBetween(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
         }
     }

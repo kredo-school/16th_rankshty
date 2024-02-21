@@ -25,11 +25,6 @@ class product extends Model
         return $this->hasMany(CategoryProduct::class)->latest();
     }
 
-    public function carts()
-    {
-        return $this->hasMany(Cart::class)->latest();
-    }
-
     public function favorites()
     {
         return $this->hasMany(Favorite::class)->latest();

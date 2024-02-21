@@ -23,6 +23,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('product_detail_id')->after('buyer_id');
             $table->unsignedBigInteger('quantity')->after('product_detail_id');
+            $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('buyer_id')->references('id')->on('users')->OnDelete('cascade');
             $table->foreign('product_detail_id')->references('id')->on('product_details')->OnDelete('cascade');
@@ -39,6 +41,8 @@ return new class extends Migration
             $table->dropForeign('carts_product_detail_id_foreign');
             $table->dropColumn('product_detail_id');
             $table->dropColumn('quantity');
+            $table->dropTimestamps();
+            $table->dropSoftDeletes();
 
             $table->unsignedBigInteger('product_id')->after('buyer_id');
 
