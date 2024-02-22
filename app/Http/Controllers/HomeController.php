@@ -29,15 +29,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function ranking()
-    {
-        return view('ranking');
-    }
-
-    public function product()
-    {
-        return view('product');
-    }
 
     public function categorize()
     {

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Buyer\CartController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Buyer\BuyerController;
@@ -11,16 +13,16 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\FollowerListController;
 use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\DashboardController;
+
+
+
 use App\Http\Controllers\PurchaseHistoryController;
 use App\Http\Controllers\Admin\CategoriesController;
-
-
-
 use App\Http\Controllers\Buyer\ConnectionController;
 use App\Http\Controllers\Buyer\FollowBlockController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
-
+use App\Http\Controllers\Buyer\FavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,11 +41,11 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Ranking Routes
-Route::get('/ranking/bestseller', [HomeController::class, 'ranking'])->name('ranking.bestseller');
-Route::get('/ranking/review', [HomeController::class, 'ranking'])->name('ranking.review');
-Route::get('/ranking/favorite', [HomeController::class, 'ranking'])->name('ranking.favorite');
+Route::get('/ranking/bestseller', [ProductController::class, 'ranking'])->name('ranking.bestseller');
+Route::get('/ranking/review', [ProductController::class, 'ranking'])->name('ranking.review');
+Route::get('/ranking/favorite', [ProductController::class, 'ranking'])->name('ranking.favorite');
 // Product Route
-Route::get('/product', [HomeController::class, 'product'])->name('product');
+Route::get('/product/{id}/show', [ProductController::class, 'show'])->name('product');
 // Categorize Route
 Route::get('/categorize', [HomeController::class, 'categorize'])->name('categorize');
 
@@ -52,9 +54,10 @@ Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.gu
 Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
-Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
-Route::get('/seller/productslist', [SellerController::class, 'productsList'])->name('seller.productslist');
-Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
+Route::get('/seller/draftlist', [ProductController::class, 'draftlist'])->name('seller.draftlist');
+Route::get('/seller/productslist', [ProductController::class, 'index'])->name('seller.productslist');
+Route::delete('/seller/productslist/{id}/delete', [ProductController::class, 'softDelete'])->name('seller.productslist.delete');
+Route::get('/seller/ranking', [ProductController::class, 'sellersRanking'])->name('seller.ranking');
 Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
 Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
@@ -72,8 +75,10 @@ Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.c
 
 Route::get('/buyer/review-page', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/returnproducts', [BuyerController::class, 'returnProducts'])->name('buyer.returnproducts');
+Route::post('/buyer/cart/store', [CartController::class, 'store'])->name('buyer.cart.store');
 Route::get('/buyer/cart', [BuyerController::class, 'cart'])->name('buyer.cart');
 Route::get('/buyer/watchlist', [BuyerController::class, 'watchlist'])->name('buyer.watchlist');
+Route::post('/buyer/favorite/store', [FavoriteController::class, 'store'])->name('buyer.favorite.store');
 Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/purchase-history', [PurchaseHistoryController::class, 'index'])->name('buyer.purchase-history');
 Route::get('/buyer/connection', [ConnectionController::class, 'index'])->name('buyer.connection');
@@ -82,13 +87,6 @@ Route::get('/buyer/connection', [ConnectionController::class, 'index'])->name('b
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
 Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
-Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
-Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
-Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
-//FollowBlock
-Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
-Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
-Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
 Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');
@@ -106,7 +104,7 @@ Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('ad
 //FollowerFolloingList
 Route::get('/admin/followerfollowinglist', [FollowerFollowingListController::class, 'index'])->name('admin.followerfollowinglist');
 //Ranking
-Route::get('/admin/ranking', [AdminController::class, 'ranking'])->name('admin.ranking');
+Route::get('/admin/ranking', [ProductController::class, 'adminRanking'])->name('admin.ranking');
 //Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 //Category

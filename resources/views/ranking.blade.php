@@ -25,29 +25,35 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <i class="fa-solid fa-crown fa-2x me-1"></i>
-                            <span class="fs-5 fw-bold text-orange">1</span>
-                        </td>
-                        <td>
-                            <img src="{{ asset('images/Green Capsicum.png')}}" alt="Green Capsicum">
-                        </td>
-                        <td>Green Capsicum</td>
-                        <td>
-                            <i class="fa-solid fa-star"></i>
-                            4.8
-                        </td>
-                        <td>3500</td>
-                        <td style="position: relative;">
-                            <button type="button" class="btn btn-link p-0 btn-rank">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            5000
-                        </td>
-                        <td>1,950</td>
-                        <td>A company</td>
-                    </tr>
+                    @foreach ( $all_products as $product )
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-crown fa-2x me-1"></i>
+                                <span class="fs-5 fw-bold text-orange">1</span>
+                            </td>
+                            <td>
+                                <img src="{{ $product->image_1 }}" alt="{{ $product->product_name }}" style="width: 100%">
+                            </td>
+                            <td>G{{ $product->product_name }}</td>
+                            <td>
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                            </td>
+                            <td>{{ $product->reviews->count() }}</td>
+                            <td style="position: relative;">
+                                <button type="button" class="btn btn-link p-0 btn-rank">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                {{ $product->favorites->count() }}
+                            </td>
+                            <td>1,950</td>
+                            <td>
+                                @if($product->user)
+                                    {{ $product->user->business_name }}
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         @endif

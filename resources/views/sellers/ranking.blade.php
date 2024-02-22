@@ -40,60 +40,24 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                {{-- @forelse ( $all_products as $product ) --}}
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="{{ asset('images/Green Capsicum.png') }}" alt="demo">
-                    </td>
-                    <td>iPhone</td>
-                    <td>PCs</td>
-                    <td>10</td>
-                    <td>$1.65</td>
-                    <td>$1.00</td>
-                    <td>10/11/2023</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <img src="{{ asset('images/Green Capsicum.png') }}" alt="demo">
-                    </td>
-                    <td>iPhone</td>
-                    <td>PCs</td>
-                    <td>10</td>
-                    <td>$1.65</td>
-                    <td>$1.00</td>
-                    <td>10/11/2023</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        <img src="{{ asset('images/Green Capsicum.png') }}" alt="demo">
-                    </td>
-                    <td>iPhone</td>
-                    <td>PCs</td>
-                    <td>10</td>
-                    <td>$1.65</td>
-                    <td>$1.00</td>
-                    <td>10/11/2023</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <img src="{{ asset('images/Green Capsicum.png') }}" alt="demo">
-                    </td>
-                    <td>iPhone</td>
-                    <td>PCs</td>
-                    <td>10</td>
-                    <td>$1.65</td>
-                    <td>$1.00</td>
-                    <td>10/11/2023</td>
-                </tr>
-                {{-- @empty
+                @forelse ( $all_products as $product )
+                    <tr>
+                        <td>{{ $product->id }}</td>
+                        <td>
+                            <img src="{{ $product->image_1 }}" alt="{{ $product->product_name }}" style="width: 100%">
+                        </td>
+                        <td>{{ $product->product_name }}</td>
+                        <td>PCs</td>
+                        <td>10</td>
+                        <td>$1.65</td>
+                        <td>$1.00</td>
+                        <td>{{ date('M d, Y', strtotime($product->created_at)) }}</td>
+                    </tr>
+                @empty
                     <div class="bg-secondary-subtle">
                         <p>You don't have a product.</p>
                     </div>
-                @endforelse --}}
+                @endforelse
             </tbody>
         </table>
 
