@@ -51,5 +51,10 @@ class SellerController extends Controller
     {
         return view('sellers.contact');
     }
+
+    public function reviews()
+    {
+        return view('users.seller.reviews');
+    }
 }
 
