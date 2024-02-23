@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +10,14 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-    {{-- FONTAWESOME CDN --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Styles -->
         {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        {{-- FONTAWESOME --}}
+        <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -33,18 +32,19 @@
         {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}">
         {{-- Specific page css --}}
         @stack('css')
 
         {{-- js for all pages --}}
         {{-- Searchcondition.js --}}
+        <script src="{{ asset('js/jquery-ui.min.js') }}" defer></script>
+        {{-- Footer.js --}}
         <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"></script>
         <script src="{{ asset('js/searchcondition.js') }}" defer></script>
         {{-- Footer.js --}}
         <script src="{{ asset('js/footer.js') }}" defer></script>
-        {{-- Chart.js --}}
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
     </head>
 
     <body>

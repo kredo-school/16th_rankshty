@@ -61,37 +61,49 @@
             <span class="list-group-item  disabled">
                 <h3>Admin Navigation</h3>
             </span>
-            <a href="{{ route('admin.users') }}" class="list-group-item">
+            <a href="{{ route('admin.users') }}"
+                class="list-group-item {{ request()->is('admin/usermanagement') ? 'focused' : '' }}">
                 User Management
             </a>
-            <a href="{{ route('admin.contentmanagement') }}" class="list-group-item">
+            <a href="{{ route('admin.contentmanagement') }}"
+                class="list-group-item {{ request()->is('admin/contentmanagement') ? 'focused' : '' }}">
                 Content Management
             </a>
-            <a href="{{ route('admin.complainhandling') }}" class="list-group-item">
+            <a href="{{ route('admin.complainhandling') }}"
+                class="list-group-item {{ request()->is('admin/complainhandling') ? 'focused' : '' }}">
                 Complain Handling
             </a>
-            <a href="{{ route('admin.connection') }}" class="list-group-item">
+            <a href="{{ route('admin.connection') }}"
+                class="list-group-item {{ request()->is('admin/connection') ? 'focused' : '' }}">
                 Connection With Buyer/Seller
             </a>
-            <a href="{{ route('admin.category') }}" class="list-group-item">
+            <a href="{{ route('admin.category') }}"
+                class="list-group-item {{ request()->is('admin/category') ? 'focused' : '' }}">
                 Category Add/Delete
             </a>
-            <a href="{{ route('admin.notifications') }}" class="list-group-item">
+            <a href="{{ route('admin.notifications') }}"
+                class="list-group-item {{ request()->is('admin/notification') ? 'focused' : '' }}">
                 Notification
             </a>
+
+            {{-- Customization Page are not created  --}}
             <a href="#" class="list-group-item">
                 Navbar/Dropdown
             </a>
-            <a href="{{ route('admin.followerfollowinglist') }}" class="list-group-item">
+            <a href="{{ route('admin.followerfollowinglist') }}"
+                class="list-group-item {{ request()->is('admin/followerfollowinglist') ? 'focused' : '' }}">
                 Follower/Following List
             </a>
-            <a href="{{ route('admin.dashboard') }}" class="list-group-item">
+            <a href="{{ route('admin.dashboard') }}"
+                class="list-group-item {{ request()->is('admin/dashboard') ? 'focused' : '' }}">
                 Dashboard
             </a>
-            <a href="{{ route('admin.ranking') }}" class="list-group-item">
+            <a href="{{ route('admin.ranking') }}"
+                class="list-group-item {{ request()->is('admin/ranking') ? 'focused' : '' }}">
                 Ranking
             </a>
-            {{-- <a href="#" class="list-group-item">
+            {{-- Customization Page are not created
+            <a href="#" class="list-group-item">
                 Customization
             </a> --}}
         </div>
