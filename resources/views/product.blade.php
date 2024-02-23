@@ -16,14 +16,14 @@
         </div>
         <div class="col px-5">
             <h2 class="fw-bold">{{ $product->product_name }}</h2>
-            <div class="mt-2">
+            <a href="{{ route('reviews') }}" class="mt-2">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
                 <span>4 Review</span>
-            </div>
+            </a>
             @foreach ( $product->productDetails as $productDetail )
                 <p class="fs-4 mt-3" style="color: #071657;">$ {{ $productDetail->unit_price }}</p>
             @endforeach

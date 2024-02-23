@@ -37,5 +37,10 @@ class SellerController extends Controller
     {
         return view('sellers.contact');
     }
+
+    public function orderManagementDashboard()
+    {
+        return view('sellers.ordermanagementdashboard');
+    }
 }
 

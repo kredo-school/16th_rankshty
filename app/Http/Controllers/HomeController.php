@@ -34,4 +34,9 @@ class HomeController extends Controller
     {
         return view('categorize');
     }
+
+    public function reviews()
+    {
+        return view('reviews');
+    }
 }

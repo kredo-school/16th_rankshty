@@ -35,8 +35,8 @@
                         <div class="badge bg-danger-subtle text-danger">Out of Stock</div>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-primary">Purchase</a>
-                        <a class="btn btn-secondary disabled" aria-disabled="true">Purchase</a>
+                        <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Purchase</a>
+                        {{-- <a class="btn btn-secondary disabled d-flex justify-content-center align-items-center" aria-disabled="true">Purchase</a> --}}
                     </td>
                     <td>
                         <form action="#" method="post">

@@ -31,10 +31,5 @@ class AdminController extends Controller
     {
         return view('admin.connection');
     }
-
-    public function orderManagementDashboard()
-    {
-        return view('admin.ordermanagementdashboard');
-    }
 }
 

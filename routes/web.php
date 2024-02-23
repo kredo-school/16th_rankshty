@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Buyer\BuyerController;
 use App\Http\Controllers\InformationController;
-use App\Http\Controllers\FollowerListController;
+use App\Http\Controllers\Seller\FollowerListController;
 use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -48,10 +48,12 @@ Route::get('/ranking/favorite', [ProductController::class, 'ranking'])->name('ra
 Route::get('/product/{id}/show', [ProductController::class, 'show'])->name('product');
 // Categorize Route
 Route::get('/categorize', [HomeController::class, 'categorize'])->name('categorize');
+// Review Route
+Route::get('reviews', [HomeController::class, 'reviews'])->name('reviews');
 
 //Seller Routes
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
-Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');
+
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [ProductController::class, 'draftlist'])->name('seller.draftlist');
@@ -62,8 +64,9 @@ Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.
 Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
-Route::get('/seller/follower-list', [App\Http\Controllers\Seller\FollowerListController::class, 'index'])->name('seller.follower-list');
+Route::get('/seller/follower-list', [FollowerListController::class, 'index'])->name('seller.follower-list');
 Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::class, 'index'])->name('seller.connection');
+Route::get('/seller/ordermanagement/dashboard', [SellerController::class, 'orderManagementDashboard'])->name('seller.orderManagementDashboard');
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
@@ -96,7 +99,7 @@ Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete
 //Content Management
 Route::get('/admin/contentmanagement', [AdminController::class, 'contentManagement'])->name('admin.contentmanagement');
 Route::get('/admin/contentmanagement/details', [AdminController::class, 'contentManagementDetails'])->name('admin.contentmanagementdetails');
-Route::get('/admin/ordermanagement/dashboard', [AdminController::class, 'orderManagementDashboard'])->name('admin.orderManagementDashboard');
+
 //Notifications
 Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
 //User Management
