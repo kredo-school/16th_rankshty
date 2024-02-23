@@ -51,7 +51,7 @@ class ProductController extends Controller
 
     public function draftlist()
     {
-        $all_products = $this->product->all();
+        $all_products = Product::with('category_products.category')->get();
         // dd($all_products);
 
         return view('sellers.draftlist')->with('all_products', $all_products);

@@ -14,7 +14,7 @@ class CategoryProduct extends Model
     public $timestamps = false;
 
     public function category(){
-        return $this->belongsTo(MainCategory::class);
+        return $this->belongsTo(MainCategory::class, 'main_category_id');
     }
 
     public function product(){
