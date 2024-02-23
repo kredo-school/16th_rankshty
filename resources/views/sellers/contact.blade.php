@@ -2,22 +2,26 @@
 
 @section('title', 'Seller: Contact page')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/seller.css') }}">
+@endpush
+
 @section('content')
-    <form action="#" method="get">
+    <form action="#" method="post">
         @csrf
 
         <div class="container mt-5">
             <div class="row justify-content-center align-items-start">
                 <div class="col-2 text-center border shadow">
                     <a href="#">
-                        <i class="fa-regular fa-envelope mt-3" style="font-size: 50px;color: #0C66A6; border-radius: 40%;"></i>
+                        <i class="fa-regular fa-envelope mt-3 custom-icon"></i>
                     </a>
                     <div class="text-muted">
                         admin@gmail.com
                     </div>
                     <hr>
                     <a href="#">
-                        <i class="fa-solid fa-phone-volume" style="font-size: 50px; color: #0C66A6; border-radius: 40%;"></i>
+                        <i class="fa-solid fa-phone-volume custom-icon"></i>
                     </a>
                     <div class="text-muted mb-3">
                         (219) 555-0114 <br>(164) 333-0487
@@ -45,7 +49,7 @@
                         @enderror --}}
                     </div>
                     <div class="mt-5 d-flex justify-content-end">
-                        <button type="submit" class="btn px-5 text-white d-flex justify-content-center align-items-center" style="background-color: #4CA0D4;">Send Message</button>
+                        <button type="submit" class="btn btn-info px-5 text-white d-flex justify-content-center align-items-center">Send Message</button>
                     </div>
 
 

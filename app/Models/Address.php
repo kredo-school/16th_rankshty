@@ -24,6 +24,7 @@ class Address extends Model
         return $this->belongsTo(User::class)->withTrashed();
     }
 
+
     public function orders()
     {
         return $this->hasOne(Order::class)->latest();

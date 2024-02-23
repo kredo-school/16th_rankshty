@@ -2,6 +2,10 @@
 
 @section('title', 'Seller: Help page')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/seller.css') }}">
+@endpush
+
 @section('content')
     <div class="container">
         <div class="title">
@@ -11,7 +15,7 @@
             <div class="accordion mt-3">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" style="background-color: #6c757d1f;" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Question No.1
                     </button>
                     </h2>
@@ -25,7 +29,7 @@
             <div class="accordion mt-3">
                 <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" style="background-color: #6c757d1f;" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Question No.2
                     </button>
                 </h2>
@@ -39,7 +43,7 @@
             <div class="accordion mt-3">
                 <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" style="background-color: #6c757d1f;"aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Question No.3
                     </button>
                 </h2>
@@ -53,7 +57,7 @@
             <div class="accordion mt-3">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" style="background-color: #6c757d1f;" aria-expanded="false" aria-controls="collapseFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"  aria-expanded="false" aria-controls="collapseFour">
                         Question No.4
                     </button>
                     </h2>
@@ -67,7 +71,7 @@
             <div class="accordion mt-3">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" style="background-color: #6c757d1f;"aria-expanded="false" aria-controls="collapseFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         Question No.5
                     </button>
                     </h2>
