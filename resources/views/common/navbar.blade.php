@@ -66,11 +66,10 @@
                 </li>
 
                 <li class="nav-item dropdown item-position">
-                    @if (isset(Auth::user()->name))
-                        {{-- @if (isset(Auth::user()->username)) --}}
+                    @if (isset(Auth::user()->username))
                         <a id="navbarDropdown" class="nav-link dropdown-toggle fw-bold" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->username }}
                         </a>
                     @else
                         <div class="d-flex align-items-center">
@@ -87,22 +86,24 @@
                             </a>
                             <hr>
                         @endcan
-
-                        {{-- @if (auth()->user()->role_id == 2)
-                                <a class="dropdown-item" href="#">
-                                    {{ __('My Page') }}
-                                </a>
-                            @endif --}}
-
-                        {{-- @if (auth()->user()->role_id == 3) --}}
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{ route('admin.users') }}">
                             {{ __('My Page') }}
                         </a>
-                        {{-- @endif --}}
+
+                        {{-- @if (auth()->user()->role_id == 2)
+                            <a class="dropdown-item" href="#">
+                                {{ __('My Page') }}
+                            </a>
+                        @endif
+                        @if (auth()->user()->role_id == 3)
+                            <a class="dropdown-item" href="{{ route('admin.users') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @endif --}}
 
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                            document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
