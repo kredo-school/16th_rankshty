@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 @endpush
 @push('js')
-<script src="{{ asset('js/dashboard.js') }}" defer></script>
+    <script src="{{ asset('js/seller-dashboard.js') }}" defer></script>
 @endpush
 
 @section('content')
@@ -56,7 +56,7 @@
                         </li>
                     </ul>
                 </div>
-               
+
                 <div class="dropdown d-none" id="ranking-selection">
                     <button class="btn btn-secondary dropdown-toggle shadow" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -119,7 +119,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td># 701</td>
+                                    <td># 701 Test</td>
                                     <td>YAMADA HANAKO</td>
                                 </tr>
                                 <tr>
