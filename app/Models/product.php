@@ -5,37 +5,30 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Enums\ProductStatus;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory;
 
     #A product belongs to a user
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->withTrashed();;
     }
-    //->withTrashed()
 
     public function reviews()
     {
         return $this->hasMany(Review::class)->latest();
     }
 
-    public function productDetails()
+    public function category_product()
     {
-        return $this->hasMany(productDetail::class)->latest();
-    }
-
-    public function category_products()
-    {
-        return $this->hasMany(CategoryProduct::class);
+        return $this->hasMany(CategoryProduct::class)->latest();
     }
 
     public function favorites()
     {
-        return $this->hasMany(Favorite::class);
+        return $this->hasMany(Favorite::class)->latest();
     }
 
     public function dms()
