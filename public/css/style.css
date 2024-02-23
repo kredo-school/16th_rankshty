@@ -78,6 +78,12 @@
 .followblock .nav-item a:hover, .followblock .nav-item a:active {
     color: #000000;
 }
+.sidebar .nav-item a:link, .sidebar .nav-item a:visited,
+.sidebar .nav-item a:hover, .sidebar .nav-item a:active,
+.followblock .nav-item a:link, .followblock .nav-item a:visited,
+.followblock .nav-item a:hover, .followblock .nav-item a:active {
+    color: #000000;
+}
 
 /* Button style */
 .btn {
@@ -108,6 +114,21 @@
     height: 40px;
     width: 150px;
 }
+.btn-info {
+    border-color: #4CA0D4;
+    background-color: #4CA0D4;
+    color: #ffff;
+}
+.btn-info:hover {
+    border-color: #071657;
+    background-color: #071657;
+    color: #ffff;
+}
+
+.btn-search {
+    height: 40px;
+    width: 150px;
+}
 
 /* Pagination style */
 .page-link {
@@ -126,6 +147,10 @@
     font-weight: 600;
     font-size: 14px;
     background-color: #fa8557;
+}
+
+.text-follower {
+    color: #4CA0D4;
 }
 
 /* Star Rating style */
@@ -155,3 +180,80 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+/* Picture insert icon */
+.file-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.file-input-container input[type="file"] {
+display: none;
+}
+
+.file-input-container i {
+margin-right: 5px;
+}
+
+.btn-square{
+    width: 200px;
+    height: 200px;
+}
+
+.insert-pics {
+display: flex;
+width: 80px;
+height: 80px;
+padding: 38px 35px 37px 40px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 2px;
+border: 1.5px dashed var(--Main, #071657);
+}
+
+.circle-plus-color {
+    color: #071657;
+}
+
+/* rating */
+.rating-css div {
+    color: #fa8557;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+  .rating-css input {
+    display: none;
+  }
+  .rating-css input + label {
+    font-size: 60px;
+    text-shadow: 1px 1px 0 #fa8557;
+    cursor: pointer;
+  }
+  .rating-css input:checked + label ~ label {
+    color: #b4afaf;
+  }
+  .rating-css label:active {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+  }
+
+/* End of Star Rating */
+
+
+.seller input, .seller textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
+
+
+.buyer input, .buyer textarea{
+    background-color: #E6E6E6;
+    border: none;
+}
+

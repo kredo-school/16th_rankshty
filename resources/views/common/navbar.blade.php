@@ -1,7 +1,7 @@
 {{-- Header --}}
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-3">
     <div class="container">
-        <a class="navbar-brand me-5" href="{{ url('/home') }}">
+        <a class="navbar-brand me-5" href="{{ url('/') }}">
             <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerSupportedContent"
