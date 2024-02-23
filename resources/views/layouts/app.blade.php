@@ -19,45 +19,34 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+          <!-- Fonts -->
+          <link rel="dns-prefetch" href="//fonts.bunny.net">
+          <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+  
+          <!-- Scripts -->
+          @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+          {{-- JQuery --}}
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+          <!-- Styles -->
+          {{-- css for all pages --}}
+          <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+          <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
+          <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+          {{-- Specific page css --}}
+          @stack('css')
+  
+          {{-- js for all pages --}}
+          {{-- Searchcondition.js --}}
+          <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"></script>
+          <script src="{{ asset('js/searchcondition.js') }}" defer></script>
+          {{-- Footer.js --}}
+          <script src="{{ asset('js/footer.js') }}" defer></script>
+          {{-- Chart.js --}}
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+      </head>
 
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="//fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
-        <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-        {{-- JQuery --}}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-        <!-- Styles -->
-        {{-- css for all pages --}}
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        {{-- Specific page css --}}
-        @stack('css')
-
-        {{-- js for all pages --}}
-        {{-- Searchcondition.js --}}
-        <script src="https://cdn.jsdelivr.net/npm/jquery-ui-slider@1.12.1/jquery-ui.min.js"></script>
-        <script src="{{ asset('js/searchcondition.js') }}" defer></script>
-        {{-- Footer.js --}}
-        <script src="{{ asset('js/footer.js') }}" defer></script>
-        {{-- Chart.js --}}
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
-    </head>
-
+   
     <body>
 
         <div id="app">

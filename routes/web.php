@@ -63,7 +63,7 @@ Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::cla
 
 //Buyer Routes
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
-Route::get('/buyer/reviews-page', [BuyerController::class, 'reviewsPage'])->name('buyer.reviewsPage');
+Route::get('/buyer/reviews-page', [BuyerController::class, 'reviewPage'])->name('buyer.reviewsPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
 Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
