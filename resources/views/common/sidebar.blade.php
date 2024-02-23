@@ -5,19 +5,24 @@
             <span class="list-group-item disabled">
                 <h3>Buyer Navigation</h3>
             </span>
-            <a href="{{ route('buyer.myPage') }}" class="list-group-item">
+            <a href="{{ route('buyer.myPage') }}"
+                class="list-group-item {{ request()->is('buyer/my-page') ? 'focused' : '' }}">
                 My Page
             </a>
-            <a href="{{ route('buyer.purchase-history') }}" class="list-group-item">
+            <a href="{{ route('buyer.purchase-history') }}"
+                class="list-group-item {{ request()->is('buyer/purchase-history') ? 'focused' : '' }}">
                 Order History
             </a>
-            <a href="{{ route('buyer.favorite') }}" class="list-group-item">
+            <a href="{{ route('buyer.favorite') }}"
+                class="list-group-item {{ request()->is('buyer/favorite') ? 'focused' : '' }}">
                 Favorites List
             </a>
-            <a href="{{ route('buyer.cart') }}" class="list-group-item">
+            <a href="{{ route('buyer.cart') }}"
+                class="list-group-item {{ request()->is('buyer/cart') ? 'focused' : '' }}">
                 Shopping Cart
             </a>
-            <a href="{{ route('buyer.followblock') }}" class="list-group-item">
+            <a href="{{ route('buyer.followblock') }}"
+                class="list-group-item {{ request()->is('buyer/followblock') ? 'focused' : '' }}">
                 Follow/Block List
             </a>
         </div>
@@ -27,31 +32,39 @@
             <span class="list-group-item  disabled">
                 <h3>Seller Navigation</h3>
             </span>
-            <a href="{{ route('seller.myPage') }}" class="list-group-item">
+            <a href="{{ route('seller.myPage') }}"
+                class="list-group-item {{ request()->is('seller/my-page') ? 'focused' : '' }}">
                 My Page
             </a>
-            <a href="{{ route('seller.orderManagementDashboard') }}" class="list-group-item">
+            <a href="{{ route('seller.orderManagementDashboard') }}"
+                class="list-group-item {{ request()->is('seller/ordermanagement/dashboard') ? 'focused' : '' }}">
                 Order Management
             </a>
             {{-- <a href="#" class="list-group-item">
                 Sales Management
             </a> --}}
-            <a href="{{ route('seller.follower-list') }}" class="list-group-item">
+            <a href="{{ route('seller.follower-list') }}"
+                class="list-group-item {{ request()->is('seller/follower-list') ? 'focused' : '' }}">
                 Follower List
             </a>
-            <a href="{{ route('seller.connection') }}" class="list-group-item">
+            <a href="{{ route('seller.connection') }}"
+                class="list-group-item {{ request()->is('seller/connection') ? 'focused' : '' }}">
                 Direct Messages
             </a>
-            <a href="{{ route('seller.ranking') }}" class="list-group-item">
+            <a href="{{ route('seller.ranking') }}"
+                class="list-group-item {{ request()->is('seller/ranking') ? 'focused' : '' }}">
                 Ranking
             </a>
-            <a href="{{ route('seller.productslist') }}" class="list-group-item">
+            <a href="{{ route('seller.productslist') }}"
+                class="list-group-item {{ request()->is('seller/productslist') ? 'focused' : '' }}">
                 Products List
             </a>
-            <a href="{{ route('seller.draftlist') }}" class="list-group-item">
+            <a href="{{ route('seller.draftlist') }}"
+                class="list-group-item {{ request()->is('seller/draftlist') ? 'focused' : '' }}">
                 Draft List
             </a>
-            <a href="{{ route('seller.produtRegisty') }}" class="list-group-item">
+            <a href="{{ route('seller.produtRegisty') }}"
+                class="list-group-item {{ request()->is('seller/product-registry') ? 'focused' : '' }}">
                 Product Registry
             </a>
         </div>
@@ -85,11 +98,9 @@
                 class="list-group-item {{ request()->is('admin/notification') ? 'focused' : '' }}">
                 Notification
             </a>
-
-            {{-- Customization Page are not created  --}}
-            <a href="#" class="list-group-item">
+            {{-- <a href="#" class="list-group-item">
                 Navbar/Dropdown
-            </a>
+            </a> --}}
             <a href="{{ route('admin.followerfollowinglist') }}"
                 class="list-group-item {{ request()->is('admin/followerfollowinglist') ? 'focused' : '' }}">
                 Follower/Following List

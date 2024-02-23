@@ -9,7 +9,7 @@ class SellerController extends Controller
 {
     public function guide()
     {
-        return view('users.seller.guide_page');
+        return view('sellers.guide_page');
     }
 
     public function myPage()

@@ -149,7 +149,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Opening store') }}</a>
+                    <a class="nav-link" href="{{ route('seller.guide') }}">{{ __('Opening store') }}</a>
                 </li>
             </ul>
         </div>

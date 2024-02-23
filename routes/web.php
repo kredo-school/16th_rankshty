@@ -49,11 +49,13 @@ Route::get('/product/{id}/show', [ProductController::class, 'show'])->name('prod
 // Categorize Route
 Route::get('/categorize', [HomeController::class, 'categorize'])->name('categorize');
 // Review Route
-Route::get('reviews', [HomeController::class, 'reviews'])->name('reviews');
+Route::get('/reviews', [HomeController::class, 'reviews'])->name('reviews');
+
+
 
 //Seller Routes
-Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
-
+Route::get('/guide', [SellerController::class, 'guide'])->name('seller.guide');
+Route::get('/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
 Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.produtRegisty');
 Route::get('/seller/draftlist', [ProductController::class, 'draftlist'])->name('seller.draftlist');
@@ -61,7 +63,6 @@ Route::get('/seller/productslist', [ProductController::class, 'index'])->name('s
 Route::delete('/seller/productslist/{id}/delete', [ProductController::class, 'softDelete'])->name('seller.productslist.delete');
 Route::get('/seller/ranking', [ProductController::class, 'sellersRanking'])->name('seller.ranking');
 Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
-Route::get('/seller/help', [SellerController::class, 'help'])->name('seller.help');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
 Route::get('/seller/follower-list', [FollowerListController::class, 'index'])->name('seller.follower-list');
@@ -69,13 +70,12 @@ Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::cla
 Route::get('/seller/ordermanagement/dashboard', [SellerController::class, 'orderManagementDashboard'])->name('seller.orderManagementDashboard');
 
 //Buyer Routes
+Route::get('/help/buyer', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/my-page', [BuyerController::class, 'myPage'])->name('buyer.myPage');
 Route::get('/buyer/reviews-page', [BuyerController::class, 'reviewsPage'])->name('buyer.reviewsPage');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('seller.service');
-Route::get('/buyer/help', [BuyerController::class, 'help'])->name('buyer.help');
 Route::get('/buyer/service', [BuyerController::class, 'service'])->name('buyer.service');
 Route::get('/buyer/contact', [BuyerController::class, 'contact'])->name('buyer.contact');
-
 Route::get('/buyer/review-page', [BuyerController::class, 'reviewPage'])->name('buyer.reviewPage');
 Route::get('/buyer/returnproducts', [BuyerController::class, 'returnProducts'])->name('buyer.returnproducts');
 Route::post('/buyer/cart/store', [CartController::class, 'store'])->name('buyer.cart.store');
