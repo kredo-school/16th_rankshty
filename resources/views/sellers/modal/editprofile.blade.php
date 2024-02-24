@@ -47,9 +47,9 @@
                             </div>
 
                             <div class="col-4 text-center">
-                                <img src="https://via.placeholder.com/150" alt=""
+                                <img src="https://via.placeholder.com/150" alt="profile image"
                                     class="rounded-circle picture-circle border border-primary mt-2">
-                                <input type="file" class="form-control mt-2" id="picture" value="Change Picture">
+                                <input type="file" class="form-control mt-2" id="picture">
                             </div>
                         </div>
 
