@@ -7,10 +7,10 @@
                 Morbi cursus porttitor enim lobortis molestie.<br>
                 Duis gravida turpis dui, eget bibendum magna<br>
                 congue nec.<br>
-              <p>(219) 555-0114 <span class="grayed-out">or</span> Proxy@gmail.com</p>           
+              <p>(219) 555-0114 <span class="grayed-out">or</span> Proxy@gmail.com</p>
           </div>
           <div class="col-6 text-right">
-              <a href="#" class="text-decoration-none text-white">Helps</a>
+              <a href="{{ route('seller.help') }}" class="text-decoration-none text-white">Helps</a>
           </div>
       </div>
       <hr>

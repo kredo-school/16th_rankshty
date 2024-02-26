@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-use App\Models\OrderDetails;
+use App\Models\OrderDetail;
 
-class OrderDetailsTableSeeder extends Seeder
+class OrderDetailSeeder extends Seeder
 {
     public function run(): void
     {

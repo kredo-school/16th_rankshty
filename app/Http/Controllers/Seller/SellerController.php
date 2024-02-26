@@ -9,7 +9,7 @@ class SellerController extends Controller
 {
     public function guide()
     {
-        return view('users.seller.guide_page');
+        return view('sellers.guide_page');
     }
 
     public function myPage()
@@ -22,26 +22,11 @@ class SellerController extends Controller
         return view('sellers.productRegistry');
     }
 
-    public function draftlist()
-    {
-        return view('sellers.draftlist');
-    }
-
-    public function productsList()
-    {
-        return view('sellers.productslist');
-    }
-
-    public function ranking()
-    {
-        return view('sellers.ranking');
-    }
-
     public function report()
     {
         return view('sellers.report');
     }
-    
+
     public function help()
     {
         return view('sellers.help');
@@ -50,6 +35,12 @@ class SellerController extends Controller
     public function contact()
     {
         return view('sellers.contact');
+    }
+
+    public function orderManagementDashboard()
+    {
+        return view('sellers.ordermanagementdashboard');
+
     }
 
     public function reviews()

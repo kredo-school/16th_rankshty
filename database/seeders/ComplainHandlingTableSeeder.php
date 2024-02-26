@@ -12,7 +12,7 @@ class ComplainHandlingTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('users')->insert
+        \DB::table('complains')->insert
         ([
             [
                 'body'     => 'About Shipping',

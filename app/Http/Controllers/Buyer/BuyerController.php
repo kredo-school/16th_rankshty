@@ -33,7 +33,7 @@ class BuyerController extends Controller
         return view('users.buyer.help_page');
     }
 
-    public function reviewPage()
+    public function reviewsPage()
     {
         return view('buyers.reviewpage');
     }
