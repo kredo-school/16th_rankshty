@@ -25,6 +25,10 @@
                 class="list-group-item {{ request()->is('buyer/followblock') ? 'focused' : '' }}">
                 Follow/Block List
             </a>
+            <a href="{{ route('buyer.connection') }}"
+                class="list-group-item {{ request()->is('buyer/connection') ? 'focused' : '' }}">
+                Direct Messages
+            </a>
         </div>
         {{-- Seller Sidebar --}}
     @elseif (request()->is('seller/*'))

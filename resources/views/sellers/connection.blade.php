@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Buyers: Connection')
+@section('title', 'Sellers: Connection')
 
 @section('content')
 <head>
