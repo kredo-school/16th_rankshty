@@ -10,6 +10,12 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Styles -->
+        {{-- css for all pages --}}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
         {{-- FONTAWESOME --}}
         <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
 

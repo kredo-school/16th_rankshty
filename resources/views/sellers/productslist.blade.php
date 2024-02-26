@@ -20,30 +20,48 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @forelse ( $all_products as $product ) --}}
-                <tr>
-                    <td>1</td>
-                    <td>iPhone</td>
-                    <td>red</td>
-                    <td>mini</td>
-                    <td>$10.00</td>
-                    <td>200</td>
-                    <td>Published</td>
-                    <td>
-                        <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-link text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
-                            DELETE
-                        </button>
-                        @include('sellers.modal.deleteproduct')
-                    </td>
-                </tr>
-                {{-- @empty
+                @forelse ( $all_products as $product )
+                    {{-- @if ( $product->seller_id == Auth::user()->id ) --}}
+                        <tr>
+                            <td>{{ $product->id }}</td>
+                            <td>{{ $product->product_name }}</td>
+                            <td>
+                                @foreach ( $product->productDetails as $productDetail )
+                                    {{ $productDetail->color }}
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach ( $product->productDetails as $productDetail )
+                                    {{ $productDetail->size }}
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach ( $product->productDetails as $productDetail )
+                                    {{ $productDetail->unit_price }}
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach ( $product->productDetails as $productDetail )
+                                    {{ $productDetail->stock_quantity }}
+                                @endforeach
+                            </td>
+                            <td>{{ $product->status }}</td>
+                            <td>
+                                <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-link text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#deleteProductModal-{{ $product->id }}">
+                                    DELETE
+                                </button>
+                                @include('sellers.modal.deleteproduct')
+                            </td>
+                        </tr>
+                    {{-- @endif --}}
+                @empty
                     <div class="bg-secondary-subtle">
                         <p>You don't have a product.</p>
                     </div>
-                @endforelse --}}
+                @endforelse
             </tbody>
         </table>
 

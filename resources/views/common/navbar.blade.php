@@ -22,7 +22,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                {{-- @guest
+                @guest
                     @if (Route::has('login'))
                         <li class="nav-item item-position">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -34,7 +34,7 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                @else --}}
+                @else
                 <li class="nav-item">
                     <a class="nav-link position-relative" href="#">
                         <i class="fa-regular fa-bell custom-bell me-2"></i>
@@ -111,7 +111,7 @@
                         </div>
                     @endauth
                 </li>
-                {{-- @endguest --}}
+                @endguest
             </ul>
         </div>
     </div>
@@ -138,19 +138,17 @@
                         {{ __('Categories') }}
                     </a>
 
-                    {{-- @foreach ($all_categories as $category) --}}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @include('common.searchcondition')
                     </div>
-                    {{-- @endforeach --}}
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Help') }}</a>
+                    <a class="nav-link" href="{{ route('buyer.help') }}">{{ __('Help') }}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Opening store') }}</a>
+                    <a class="nav-link" href="{{ route('seller.guide') }}">{{ __('Opening store') }}</a>
                 </li>
             </ul>
         </div>

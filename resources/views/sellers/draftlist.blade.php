@@ -16,24 +16,35 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @forelse ( $all_products as $product ) --}}
-                <tr>
-                    <td>1</td>
-                    <td>iPhone</td>
-                    <td>$10.00</td>
-                    <td>
-                        PCs <br>
-                        <div class="badge bg-secondary-subtle text-dark">Xmas</div>
-                    </td>
-                    <td>
-                        <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
-                    </td>
-                </tr>
-                {{-- @empty
+                @forelse ( $all_products as $product )
+                    {{-- @if ( $product->seller_id == Auth::user()->id ) --}}
+                        <tr>
+                            <td>{{ $product->id }}</td>
+                            <td>{{ $product->product_name }}</td>
+                            <td>
+                                @foreach ( $product->productDetails as $productDetail )
+                                    {{ $productDetail->unit_price }}
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach ( $product->category_products as $category_product )
+                                    @if($category_product->category)
+                                        {{ $category_product->category->name }}
+                                    @endif
+                                @endforeach
+                                {{-- <br>
+                                <div class="badge bg-secondary-subtle text-dark">Xmas</div> --}}
+                            </td>
+                            <td>
+                                <a href="#" class="text-decoration-none fw-bold" style="color: #071657">View Details</a>
+                            </td>
+                        </tr>
+                    {{-- @endif --}}
+                @empty
                     <div class="bg-secondary-subtle">
                         <p>You don't have a product.</p>
                     </div>
-                @endforelse --}}
+                @endforelse
             </tbody>
         </table>
 

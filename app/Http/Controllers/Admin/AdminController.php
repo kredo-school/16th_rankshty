@@ -27,25 +27,9 @@ class AdminController extends Controller
         return view('admin.complaindetail');
     }
 
-    public function category()
-    {
-        return view('admin.category');
-    }
-
-    public function ranking()
-    {
-        return view('admin.ranking');
-    }
-
-
     public function connection()
     {
         return view('admin.connection');
-    }
-
-    public function orderManagementDashboard()
-    {
-        return view('admin.ordermanagementdashboard');
     }
 }
 

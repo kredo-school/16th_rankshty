@@ -23,20 +23,28 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ( $all_products as $product)
                 <tr>
-                    <td>1</td>
-                    <td>image</td>
-                    <td>iPhone</td>
+                    <td>{{ $product->id }}</td>
+                    <td>
+                        <img src="{{ $product->image_1 }}" alt="{{ $product->product_name }}" style="width: 100%">
+                    </td>
+                    <td>{{ $product->product_name }}</td>
                     <td>4.8</td>
-                    <td>3500</td>
-                    <td>5000</td>
+                    <td>{{ $product->reviews->count() }}</td>
+                    <td>{{ $product->favorites->count() }}</td>
                     <td>1,950</td>
                     <td>1,000</td>
                     <td>48.71</td>
                     <td>1,850</td>
                     <td>18,500</td>
-                    <td>A company</td>
+                    <td>
+                        @if($product->user)
+                            {{ $product->user->business_name }}
+                        @endif
+                    </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
 
