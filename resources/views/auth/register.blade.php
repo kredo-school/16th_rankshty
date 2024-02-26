@@ -20,11 +20,11 @@
                             @csrf
                             <div class="row mb-3">
                                 <div class="col-md-12">
-                                    <input id="name" type="text"
-                                        class="form-control @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}" required autocomplete="name" autofocus
+                                    <input id="username" type="text"
+                                        class="form-control @error('username') is-invalid @enderror" name="username"
+                                        value="{{ old('username') }}" required autocomplete="usernamee" autofocus
                                         placeholder="User Name">
-                                    @error('name')
+                                    @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="accepet" id="accepet"
-                                    {{ old('accepet') ? 'checked' : '' }}>
+                                    {{ old('accepet') ? 'checked' : '' }} required>
                                 <label class="form-check-label" for="accepet">
                                     {{ __('Accept All Terms & Conditions') }}
                                 </label>

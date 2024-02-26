@@ -78,39 +78,38 @@
                         </div>
                     @endif
 
-
-                    <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
-                        {{-- @can('admin') --}}
-                        @if (auth()->user()->role_id == 1)
-                            <a class="dropdown-item" href="{{ route('admin.users') }}">
-                                {{ __('Admin') }}
-                            </a>
-                            <hr>
-                        @endif
-                        {{-- @endcan --}}
-
-                        @if (auth()->user()->role_id == 2)
+                    {{-- Guest cannot open Dropdown menu --}}
+                    {{-- Admin, Buyer, Seller Can Open and Select Dropdown menu --}}
+                    @auth
+                        <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                            @if (Auth::user()->role_id == 1)
+                                <a class="dropdown-item" href="#">
+                                    {{ __('Admin') }}
+                                </a>
+                                <hr>
+                                <a class="dropdown-item" href="{{ route('admin.users') }}">
+                                    {{ __('My Page') }}
+                                </a>
+                            @elseif (Auth::user()->role_id == 2)
                                 <a class="dropdown-item" href="{{ route('buyer.myPage') }}">
                                     {{ __('My Page') }}
                                 </a>
-                        @endif
-
-                        @if (auth()->user()->role_id == 3)
-                            <a class="dropdown-item" href="{{ route('seller.myPage') }}">
-                                {{ __('My Page') }}
-                            </a>
-                        @endif
-
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
+                            @elseif (Auth::user()->role_id == 3)
+                                <a class="dropdown-item" href="{{ route('seller.myPage') }}">
+                                    {{ __('My Page') }}
+                                </a>
+                            @endif
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
+                                {{ __('Logout') }}
+                            </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    @endauth
                 </li>
                 @endguest
             </ul>
