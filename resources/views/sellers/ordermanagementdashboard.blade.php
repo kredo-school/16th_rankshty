@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Admin: Dashboard')
+@section('title', 'Sellers: Dashboard')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
@@ -56,7 +56,7 @@
                         </li>
                     </ul>
                 </div>
-               
+
                 <div class="dropdown d-none" id="ranking-selection">
                     <button class="btn btn-secondary dropdown-toggle shadow" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">

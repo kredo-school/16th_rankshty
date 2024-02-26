@@ -2,10 +2,6 @@
 
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
-use Database\Seeders\ProductSeeder;
-use Database\Seeders\SubCategorySeeder;
-use Database\Seeders\ProductDetailSeeder;
-use Database\Seeders\CategoryProductSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,9 +9,6 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
-            UsersTableSeeder::class,
-            ReviewsTableSeeder::class,
-            ComplainHandlingTableSeeder::class,
             RoleSeeder::class,
             UsersTableSeeder::class,
             AddressSeeder::class,
@@ -24,16 +17,18 @@ class DatabaseSeeder extends Seeder
             MainCategorySeeder::class,
             SubCategorySeeder::class,
             CategoryProductSeeder::class,
-            ReviewsTableSeeder::class,
-            OrdersTableSeeder::class,
-            OrderDetailsTableSeeder::class,
-            FavoritesTableSeeder::class,
             CartSeeder::class,
+            OrderSeeder::class,
+            OrderDetailSeeder::class,
+            ReviewsTableSeeder::class,
+            FavoritesTableSeeder::class,
             FollowSeeder::class,
             BlockSeeder::class,
             DmsSeeder::class,
+            ComplainHandlingTableSeeder::class,
             NotificationSeeder::class,
-
+            AdminSeeder::class,
+            SampleUserSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

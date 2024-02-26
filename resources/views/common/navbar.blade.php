@@ -22,7 +22,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                {{-- @guest
+                @guest
                     @if (Route::has('login'))
                         <li class="nav-item item-position">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -34,7 +34,7 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                @else --}}
+                @else
                 <li class="nav-item">
                     <a class="nav-link position-relative" href="#">
                         <i class="fa-regular fa-bell custom-bell me-2"></i>
@@ -80,26 +80,26 @@
 
 
                     <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
-                        @can('admin')
-                            <a class="dropdown-item" href="#">
+                        {{-- @can('admin') --}}
+                        @if (auth()->user()->role_id == 1)
+                            <a class="dropdown-item" href="{{ route('admin.users') }}">
                                 {{ __('Admin') }}
                             </a>
                             <hr>
-                        @endcan
-                        <a class="dropdown-item" href="{{ route('admin.users') }}">
-                            {{ __('My Page') }}
-                        </a>
+                        @endif
+                        {{-- @endcan --}}
 
-                        {{-- @if (auth()->user()->role_id == 2)
-                            <a class="dropdown-item" href="#">
+                        @if (auth()->user()->role_id == 2)
+                                <a class="dropdown-item" href="{{ route('buyer.myPage') }}">
+                                    {{ __('My Page') }}
+                                </a>
+                        @endif
+
+                        @if (auth()->user()->role_id == 3)
+                            <a class="dropdown-item" href="{{ route('seller.myPage') }}">
                                 {{ __('My Page') }}
                             </a>
                         @endif
-                        @if (auth()->user()->role_id == 3)
-                            <a class="dropdown-item" href="{{ route('admin.users') }}">
-                                {{ __('My Page') }}
-                            </a>
-                        @endif --}}
 
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -112,7 +112,7 @@
                         </form>
                     </div>
                 </li>
-                {{-- @endguest --}}
+                @endguest
             </ul>
         </div>
     </div>
@@ -139,19 +139,17 @@
                         {{ __('Categories') }}
                     </a>
 
-                    {{-- @foreach ($all_categories as $category) --}}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @include('common.searchcondition')
                     </div>
-                    {{-- @endforeach --}}
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Help') }}</a>
+                    <a class="nav-link" href="{{ route('buyer.help') }}">{{ __('Help') }}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Opening store') }}</a>
+                    <a class="nav-link" href="{{ route('seller.guide') }}">{{ __('Opening store') }}</a>
                 </li>
             </ul>
         </div>
