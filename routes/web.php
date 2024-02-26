@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\DashboardController;
 
 use App\Http\Controllers\PurchaseHistoryController;
 use App\Http\Controllers\Admin\CategoriesController;
-use App\Http\Controllers\Buyer\ConnectionController;
+use App\Http\Controllers\ConnectionController;
 use App\Http\Controllers\Buyer\FollowBlockController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
@@ -66,7 +66,7 @@ Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
 Route::get('/seller/follower-list', [FollowerListController::class, 'index'])->name('seller.follower-list');
-Route::get('/seller/connection', [App\Http\Controllers\ConnectionController::class, 'index'])->name('seller.connection');
+Route::get('/seller/connection', [ConnectionController::class, 'sellerIndex'])->name('seller.connection');
 Route::get('/seller/ordermanagement/dashboard', [SellerController::class, 'orderManagementDashboard'])->name('seller.orderManagementDashboard');
 
 //Buyer Routes
@@ -84,7 +84,7 @@ Route::get('/buyer/watchlist', [BuyerController::class, 'watchlist'])->name('buy
 Route::post('/buyer/favorite/store', [FavoriteController::class, 'store'])->name('buyer.favorite.store');
 Route::get('/buyer/favorite', [BuyerController::class, 'favorite'])->name('buyer.favorite');
 Route::get('/buyer/purchase-history', [PurchaseHistoryController::class, 'index'])->name('buyer.purchase-history');
-Route::get('/buyer/connection', [ConnectionController::class, 'index'])->name('buyer.connection');
+Route::get('/buyer/connection', [ConnectionController::class, 'buyerIndex'])->name('buyer.connection');
 
 
 //FollowBlock

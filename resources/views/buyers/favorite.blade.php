@@ -12,7 +12,7 @@
     </div>
 
     <table class="table table-hover border align-middle">
-        <thead class="table-info text-uppercase">
+        <thead class="text-uppercase">
             <tr>
                 <th>image</th>
                 <th>name</th>
@@ -32,7 +32,7 @@
                     <td>$10.00</td>
                     <td>
                         <div class="badge bg-primary-subtle" style="color: #071657">In Stock</div>
-                        <div class="badge bg-danger-subtle text-danger">Out of Stock</div>
+                        {{-- <div class="badge bg-danger-subtle text-danger">Out of Stock</div> --}}
                     </td>
                     <td>
                         <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center">Purchase</a>
