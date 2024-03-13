@@ -7,7 +7,8 @@
         <h1 class="ps-3 mt-2">Notification</h1>
 
         {{-- Notification Writing Area --}}
-        <form method="POST" action="#" accept-charset="UTF-8" class="m-2 border-bottom rounded-0 py-4">
+        <form method="POST" action="{{ route('admin.notifications.store', ['user_id' => Auth::user()->id]) }}"
+            accept-charset="UTF-8" class="m-2 border-bottom rounded-0 py-4">
             @csrf
             <div class="d-flex mx-auto gap-2 align-items-end">
                 <label for="notification"></label>
