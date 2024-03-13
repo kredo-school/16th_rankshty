@@ -142,13 +142,12 @@
     border: none ;
     margin: 0.5rem;
 }
-.page-link:hover, .page-link:focus {
+.page-link:hover, .page-link:focus, .page-link:active, .page-item.active .page-link{
     color: #ffffff;
     font-weight: 600;
     font-size: 14px;
     background-color: #fa8557;
 }
-
 .text-follower {
     color: #4CA0D4;
 }

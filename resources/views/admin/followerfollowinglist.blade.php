@@ -3,6 +3,8 @@
 @section('title', 'Admin: Follower/Following List')
 
 @section('content')
+
+    {{-- Backend --}}
     <div class="justify-content-center rounded border" style="min-width:696px">
         <h1 class="ps-3 mt-2">Follower/Following List</h1>
         <table class="table table-hover align-migddle bg-white text-secondary text-center">
@@ -16,55 +18,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td># 701</td>
-                    <td>YAMADA HANAKO</td>
-                    <td># 738</td>
-                    <td>YAMADA TAROU</td>
-                    <td>2023/01/01</td>
-                </tr>
-                <tr>
-                    <td># 701</td>
-                    <td>YAMADA HANAKO</td>
-                    <td># 738</td>
-                    <td>YAMADA TAROU</td>
-                    <td>2023/01/01</td>
-                </tr>
-                <tr>
-                    <td># 701</td>
-                    <td>YAMADA HANAKO</td>
-                    <td># 738</td>
-                    <td>YAMADA TAROU</td>
-                    <td>2023/01/01</td>
-                </tr>
-                <tr>
-                    <td># 701</td>
-                    <td>YAMADA HANAKO</td>
-                    <td># 738</td>
-                    <td>YAMADA TAROU</td>
-                    <td>2023/01/01</td>
-                </tr>
+                @foreach ($followersFollowings as $followerFollowing)
+                    <tr>
+                        <td>{{ $followerFollowing['follower_id'] }}</td>
+                        <td>{{ $followerFollowing['follower_name'] }}</td>
+                        <td>{{ $followerFollowing['following_id'] }}</td>
+                        <td>{{ $followerFollowing['following_name'] }}</td>
+                        <td>{{ $followerFollowing['created_at']->format('Y/m/d') }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 
         <div class="d-flex justify-content-center">
-            <nav aria-label="Page navigation followerfollowinglist">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link border disabled" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item checked"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link border" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            {{ $followersFollowings->links() }}
         </div>
     </div>
 
