@@ -89,6 +89,8 @@ Route::get('/buyer/connection', [ConnectionController::class, 'buyerIndex'])->na
 
 //FollowBlock
 Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name('buyer.followblock');
+Route::post('/buyer/followblock/removefollow', [FollowBlockController::class, 'removeFollow'])->name('buyer.followblock.romovefollow');
+Route::post('/buyer/followblock/removeblock', [FollowBlockController::class, 'removeBlock'])->name('buyer.followblock.romoveblock');
 Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
