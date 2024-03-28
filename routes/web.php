@@ -14,7 +14,7 @@ use App\Http\Controllers\Seller\FollowerListController;
 use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\DashboardController;
 
-
+use App\Http\Controllers\Admin\ComplainsController;
 
 use App\Http\Controllers\PurchaseHistoryController;
 use App\Http\Controllers\Admin\CategoriesController;
@@ -92,6 +92,7 @@ Route::get('/buyer/followblock', [FollowBlockController::class, 'index'])->name(
 Route::post('/buyer/followblock/removefollow', [FollowBlockController::class, 'removeFollow'])->name('buyer.followblock.romovefollow');
 Route::post('/buyer/followblock/removeblock', [FollowBlockController::class, 'removeBlock'])->name('buyer.followblock.romoveblock');
 Route::get('/buyer/report', [BuyerController::class, 'report'])->name('buyer.report');
+Route::post('/buyer/report/complain', [ComplainsController::class, 'setReport'])->middleware(['auth'])->name('buyer.complain');
 Route::get('/buyer/checkout', [BuyerController::class, 'checkout'])->name('buyer.checkout');
 Route::get('/buyer/checkoutconfirm', [BuyerController::class, 'checkoutConfirm'])->name('buyer.checkout_confirm');
 Route::get('/buyer/checkoutcomplete', [BuyerController::class, 'checkoutComplete'])->name('buyer.checkout_complete');

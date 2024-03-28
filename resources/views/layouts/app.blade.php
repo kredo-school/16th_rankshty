@@ -10,7 +10,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+        <!-- Styles -->
         {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">
@@ -87,6 +87,9 @@
         {{-- Scripts --}}
         {{-- Specific page js --}}
         @stack('js')
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
 
 </html>
