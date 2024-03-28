@@ -102,6 +102,7 @@ Route::get('/admin/contentmanagement/details', [AdminController::class, 'content
 
 //Notifications
 Route::get('/admin/notification', [NotificationsController::class, 'index'])->name('admin.notifications');
+Route::post('/admin/notification', [NotificationsController::class, 'store'])->name('admin.notifications.store');
 //User Management
 Route::get('/admin/usermanagement', [UsersController::class, 'index'])->name('admin.users');
 //FollowerFolloingList

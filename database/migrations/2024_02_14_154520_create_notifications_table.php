@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('target_user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('target_user_id')->nullable()->references('id')->on('users')->onDelete('cascade');
             $table->enum('action', ['dms', 'Favorite','Follow','Order','Shipped','Review','Restocked','Information']);
             $table->foreignId('dms_id')->nullable()->references('id')->on('dms')->onDelete('cascade');
             $table->foreignId('order_id')->nullable()->references('id')->on('orders')->onDelete('cascade');
@@ -26,7 +26,7 @@ return new class extends Migration
             $table->boolean('is_checked')->default(false);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreignId('receiver_role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreignId('receiver_role_id')->nullable()->references('id')->on('roles')->onDelete('cascade');
         });
     }
 
