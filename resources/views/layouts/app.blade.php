@@ -10,7 +10,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
+        <!-- Styles -->
         {{-- css for all pages --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/searchcondition.css') }}">

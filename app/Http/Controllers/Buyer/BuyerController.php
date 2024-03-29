@@ -68,7 +68,7 @@ class BuyerController extends Controller
         return view('buyers.watchlist');
     }
     public function report()
-    {
+    {   
         return view('buyers.report');
     }
 }
