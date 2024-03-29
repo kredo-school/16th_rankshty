@@ -63,6 +63,7 @@ Route::get('/seller/productslist', [ProductController::class, 'index'])->name('s
 Route::delete('/seller/productslist/{id}/delete', [ProductController::class, 'softDelete'])->name('seller.productslist.delete');
 Route::get('/seller/ranking', [ProductController::class, 'sellersRanking'])->name('seller.ranking');
 Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
+Route::post('/seller/report/complain', [ComplainsController::class, 'setReport'])->middleware(['auth'])->name('seller.complain');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
 Route::get('/seller/follower-list', [FollowerListController::class, 'index'])->name('seller.follower-list');

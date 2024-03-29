@@ -33,7 +33,7 @@
 
                     {{-- Product ID --}}
                     <label for="report_productID">Product ID</label>
-                    <input class="form-control mb-3" id="report_productID" name="report_productID"
+                    <input type="number" class="form-control mb-3" id="report_productID" name="report_productID"
                         placeholder="Input Product ID">
 
                     {{-- Reason --}}
