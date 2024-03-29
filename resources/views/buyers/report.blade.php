@@ -1,23 +1,21 @@
 @extends('layouts.app')
 
 @section('title', 'Buyer: Report')
-@push('js')
-    <script src="{{ asset('js/toast.js') }}"></script>
-@endpush
 
 @section('content')
     <div class="justify-content-center rounded border">
         <h1 class="ps-3 mt-1">Report Page</h1>
+
+        {{-- Alert --}}
         @if (session('success'))
-            <div id="liveToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
-                aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        {{ session('success') }}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                        aria-label="Close"></button>
-                </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success!</strong> {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @elseif (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
 
@@ -30,8 +28,8 @@
 
                     {{-- User ID --}}
                     <label for="report_userID">User ID</label>
-                    <input class="form-control mb-3" id="report_userID" name="report_userID" placeholder="Input User ID"
-                        required>
+                    <input type="number" class="form-control mb-3" id="report_userID" name="report_userID"
+                        placeholder="Input User ID" required>
 
                     {{-- Product ID --}}
                     <label for="report_productID">Product ID</label>
