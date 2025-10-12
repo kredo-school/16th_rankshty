@@ -47,5 +47,37 @@ class Product extends Model
         'status' => ProductStatus::class,
     ];
 
-}
+        use HasFactory;
 
+    public function details()
+    {
+        return $this->hasOne (ProductDetail::class);
+    }
+
+    public function categories()
+    {
+         // ピボットが main_category_id を持つ前提でキー名を明示
+        return $this->belongsToMany(\App\Models\Category::class, 'category_product', 'product_id', 'main_category_id')
+                    ->withTimestamps();
+    }
+
+    protected $casts = 
+    [
+        'status'         => \App\Enums\ProductStatus::class,//←Enumキャスト
+        'stock_quantity' => 'integer',
+        'unit_price'     => 'decimal:2',//金額を小数2桁で扱う場合
+    ];
+
+    protected $fillable =
+    [
+        'status', 
+        'seller_id',
+        'product_name',
+        'description',
+        'image_1',
+        'image_2',
+        'image_3',
+        'image_4',
+        'image_5',
+    ];
+}

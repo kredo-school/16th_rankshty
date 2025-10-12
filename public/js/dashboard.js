@@ -100,6 +100,5 @@ $(function(){
             $('#role-select').removeClass('d-none');
             $('#ranking-selection').addClass('d-none');
         }
-
     });
 });

@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->foreignId('product_details_id')->references('id')->on('product_details')->onDelete('cascade');
-            $table->bigInteger('quantity');
-            $table->bigInteger('unitPrice');
-            $table->bigInteger('discount')->default(0);
+            $table->unsignedBigInteger('quantity');
+            $table->unsignedBigInteger('unitPrice');
+            $table->unsignedBigInteger('discount')->default(0);
         });
     }
 

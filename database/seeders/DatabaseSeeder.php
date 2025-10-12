@@ -5,10 +5,15 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
 
         $this->call([
+
+            RolerSeeder::class,      // ← 先にロールを投入（id を作る）
+            UsersTableSeeder::class, // ← 次にユーザー（role_id が参照できる）
+            ReviewsTableSeeder::class,
+            ComplainHandlingTableSeeder::class,
             RoleSeeder::class,
             UsersTableSeeder::class,
             AddressSeeder::class,

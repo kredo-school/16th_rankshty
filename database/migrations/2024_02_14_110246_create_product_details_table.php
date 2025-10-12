@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
-            $table->unsignedbigInteger('product_id');
+
+            // products.id (unsigned BIGINT) を参照
+            $table->foreignId('product_id')->constrained('products')->cascadeOnDelete();
             $table->string('size', 50)->nullable();
             $table->string('color', 50)->nullable();
             $table->decimal('unit_price', 10, 2)->nullable();
@@ -21,9 +23,7 @@ return new class extends Migration
             $table->string('model_number')->nullable();
             $table->unsignedbigInteger('stock_quantity')->nullable();
             $table->timestamps();
-            $table->softDeletes();
-
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->softDeletes(); // deleted_at
         });
     }
 

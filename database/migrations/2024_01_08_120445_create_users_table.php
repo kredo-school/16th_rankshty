@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // users: role_id（FK, not null, default 3=buyer などでもOK）
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('username')->nullable();
@@ -22,13 +23,13 @@ return new class extends Migration
             $table->string('introduction')->nullable();
             $table->string('business_name')->nullable();
             $table->string('credit_card_number')->nullable();
-            $table->unsignedbigInteger('role_id');
+            $table->foreignId('role_id')
+                  ->constrained('roles')   // roles.id を参照
+                  ->onDelete('cascade');   // 役割削除時の挙動（任意）
             $table->timestamp('last_login_at')->nullable();
             $table->timestamp('last_logout_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('role_id')->references('id')->on('roles');
         });
     }
 

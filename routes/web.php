@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Buyer\CartController;
@@ -13,9 +12,6 @@ use App\Http\Controllers\InformationController;
 use App\Http\Controllers\Seller\FollowerListController;
 use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Admin\DashboardController;
-
-
-
 use App\Http\Controllers\PurchaseHistoryController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\ConnectionController;
@@ -23,6 +19,7 @@ use App\Http\Controllers\Buyer\FollowBlockController;
 use App\Http\Controllers\Admin\NotificationsController;
 use App\Http\Controllers\Admin\FollowerFollowingListController;
 use App\Http\Controllers\Buyer\FavoriteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +43,7 @@ Route::get('/ranking/review', [ProductController::class, 'ranking'])->name('rank
 Route::get('/ranking/favorite', [ProductController::class, 'ranking'])->name('ranking.favorite');
 // Product Route
 Route::get('/product/{id}/show', [ProductController::class, 'show'])->name('product');
+
 // Categorize Route
 Route::get('/categorize', [HomeController::class, 'categorize'])->name('categorize');
 // Review Route
@@ -62,12 +60,40 @@ Route::get('/seller/draftlist', [ProductController::class, 'draftlist'])->name('
 Route::get('/seller/productslist', [ProductController::class, 'index'])->name('seller.productslist');
 Route::delete('/seller/productslist/{id}/delete', [ProductController::class, 'softDelete'])->name('seller.productslist.delete');
 Route::get('/seller/ranking', [ProductController::class, 'sellersRanking'])->name('seller.ranking');
+
+Route::prefix('seller')->name('seller.')->middleware('auth')->group(function()
+{
+    //一覧（index）：登録済み商品テーブル表示
+    Route::get('/products', [SellerController::class, 'index'])->name('products.index');
+    //登録フォーム表示（crete）：空フォームを表示（DB変更なし）
+    Route::get('/products/create', [SellerController::class, 'create'])->name('products.create');
+    //登録処理（store）：フォーム送信を受けてバリデーション→保存→リダイレクト
+    Route::post('/products', [SellerController::class, 'store'])->name('products.store');
+});
+
+Route::middleware(['auth', 'role:seller'])->group(function()
+{
+    Route::get('/seller/products', [SellerController::class, 'index'])->name('seller.products.index');
+    Route::get('/seller/products/create', [SellerController::class, 'create'])->name('seller.products.create');
+    Route::post('/seller/products', [SellerController::class, 'store'])->name('seller.products.store');
+});
+
+
+
+Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
+Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');
+Route::get('/seller/my-page', [SellerController::class, 'myPage'])->name('seller.myPage');
+Route::get('/seller/product-registry', [SellerController::class, 'productRegistry'])->name('seller.productRegistry');
+Route::get('/seller/draftlist', [SellerController::class, 'draftlist'])->name('seller.draftlist');
+Route::get('/seller/ranking', [SellerController::class, 'ranking'])->name('seller.ranking');
+
 Route::get('/seller/report', [SellerController::class, 'report'])->name('seller.report');
 Route::get('/seller/contact', [SellerController::class, 'contact'])->name('seller.contact');
 Route::get('/seller/info', [App\Http\Controllers\InformationController::class, 'index'])->name('seller.info');
 Route::get('/seller/follower-list', [FollowerListController::class, 'index'])->name('seller.follower-list');
 Route::get('/seller/connection', [ConnectionController::class, 'sellerIndex'])->name('seller.connection');
 Route::get('/seller/ordermanagement/dashboard', [SellerController::class, 'orderManagementDashboard'])->name('seller.orderManagementDashboard');
+
 
 //Buyer Routes
 Route::get('/help/buyer', [BuyerController::class, 'help'])->name('buyer.help');
@@ -120,6 +146,3 @@ Route::get('/admin/complainhandling', [AdminController::class, 'complainhandling
 Route::get('/admin/complaindetail', [AdminController::class, 'complaindetail'])->name('admin.complaindetail');
 //Connection
 Route::get('/admin/connection', [AdminController::class, 'connection'])->name('admin.connection');
-
-
-
