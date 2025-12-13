@@ -81,7 +81,7 @@ class SellerController extends Controller
     public function create()
     {
         return view('sellers.products.create');
-}
+    }
 
     //　登録処理
     public function store(Request $request)
@@ -139,8 +139,8 @@ class SellerController extends Controller
         $detailData =
         [
             'product_id'     => $product->id,
-            'size'           => $validated['product_size'],
-            'color'          => $validated['product_color'],
+            'product_size'   => $validated['product_size'],
+            'product_color'  => $validated['product_color'],
             'stock_quantity' => $validated['stock_quantity'],
             'unit_price'     => $validated['unit_price'],
         ];
@@ -148,6 +148,83 @@ class SellerController extends Controller
 
         //完了後に一覧画面に戻る
         return redirect()->route('seller.products.index')->with('success', '商品が登録されました');
+    }
+    
+    public function edit($id)
+    {
+        // ログイン seller が登録した商品のみ取得
+        $product = Product::with(['details', 'categories'])
+            ->where('seller_id', auth()->id())
+            ->findOrFail($id);
+
+        // ステータスの初期選択値
+        $selectedStatus = (string)$product->status->value;
+
+        return view('sellers.products.edit', compact('product', 'selectedStatus'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // 1) 自分のproductのみ取得（認可 + find）
+        $product = Product::where('seller_id', auth()->id())
+            ->with(['details', 'categories'])
+            ->findOrFail($id);
+
+        // 2) バリデーション
+        $validated = $request->validate
+        ([
+            'status'         => ['required' , new EnumValue(ProductStatus::class, false)],//← 第2引数 false
+            'product_name'   => ['required', 'string', 'max:255'],
+            'name'           => ['required', 'string', 'max:255'],
+            'stock_quantity' => ['required', 'integer', 'min:0'],
+            'unit_price'     => ['required', 'numeric','min:0'],
+            'product_size'   => ['required', 'string'],
+            'product_color'  => ['required', 'string'],
+            'description'    => ['required', 'string', 'max:2000'],
+            'picture_1'      => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+            'picture_2'      => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+            'picture_3'      => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+            'picture_4'      => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+            'picture_5'      => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
+        ]);
+
+        // 3) category準備
+        $category = Category::firstOrCreate(['name' => $validated['name']]);
+
+        // 4) product更新用データ作成（後で一括保存）
+        $productData = Arr::only($validated,
+        [
+            'status', 'product_name', 'description',
+        ]);
+        
+        // 5) 画像が送られてきた場合のみ追加
+        foreach([1,2,3,4,5] as $i)
+        {
+            $key = "picture_{$i}";
+            if ($request->hasFile($key))
+            {
+                $productData["image_{$i}"] = $request->file($key)->store('images', 'public');
+            }
+        }
+
+        // 6) Product本体を更新（SQLはここで1回）
+        $product->update($productData);
+
+        // 7) Pivotカテゴリ再紐付け
+        $product->categories()->sync([$category->id]);
+
+        // 8) detail更新（存在すればupdate・なければcreate）
+        $detailData = Arr::only($validated, 
+        [
+            'product_size', 'product_color', 'stock_quantity', 'unit_price',
+        ]);
+
+        $product->details
+            ? $product->details->update($detailData)
+            : $product->details()->create($detailData);
+
+        // 9) リダイレクト
+        return redirect()->route('seller.products.index')->with('success', '商品情報が更新されました');
     }
 }
 

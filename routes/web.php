@@ -69,6 +69,8 @@ Route::prefix('seller')->name('seller.')->middleware('auth')->group(function()
     Route::get('/products/create', [SellerController::class, 'create'])->name('products.create');
     //登録処理（store）：フォーム送信を受けてバリデーション→保存→リダイレクト
     Route::post('/products', [SellerController::class, 'store'])->name('products.store');
+    Route::get('/products/{id}/edit', [SellerController::class, 'edit'])->name('products.edit');
+    Route::put('/products/{id}', [SellerController::class, 'update'])->name('products.update');
 });
 
 Route::middleware(['auth', 'role:seller'])->group(function()
@@ -77,8 +79,6 @@ Route::middleware(['auth', 'role:seller'])->group(function()
     Route::get('/seller/products/create', [SellerController::class, 'create'])->name('seller.products.create');
     Route::post('/seller/products', [SellerController::class, 'store'])->name('seller.products.store');
 });
-
-
 
 Route::get('/seller/guide', [SellerController::class, 'guide'])->name('seller.guide');
 Route::get('/seller/reviews', [SellerController::class, 'reviews'])->name('seller.reviews');

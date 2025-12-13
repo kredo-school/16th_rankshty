@@ -1,6 +1,6 @@
 <div class="col-3 sidebar">
     {{-- Buyer Sidebar --}}
-    @if (request()->is('buyer/*'))
+    @if (request()->routeIs('buyer.*'))
         <div class="list-group">
             <span class="list-group-item disabled">
                 <h3>Buyer Navigation</h3>
@@ -31,7 +31,7 @@
             </a>
         </div>
         {{-- Seller Sidebar --}}
-    @elseif (request()->is('seller/*'))
+    @elseif (request()->routeIs('seller.*'))
         <div class="list-group">
             <span class="list-group-item  disabled">
                 <h3>Seller Navigation</h3>
@@ -73,48 +73,48 @@
             </a>
         </div>
         {{-- Admin Sidebar --}}
-    @elseif (request()->is('admin/*'))
+    @elseif (request()->routeIs('admin.*'))
         <div class="list-group">
             <span class="list-group-item  disabled">
                 <h3>Admin Navigation</h3>
             </span>
             <a href="{{ route('admin.users') }}"
-                class="list-group-item {{ request()->is('admin/usermanagement') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.usermanagement') ? 'focused' : '' }}">
                 User Management
             </a>
             <a href="{{ route('admin.contentmanagement') }}"
-                class="list-group-item {{ request()->is('admin/contentmanagement') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.contentmanagement') ? 'focused' : '' }}">
                 Content Management
             </a>
             <a href="{{ route('admin.complainhandling') }}"
-                class="list-group-item {{ request()->is('admin/complainhandling') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.complainhandling') ? 'focused' : '' }}">
                 Complain Handling
             </a>
             <a href="{{ route('admin.connection') }}"
-                class="list-group-item {{ request()->is('admin/connection') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.connection') ? 'focused' : '' }}">
                 Connection With Buyer/Seller
             </a>
             <a href="{{ route('admin.category') }}"
-                class="list-group-item {{ request()->is('admin/category') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.category') ? 'focused' : '' }}">
                 Category Add/Delete
             </a>
             <a href="{{ route('admin.notifications') }}"
-                class="list-group-item {{ request()->is('admin/notification') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.notification') ? 'focused' : '' }}">
                 Notification
             </a>
             {{-- <a href="#" class="list-group-item">
                 Navbar/Dropdown
             </a> --}}
             <a href="{{ route('admin.followerfollowinglist') }}"
-                class="list-group-item {{ request()->is('admin/followerfollowinglist') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.followerfollowinglist') ? 'focused' : '' }}">
                 Follower/Following List
             </a>
             <a href="{{ route('admin.dashboard') }}"
-                class="list-group-item {{ request()->is('admin/dashboard') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.dashboard') ? 'focused' : '' }}">
                 Dashboard
             </a>
             <a href="{{ route('admin.ranking') }}"
-                class="list-group-item {{ request()->is('admin/ranking') ? 'focused' : '' }}">
+                class="list-group-item {{ request()->routeIs('admin.ranking') ? 'focused' : '' }}">
                 Ranking
             </a>
             {{-- Customization Page are not created

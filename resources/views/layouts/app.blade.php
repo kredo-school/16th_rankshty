@@ -61,7 +61,7 @@
 
                         {{-- Sidebar --}}
                         @auth
-                            @if (request()->is('admin/*') || request()->is('buyer/*') || request()->is('seller/*'))
+                            @if (request()->routeIs('admin.*') || request()->routeIs('buyer.*') || request()->routeIs('seller.*'))
                                 @include('common.sidebar')
                             @endif
                         @endauth
@@ -75,7 +75,7 @@
                         @endif
 
                         {{-- Content --}}
-                        <div class="col-9">
+                        <div class="@auth {{ request()->routeIs('admin.*') || request()->routeIs('buyer.*') || request()->routeIs('seller.*') ? 'col-9' : 'col-12' }} @else col-12 @endauth">
                             @yield('content')
                         </div>
                     </div>

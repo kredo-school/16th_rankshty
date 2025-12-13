@@ -67,16 +67,27 @@ class RegisterController extends Controller
     protected function create(array $data)
     {   
         // チェックボックス true なら seller、false なら buyer
-        $roleName = !empty($data['is_seller']) ? 'seller' : 'buyer';
+        $roleName = !empty($data['isSeller']) ? 'seller' : 'buyer';
 
         // roles テーブルから id を取得（なければ例外）
-        $roleId = Role::where('role_name', $roleName)->value('id');
+        $roleId = Role::where('role_name', $roleName)->value('id')
+               ?? Role::where('role_name', 'buyer')->value('id');
 
-        return User::create([
-            'name'     => $data['name'],
-            'email'    => $data['email'],
-            'password' => Hash::make($data['password']),
-            'role_id'  => $roleId, //EnumではなくDBのidを使う 
-        ]);
+        if (!$roleId)
+        {
+            throw new \RuntimeException("roles テーブルに{$roleName}/buyer がありません。RoleSeeder を実行してください。");
+        }
+
+        $user = new \App\Models\User(
+            [
+                'username' => $data['username'],
+                'email'    => $data['email'],
+                'password' => \Hash::make($data['password']),
+            ]);
+        
+        $user->role_id = $roleId;
+        $user->save();
+
+        return $user;
     }
 }

@@ -64,8 +64,6 @@ class Product extends Model
     protected $casts = 
     [
         'status'         => \App\Enums\ProductStatus::class,//←Enumキャスト
-        'stock_quantity' => 'integer',
-        'unit_price'     => 'decimal:2',//金額を小数2桁で扱う場合
     ];
 
     protected $fillable =

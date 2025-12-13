@@ -78,29 +78,41 @@
                         </div>
                     @endif
 
-                    {{-- Guest cannot open Dropdown menu --}}
-                    {{-- Admin, Buyer, Seller Can Open and Select Dropdown menu --}}
-                    @auth
-                        <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
-                            @if (Auth::user()->role_id == 1)
-                                <a class="dropdown-item" href="#">
-                                    {{ __('Admin') }}
-                                </a>
-                                <hr>
-                                <a class="dropdown-item" href="{{ route('admin.users') }}">
-                                    {{ __('My Page') }}
-                                </a>
-                            @elseif (Auth::user()->role_id == 2)
-                                <a class="dropdown-item" href="{{ route('buyer.myPage') }}">
-                                    {{ __('My Page') }}
-                                </a>
-                            @elseif (Auth::user()->role_id == 3)
-                                <a class="dropdown-item" href="{{ route('seller.myPage') }}">
-                                    {{ __('My Page') }}
-                                </a>
-                            @endif
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
+
+                    <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                        @can('admin')
+                            <a class="dropdown-item" href="{{ route('admin.users') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @endcan
+
+                        @can('seller')
+                            <a class="dropdown-item" href="{{ route('seller.myPage') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @endcan
+
+                        @can('buyer')
+                            <a class="dropdown-item" href="{{ route('buyer.myPage') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @endcan
+                        {{-- @if (auth()->user()->role_id == 1)
+                            <a class="dropdown-item" href="{{ route('admin.users') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @elseif (auth()->user()->role_id == 2)
+                            <a class="dropdown-item" href="{{ route('seller.myPage') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @else
+                            <a class="dropdown-item" href="{{ route('buyer.myPage') }}">
+                                {{ __('My Page') }}
+                            </a>
+                        @endif --}}
+
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>

@@ -13,19 +13,8 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
-        DB::table('roles')->upsert( 
-        [
-            ['role_name' => 'admin'],
-            ['role_name' => 'buyer'],
-            ['role_name' => 'seller'],
-        ],
-        ['role_name'],// 一意キー
-        []            // 更新カラムなし（既存なら何もしない）
-        );
-
-        foreach ($roles as $role) {
-            Role::create($role);
-        }
+        foreach (['admin', 'buyer', 'seller'] as $name){ 
+              Role::firstOrcreate(['role_name' => $name]);  
+            }
     }
 }

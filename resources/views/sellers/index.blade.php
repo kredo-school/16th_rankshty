@@ -3,7 +3,7 @@
 @section('title', 'Seller: My page')
 @section('content')
 
-    <div class="container seller">
+    <div class="seller">
         <div class="container-header border border-tertiary rounded-top px-3 py-1">
             <h1>Account Infomation</h1>
         </div>

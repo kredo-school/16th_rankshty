@@ -3,13 +3,13 @@
 /* Header & Navbar */
 .logo{
     height: 4.5rem;
-    position: absolute;
-    top:1px;
+    /* position: absolute; */
+    /* top:1px; */
 }
 
 .search-position{
     position: relative;
-    top:6px;
+    /* top:6px; */
 }
 
 .item-position{
